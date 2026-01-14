@@ -1,8 +1,10 @@
-# robots.txt for MythicNames
+# MythicNames Fantasy Name Generator
+# https://mythicnames.io
+
 User-agent: *
 Allow: /
 
-# Sitemap location
+# Sitemap
 Sitemap: https://mythicnames.io/sitemap.xml
 
 # Crawl-delay (optional, be nice to servers)

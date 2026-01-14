@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fantasy Name Generator | D&D, Anime, Sci-Fi Character Names | MythicNames</title>
-    <meta name="description" content="Free fantasy name generator for characters, places, and creatures. Perfect for D&D campaigns, novels, anime characters, sci-fi worlds, and RPG games. Generate unique names instantly.">
-    <meta name="keywords" content="fantasy name generator, dnd name generator, character name generator, anime name generator, sci-fi names, rpg name generator, random name generator, elf names, dwarf names, dragon names">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>Fantasy Name Generator | Free D&D, Elf, Dwarf & Character Names | MythicNames</title>
+    <meta name="description" content="Free fantasy name generator with backstory creator. Generate unique names for D&D characters, elves, dwarves, orcs, places, kingdoms, taverns & more. Includes pronunciation guides, meanings, and full character backstories. Perfect for RPGs, novels & worldbuilding.">
+    <meta name="keywords" content="fantasy name generator, dnd name generator, character name generator, elf name generator, dwarf name generator, orc names, tiefling names, dragonborn names, halfling names, gnome names, fantasy character creator, backstory generator, rpg name generator, dungeons and dragons names, pathfinder names, world of warcraft names, skyrim names, tolkien names, medieval names, kingdom names, tavern name generator, weapon name generator, spell names, guild names, ship names">
     <meta name="author" content="MythicNames">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <link rel="canonical" href="https://mythicnames.io/">
     
     <!-- Favicons -->
@@ -15,21 +17,26 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="manifest" href="site.webmanifest">
+    <meta name="theme-color" content="#d4a857">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://mythicnames.io/">
-    <meta property="og:title" content="Fantasy Name Generator | MythicNames">
-    <meta property="og:description" content="Generate unique fantasy names for characters, places, and creatures. Perfect for D&D, novels, anime, and RPG games.">
-    <meta property="og:image" content="https://mythicnames.io/icon-512.png">
+    <meta property="og:title" content="Fantasy Name Generator | Free D&D & Character Names with Backstories">
+    <meta property="og:description" content="Generate unique fantasy names for elves, dwarves, orcs, humans & more. Includes pronunciation, meanings, and full character backstories. Perfect for D&D, Pathfinder, novels & RPGs.">
+    <meta property="og:image" content="https://mythicnames.io/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="MythicNames">
+    <meta property="og:locale" content="en_US">
     
-    <!-- Twitter -->
+    <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://mythicnames.io/">
-    <meta name="twitter:title" content="Fantasy Name Generator | MythicNames">
-    <meta name="twitter:description" content="Generate unique fantasy names for characters, places, and creatures. Perfect for D&D, novels, anime, and RPG games.">
-    <meta name="twitter:image" content="https://mythicnames.io/icon-512.png">
+    <meta name="twitter:title" content="Fantasy Name Generator | Free D&D & Character Names">
+    <meta name="twitter:description" content="Generate unique fantasy names with backstories for D&D, novels & RPGs. Elves, dwarves, orcs, kingdoms, taverns & more.">
+    <meta name="twitter:image" content="https://mythicnames.io/og-image.png">
     
     <!-- Structured Data - WebApplication -->
     <script type="application/ld+json">
@@ -37,15 +44,32 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "MythicNames Fantasy Name Generator",
-        "description": "Free fantasy name generator for characters, places, and creatures. Perfect for D&D campaigns, novels, anime characters, sci-fi worlds, and RPG games.",
+        "alternateName": ["MythicNames", "Mythic Names Generator", "Fantasy Name Creator"],
+        "description": "Free fantasy name generator with backstory creator. Generate unique names for D&D characters, elves, dwarves, orcs, places, kingdoms, and more with pronunciation guides and meanings.",
         "url": "https://mythicnames.io",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
         "offers": {
             "@type": "Offer",
             "price": "0",
             "priceCurrency": "USD"
         },
+        "featureList": [
+            "Character name generation",
+            "Race-specific names (Elf, Dwarf, Orc, Human, Tiefling, Dragonborn)",
+            "Place and kingdom names",
+            "Tavern and inn names",
+            "Weapon and spell names",
+            "Guild and organization names",
+            "Ship names",
+            "Backstory generator",
+            "Pronunciation guides",
+            "Name meanings",
+            "Multiple fantasy styles (D&D, Anime, Sci-Fi, Medieval, Norse, Celtic)"
+        ],
+        "screenshot": "https://mythicnames.io/og-image.png",
+        "softwareVersion": "2.0",
         "author": {
             "@type": "Organization",
             "name": "MythicNames"
@@ -53,7 +77,7 @@
     }
     </script>
     
-    <!-- Structured Data - FAQ -->
+    <!-- Structured Data - FAQPage -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
@@ -61,367 +85,209 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "How does the fantasy name generator work?",
+                "name": "How does the MythicNames fantasy name generator work?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "MythicNames uses sophisticated algorithms combining syllable patterns, linguistic rules, and style-specific naming conventions to generate unique, authentic-sounding names for your characters, places, and creatures."
+                    "text": "MythicNames uses sophisticated algorithms combining syllable patterns, linguistic rules, and style-specific naming conventions to generate unique, authentic-sounding fantasy names. Each name comes with a pronunciation guide and meaning. You can also generate full character backstories with factions, secrets, and personality traits."
                 }
             },
             {
                 "@type": "Question",
-                "name": "Can I use these names for my D&D campaign?",
+                "name": "Can I use these names for my D&D campaign or commercial project?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Yes! All names generated by MythicNames are free to use for any purpose, including D&D campaigns, novels, video games, and other creative projects."
+                    "text": "Yes! All generated names are completely free to use for any purpose, including D&D campaigns, Pathfinder games, novels, video games, and commercial projects. The names are procedurally generated and not copyrighted."
                 }
             },
             {
                 "@type": "Question",
-                "name": "What styles of names can I generate?",
+                "name": "What races can I generate names for?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "MythicNames supports multiple styles including classic Fantasy, D&D/High Fantasy, Anime/Japanese, Sci-Fi, Medieval, Mythological, and Dark/Gothic themes."
+                    "text": "MythicNames supports 12 fantasy races: Elf, Dwarf, Orc, Human, Halfling, Gnome, Tiefling, Dragonborn, Vampire, Angel, Demon, and Fairy. Each race has unique naming patterns with masculine, feminine, and neutral options."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of names can I generate besides character names?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Beyond character names, you can generate names for: Kingdoms and empires, Places and landmarks, Taverns and inns, Ships and vessels, Weapons (with titles like 'Blade of Shadows'), Spells and magic abilities, Guilds and organizations, Creatures and monsters."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does the backstory generator work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each generated name includes a backstory preview. Click 'Read full backstory' to see a complete 5-paragraph character history including: origin and childhood, defining life events, personality traits, faction affiliations, secrets and flaws, and motivations. You can regenerate backstories until you find one you love."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What name styles are available?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MythicNames offers 13 distinct naming styles: Fantasy (general), D&D/High Fantasy, Anime/Japanese, Sci-Fi, Medieval, Mythological, Dark/Gothic, Lovecraftian, Steampunk, Pirate, Norse/Viking, Celtic, and Arabic/Persian. Each style produces names with authentic linguistic patterns."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What do the pronunciation guides mean?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Each name includes a phonetic pronunciation guide showing how to say it. Stressed syllables appear in CAPITALS. For example, 'Aelindra' shows as 'ay-LIN-drah', indicating the middle syllable is emphasized. This helps Game Masters and players pronounce names consistently."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is MythicNames free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, MythicNames is completely free with no registration required. Generate unlimited names, backstories, and characters. All features including race-specific generators, name packs, and the character creator are free to use."
                 }
             }
         ]
     }
     </script>
     
-    <!-- Google AdSense -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3396661218169624" crossorigin="anonymous"></script>
+    <!-- Structured Data - BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://mythicnames.io/"
+            }
+        ]
+    }
+    </script>
     
+    <!-- Google AdSense (disabled during review)
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3396661218169624" crossorigin="anonymous"></script>
+    -->
+    
+    <!-- Preconnect for performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
-    
     <style>
-        :root {
-            --bg-deep: #0d0b0e;
-            --bg-parchment: #1a1714;
-            --bg-card: #211d19;
-            --border-subtle: #3d352c;
-            --border-glow: #8b7355;
-            --accent-gold: #d4a857;
-            --accent-amber: #e8c47c;
-            --accent-ember: #c45d3e;
-            --text-primary: #e8dcc8;
-            --text-secondary: #9a8b78;
-            --text-faded: #6b5d4d;
-            --shadow-gold: rgba(212, 168, 87, 0.15);
-        }
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body {
-            font-family: 'Crimson Pro', Georgia, serif;
-            background: var(--bg-deep);
-            color: var(--text-primary);
-            min-height: 100vh;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-        body::before {
-            content: '';
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
-            opacity: 0.03;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .ambient-glow {
-            position: fixed;
-            width: 800px; height: 800px;
-            border-radius: 50%;
-            filter: blur(200px);
-            opacity: 0.07;
-            pointer-events: none;
-            z-index: 0;
-        }
-        .glow-1 { top: -400px; left: 50%; transform: translateX(-50%); background: var(--accent-gold); }
-        .glow-2 { bottom: -400px; right: -200px; background: var(--accent-ember); }
-        .container {
-            position: relative;
-            z-index: 1;
-            max-width: 720px;
-            margin: 0 auto;
-            padding: 2rem 1.5rem 4rem;
-            min-height: 100vh;
-        }
-        header { text-align: center; padding: 2rem 0 3rem; }
-        .logo-wrapper { display: flex; align-items: center; justify-content: center; gap: 1rem; margin-bottom: 0.5rem; }
-        .logo-icon { width: 56px; height: 56px; }
-        .logo {
-            font-family: 'Cinzel', serif;
-            font-size: clamp(2.2rem, 7vw, 3.2rem);
-            font-weight: 700;
-            color: var(--accent-gold);
-            letter-spacing: 0.1em;
-            text-shadow: 0 0 40px var(--shadow-gold);
-        }
-        .tagline {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            font-style: italic;
-            letter-spacing: 0.05em;
-        }
-        .divider {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 1rem;
-            margin: 2rem 0;
-            color: var(--text-faded);
-        }
-        .divider::before, .divider::after {
-            content: '';
-            height: 1px;
-            width: 60px;
-            background: linear-gradient(90deg, transparent, var(--border-subtle), transparent);
-        }
-        .divider-icon { font-size: 1.2rem; }
-        .controls-panel {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            padding: 1.5rem;
-            margin-bottom: 2rem;
-        }
-        .control-row {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-        .control-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        .control-group.full-width { grid-column: 1 / -1; }
-        label {
-            font-family: 'Cinzel', serif;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        select, input[type="text"] {
-            font-family: 'Crimson Pro', Georgia, serif;
-            font-size: 1rem;
-            padding: 0.75rem 1rem;
-            background: var(--bg-parchment);
-            border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            color: var(--text-primary);
-            transition: all 0.3s ease;
-            width: 100%;
-        }
-        select:hover, input[type="text"]:hover { border-color: var(--border-glow); }
-        select:focus, input[type="text"]:focus {
-            outline: none;
-            border-color: var(--accent-gold);
-            box-shadow: 0 0 0 3px var(--shadow-gold);
-        }
-        select {
-            cursor: pointer;
-            appearance: none;
-            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239a8b78' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
-            background-repeat: no-repeat;
-            background-position: right 1rem center;
-            padding-right: 2.5rem;
-        }
-        input[type="text"]::placeholder { color: var(--text-faded); font-style: italic; }
-        .generate-btn {
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            font-weight: 600;
-            width: 100%;
-            padding: 1rem 2rem;
-            margin-top: 0.5rem;
-            background: linear-gradient(135deg, var(--accent-gold) 0%, var(--accent-amber) 100%);
-            color: var(--bg-deep);
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-        }
-        .generate-btn:hover:not(:disabled) {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--shadow-gold);
-        }
-        .generate-btn:active:not(:disabled) { transform: translateY(0); }
-        .generate-btn:disabled { opacity: 0.6; cursor: not-allowed; }
-        .results-section { margin-top: 2rem; }
-        .results-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-        }
-        .results-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1rem;
-            color: var(--text-secondary);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-        }
-        .results-count { font-size: 0.9rem; color: var(--text-faded); }
-        .names-list { display: flex; flex-direction: column; gap: 0.375rem; }
-        .name-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.625rem 0.875rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 6px;
-            transition: all 0.2s ease;
-            animation: fadeSlideIn 0.4s ease-out backwards;
-        }
-        .name-item:hover {
-            border-color: var(--border-glow);
-            background: rgba(212, 168, 87, 0.05);
-        }
-        @keyframes fadeSlideIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .name-text {
-            font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
-            font-weight: 400;
-            color: var(--text-primary);
-            letter-spacing: 0.03em;
-        }
-        .copy-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 32px; height: 32px;
-            background: transparent;
-            border: 1px solid var(--border-subtle);
-            border-radius: 5px;
-            color: var(--text-secondary);
-            cursor: pointer;
-            transition: all 0.2s ease;
-            flex-shrink: 0;
-        }
-        .copy-btn:hover {
-            background: var(--accent-gold);
-            border-color: var(--accent-gold);
-            color: var(--bg-deep);
-        }
-        .copy-btn.copied { background: #4a7c59; border-color: #4a7c59; color: white; }
-        .copy-btn svg { width: 14px; height: 14px; }
-        .empty-state { text-align: center; padding: 4rem 2rem; color: var(--text-faded); }
-        .empty-icon { font-size: 3rem; margin-bottom: 1rem; opacity: 0.5; }
-        .empty-state p { font-size: 1.1rem; font-style: italic; }
-        footer { text-align: center; padding: 3rem 0 1rem; color: var(--text-faded); font-size: 0.9rem; }
-        .cooldown-text { font-size: 0.8rem; color: var(--text-faded); text-align: center; margin-top: 0.5rem; height: 1.2rem; }
-        .toast {
-            position: fixed;
-            bottom: 2rem;
-            left: 50%;
-            transform: translateX(-50%) translateY(100px);
-            background: var(--bg-card);
-            border: 1px solid var(--accent-gold);
-            padding: 0.75rem 1.5rem;
-            border-radius: 6px;
-            color: var(--accent-amber);
-            font-size: 0.9rem;
-            opacity: 0;
-            transition: all 0.3s ease;
-            z-index: 100;
-        }
-        .toast.show { transform: translateX(-50%) translateY(0); opacity: 1; }
-        
-        /* Ad Container Styles */
-        .ad-container {
-            margin: 1.5rem 0;
-            min-height: 90px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .ad-container.ad-banner { min-height: 90px; }
-        .ad-container.ad-rectangle { min-height: 250px; }
-        .ad-container ins { background: transparent; }
-        
-        /* FAQ Section */
-        .faq-section {
-            margin-top: 3rem;
-            padding-top: 2rem;
-            border-top: 1px solid var(--border-subtle);
-        }
-        .faq-title {
-            font-family: 'Cinzel', serif;
-            font-size: 1.5rem;
-            color: var(--accent-gold);
-            text-align: center;
-            margin-bottom: 1.5rem;
-        }
-        .faq-item {
-            background: var(--bg-card);
-            border: 1px solid var(--border-subtle);
-            border-radius: 8px;
-            margin-bottom: 0.75rem;
-            overflow: hidden;
-        }
-        .faq-question {
-            padding: 1rem 1.25rem;
-            font-family: 'Cinzel', serif;
-            font-size: 0.95rem;
-            color: var(--text-primary);
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            transition: background 0.2s ease;
-        }
-        .faq-question:hover { background: rgba(212, 168, 87, 0.05); }
-        .faq-question::after {
-            content: '+';
-            font-size: 1.25rem;
-            color: var(--accent-gold);
-            transition: transform 0.2s ease;
-        }
-        .faq-item.open .faq-question::after { transform: rotate(45deg); }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease, padding 0.3s ease;
-        }
-        .faq-item.open .faq-answer {
-            max-height: 200px;
-            padding: 0 1.25rem 1rem;
-        }
-        .faq-answer p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        
-        /* Intro Section */
-        .intro-section {
-            text-align: center;
-            margin-bottom: 2rem;
-            padding: 0 1rem;
-        }
-        .intro-section p {
-            color: var(--text-secondary);
-            font-size: 1rem;
-            line-height: 1.7;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        
-        @media (max-width: 600px) {
-            .container { padding: 1.5rem 1rem 3rem; }
-            .control-row { grid-template-columns: 1fr; }
-            .controls-panel { padding: 1.25rem; }
-            .name-text { font-size: 0.9rem; }
-            header { padding: 1.5rem 0 2rem; }
-            .logo-icon { width: 44px; height: 44px; }
-        }
+        :root{--bg-deep:#0d0b0e;--bg-parchment:#1a1714;--bg-card:#211d19;--border-subtle:#3d352c;--border-glow:#8b7355;--accent-gold:#d4a857;--accent-amber:#e8c47c;--accent-ember:#c45d3e;--accent-blue:#7da8e8;--accent-purple:#b48be0;--accent-green:#6db87d;--text-primary:#f5efe6;--text-secondary:#c4b8a8;--text-faded:#8a7d6d;--shadow-gold:rgba(212,168,87,0.15)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Crimson Pro',Georgia,serif;background:var(--bg-deep);color:var(--text-primary);min-height:100vh;line-height:1.6}
+        body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:0}
+        .ambient-glow{position:fixed;width:800px;height:800px;border-radius:50%;filter:blur(200px);opacity:0.07;pointer-events:none;z-index:0}
+        .glow-1{top:-400px;left:50%;transform:translateX(-50%);background:var(--accent-gold)}
+        .glow-2{bottom:-400px;right:-200px;background:var(--accent-ember)}
+        .container{position:relative;z-index:1;max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem}
+        header{text-align:center;padding:1.5rem 0}
+        .logo-wrapper{display:flex;align-items:center;justify-content:center;gap:0.75rem;margin-bottom:0.5rem}
+        .logo-icon{width:48px;height:48px}
+        .logo{font-family:'Cinzel',serif;font-size:clamp(1.8rem,6vw,2.5rem);font-weight:700;color:var(--accent-gold);letter-spacing:0.08em;text-shadow:0 0 40px var(--shadow-gold)}
+        .tagline{font-size:1.1rem;color:var(--text-secondary);font-style:italic}
+        .tab-nav{display:flex;gap:0.4rem;margin-bottom:1.25rem;flex-wrap:wrap;justify-content:center}
+        .tab-btn{font-family:'Cinzel',serif;font-size:0.85rem;padding:0.55rem 1rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:6px;color:var(--text-secondary);cursor:pointer;transition:all 0.2s}
+        .tab-btn:hover{border-color:var(--border-glow);color:var(--text-primary)}
+        .tab-btn.active{background:linear-gradient(135deg,var(--accent-gold),var(--accent-amber));color:var(--bg-deep);border-color:var(--accent-gold)}
+        .tab-content{display:none}.tab-content.active{display:block}
+        .controls-panel{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:1.25rem;margin-bottom:1.25rem}
+        .control-row{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;margin-bottom:0.75rem}
+        .control-row.three-col{grid-template-columns:repeat(3,1fr)}
+        .control-group{display:flex;flex-direction:column;gap:0.4rem}
+        .control-group.full-width{grid-column:1/-1}
+        label{font-family:'Cinzel',serif;font-size:0.75rem;font-weight:600;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.1em}
+        select,input[type="text"]{font-family:'Crimson Pro',serif;font-size:1rem;padding:0.6rem 0.8rem;background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;color:var(--text-primary);width:100%}
+        select:focus,input:focus{outline:none;border-color:var(--accent-gold);box-shadow:0 0 0 3px var(--shadow-gold)}
+        select{cursor:pointer;appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%239a8b78' d='M6 8L1 3h10z'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 0.75rem center;padding-right:2rem}
+        .btn-row{display:flex;gap:0.75rem;margin-top:0.5rem}
+        .generate-btn{font-family:'Cinzel',serif;font-size:0.95rem;font-weight:600;flex:1;padding:0.9rem 1.25rem;background:linear-gradient(135deg,var(--accent-gold),var(--accent-amber));color:var(--bg-deep);border:none;border-radius:6px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:all 0.2s}
+        .generate-btn:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow-gold)}
+        .generate-btn:disabled{opacity:0.6;cursor:not-allowed}
+        .secondary-btn{font-family:'Cinzel',serif;font-size:0.85rem;padding:0.9rem 1.1rem;background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;color:var(--text-secondary);cursor:pointer;transition:all 0.2s;white-space:nowrap}
+        .secondary-btn:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
+        .results-section{margin-top:1.25rem}
+        .results-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.75rem;flex-wrap:wrap;gap:0.5rem}
+        .results-title{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.1em}
+        .names-list{display:flex;flex-direction:column;gap:0.6rem}
+        .name-item{display:flex;flex-direction:column;padding:0.75rem 0.9rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:6px;transition:all 0.2s;animation:fadeIn 0.3s ease-out backwards}
+        .name-item:hover{border-color:var(--border-glow);background:rgba(212,168,87,0.05)}
+        @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+        .name-row{display:flex;justify-content:space-between;align-items:center;gap:0.5rem}
+        .name-main{display:flex;align-items:baseline;gap:0.75rem;flex-wrap:wrap;flex:1;min-width:0}
+        .name-text{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--text-primary);letter-spacing:0.02em}
+        .name-pronunciation{font-size:0.9rem;color:var(--accent-blue);font-style:italic}
+        .name-meaning{font-size:0.9rem;color:var(--accent-purple)}
+        .name-actions{display:flex;gap:0.3rem;flex-shrink:0}
+        .name-preview{margin-top:0.6rem;padding-top:0.6rem;border-top:1px solid var(--border-subtle)}
+        .name-preview-text{font-size:0.95rem;color:var(--text-secondary);line-height:1.6;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+        .name-expand{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.5rem;font-size:0.8rem;color:var(--accent-gold);cursor:pointer;background:none;border:none;padding:0;font-family:'Cinzel',serif;text-transform:uppercase;letter-spacing:0.05em}
+        .name-expand:hover{color:var(--accent-amber);text-decoration:underline}
+        .copy-btn{display:flex;align-items:center;justify-content:center;width:34px;height:34px;background:transparent;border:1px solid var(--border-subtle);border-radius:5px;color:var(--text-secondary);cursor:pointer;transition:all 0.2s}
+        .copy-btn:hover{background:var(--accent-gold);border-color:var(--accent-gold);color:var(--bg-deep)}
+        .copy-btn.copied{background:var(--accent-green);border-color:var(--accent-green);color:white}
+        .copy-btn svg{width:16px;height:16px}
+        .character-card{background:var(--bg-card);border:1px solid var(--accent-gold);border-radius:10px;padding:1.35rem;margin-top:1.25rem}
+        .character-card h3{font-family:'Cinzel',serif;font-size:1.35rem;color:var(--accent-gold);margin-bottom:0.25rem}
+        .character-subtitle{font-size:1rem;color:var(--accent-amber);margin-bottom:0.85rem}
+        .character-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0.65rem;margin-bottom:0.85rem}
+        .stat-item{background:var(--bg-parchment);padding:0.5rem 0.7rem;border-radius:5px}
+        .stat-label{font-size:0.7rem;color:var(--text-faded);text-transform:uppercase;letter-spacing:0.1em}
+        .stat-value{font-family:'Cinzel',serif;font-size:1rem;color:var(--text-primary)}
+        .character-backstory{background:var(--bg-parchment);padding:1.1rem;border-radius:6px;border-left:3px solid var(--accent-gold);max-height:400px;overflow-y:auto}
+        .character-backstory p{font-size:1rem;color:var(--text-secondary);line-height:1.75;margin-bottom:0.85rem}
+        .character-backstory p:last-child{margin-bottom:0}
+        .character-actions{display:flex;gap:0.7rem;margin-top:1rem}
+        .pack-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:0.9rem;margin-top:0.9rem}
+        .pack-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:1rem;cursor:pointer;transition:all 0.2s}
+        .pack-card:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
+        .pack-icon{font-size:1.85rem;margin-bottom:0.45rem}
+        .pack-name{font-family:'Cinzel',serif;font-size:1rem;color:var(--text-primary);margin-bottom:0.25rem}
+        .pack-desc{font-size:0.9rem;color:var(--text-secondary)}
+        .race-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(105px,1fr));gap:0.65rem;margin-top:0.9rem}
+        .race-card{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:0.85rem;text-align:center;cursor:pointer;transition:all 0.2s}
+        .race-card:hover,.race-card.active{border-color:var(--accent-gold);background:rgba(212,168,87,0.08)}
+        .race-icon{font-size:1.6rem;margin-bottom:0.35rem}
+        .race-name{font-family:'Cinzel',serif;font-size:0.9rem;color:var(--text-primary)}
+        .empty-state{text-align:center;padding:2.5rem 1.5rem;color:var(--text-faded)}
+        .empty-icon{font-size:2.25rem;margin-bottom:0.6rem;opacity:0.5}
+        .empty-state p{font-size:1.05rem;font-style:italic}
+        .info-box{background:rgba(125,168,232,0.12);border:1px solid rgba(125,168,232,0.35);border-radius:6px;padding:0.75rem 1rem;margin-bottom:0.9rem;font-size:0.95rem;color:var(--accent-blue)}
+        .ad-container{margin:1.25rem 0;min-height:90px;display:flex;align-items:center;justify-content:center}
+        .faq-section{margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border-subtle)}
+        .faq-title{font-family:'Cinzel',serif;font-size:1.4rem;color:var(--accent-gold);text-align:center;margin-bottom:1.1rem}
+        .faq-item{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;margin-bottom:0.55rem;overflow:hidden}
+        .faq-question{padding:0.9rem 1rem;font-family:'Cinzel',serif;font-size:0.95rem;font-weight:400;color:var(--text-primary);cursor:pointer;display:flex;justify-content:space-between;align-items:center;margin:0}
+        .faq-question:hover{background:rgba(212,168,87,0.05)}
+        .faq-question::after{content:'+';font-size:1.2rem;color:var(--accent-gold);transition:transform 0.2s}
+        .faq-item.open .faq-question::after{transform:rotate(45deg)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s}
+        .faq-item.open .faq-answer{max-height:200px;padding:0 1rem 0.9rem}
+        .faq-answer p{color:var(--text-secondary);font-size:0.95rem;line-height:1.6}
+        .intro-section{text-align:center;margin-bottom:1.25rem}
+        .intro-section p{color:var(--text-secondary);font-size:1.05rem;max-width:580px;margin:0 auto;line-height:1.6}
+        footer{text-align:center;padding:2rem 0 1rem;color:var(--text-faded);font-size:0.9rem}
+        .toast{position:fixed;bottom:1.5rem;left:50%;transform:translateX(-50%) translateY(100px);background:var(--bg-card);border:1px solid var(--accent-gold);padding:0.6rem 1.1rem;border-radius:6px;color:var(--accent-amber);font-size:0.8rem;opacity:0;transition:all 0.3s;z-index:100}
+        .toast.show{transform:translateX(-50%) translateY(0);opacity:1}
+        .modal-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.85);z-index:200;align-items:center;justify-content:center;padding:1rem}
+        .modal-overlay.show{display:flex}
+        .modal{background:var(--bg-card);border:1px solid var(--accent-gold);border-radius:12px;max-width:600px;width:100%;max-height:85vh;overflow:hidden;display:flex;flex-direction:column}
+        .modal-header{display:flex;justify-content:space-between;align-items:center;padding:1.1rem 1.35rem;border-bottom:1px solid var(--border-subtle)}
+        .modal-title{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--accent-gold)}
+        .modal-close{background:none;border:none;color:var(--text-secondary);font-size:1.75rem;cursor:pointer;line-height:1;padding:0}
+        .modal-close:hover{color:var(--text-primary)}
+        .modal-body{padding:1.35rem;overflow-y:auto;flex:1}
+        .modal-body p{font-size:1rem;color:var(--text-secondary);line-height:1.75;margin-bottom:0.85rem}
+        .modal-body p:last-child{margin-bottom:0}
+        .modal-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0.6rem;margin-bottom:1.1rem}
+        .modal-stat{background:var(--bg-parchment);padding:0.5rem 0.7rem;border-radius:5px}
+        .modal-stat-label{font-size:0.7rem;color:var(--text-faded);text-transform:uppercase;letter-spacing:0.1em}
+        .modal-stat-value{font-family:'Cinzel',serif;font-size:1rem;color:var(--text-primary)}
+        .modal-actions{display:flex;gap:0.75rem;padding:1.1rem 1.35rem;border-top:1px solid var(--border-subtle)}
+        @media(max-width:600px){.container{padding:1.25rem 1rem 2.5rem}.control-row,.control-row.three-col{grid-template-columns:1fr 1fr}.controls-panel{padding:1rem}.name-text{font-size:1rem}.name-pronunciation,.name-meaning{font-size:0.8rem}.name-preview-text{font-size:0.9rem}.logo-icon{width:40px;height:40px}.logo{font-size:1.6rem}.btn-row{flex-direction:column}.character-stats{grid-template-columns:1fr}.tab-btn{font-size:0.75rem;padding:0.5rem 0.8rem}.modal{max-width:95%}.modal-title{font-size:1.15rem}.modal-body p{font-size:0.95rem}}
     </style>
 </head>
 <body>
@@ -436,569 +302,709 @@
             <p class="tagline">Forge legendary names for your world</p>
         </header>
         
-        <!-- Ad Placement: Top Banner -->
-        <div class="ad-container ad-banner" id="ad-top">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3396661218169624"
-                data-ad-slot="auto"
-                data-ad-format="horizontal"
-                data-full-width-responsive="true"></ins>
+        <!-- Ad Placement: Top Banner (disabled during AdSense review)
+        <div class="ad-container" id="ad-top">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3396661218169624" data-ad-slot="auto" data-ad-format="horizontal" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+        -->
         
-        <!-- SEO Intro Section -->
         <section class="intro-section">
-            <p>Create unique <strong>fantasy names</strong> for your characters, places, and creatures. Perfect for <strong>D&D campaigns</strong>, novels, anime fan fiction, sci-fi stories, and RPG adventures. Choose your style and generate instantly!</p>
+            <p>Create unique <strong>fantasy names</strong> for your <strong>D&D characters</strong>, <strong>elves</strong>, <strong>dwarves</strong>, kingdoms, and creatures. Each name includes <strong>pronunciation guides</strong>, meanings, and optional <strong>character backstories</strong>. Perfect for tabletop RPGs, novels, and worldbuilding.</p>
         </section>
-        <div class="controls-panel">
-            <div class="control-row">
-                <div class="control-group">
-                    <label for="category">Category</label>
-                    <select id="category">
-                        <option value="characters">Characters</option>
-                        <option value="places">Places</option>
-                        <option value="creatures">Creatures</option>
-                    </select>
+        
+        <nav class="tab-nav">
+            <button class="tab-btn active" data-tab="generator">Name Generator</button>
+            <button class="tab-btn" data-tab="races">Race Names</button>
+            <button class="tab-btn" data-tab="packs">Name Packs</button>
+            <button class="tab-btn" data-tab="character">Character Creator</button>
+        </nav>
+        
+        <!-- Generator Tab -->
+        <div class="tab-content active" id="tab-generator">
+            <div class="controls-panel">
+                <div class="control-row">
+                    <div class="control-group">
+                        <label>Category</label>
+                        <select id="category">
+                            <option value="characters">Characters</option>
+                            <option value="places">Places</option>
+                            <option value="creatures">Creatures</option>
+                            <option value="kingdoms">Kingdoms</option>
+                            <option value="ships">Ships</option>
+                            <option value="taverns">Taverns & Inns</option>
+                            <option value="weapons">Weapons</option>
+                            <option value="spells">Spells</option>
+                            <option value="guilds">Guilds</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Style</label>
+                        <select id="style">
+                            <option value="fantasy">Fantasy</option>
+                            <option value="dnd">D&D / High Fantasy</option>
+                            <option value="anime">Anime / Japanese</option>
+                            <option value="scifi">Sci-Fi</option>
+                            <option value="medieval">Medieval</option>
+                            <option value="mythological">Mythological</option>
+                            <option value="dark">Dark / Gothic</option>
+                            <option value="lovecraftian">Lovecraftian</option>
+                            <option value="steampunk">Steampunk</option>
+                            <option value="pirate">Pirate</option>
+                            <option value="norse">Norse / Viking</option>
+                            <option value="celtic">Celtic</option>
+                            <option value="arabic">Arabic / Persian</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="control-group">
-                    <label for="style">Style</label>
-                    <select id="style">
-                        <option value="fantasy">Fantasy</option>
-                        <option value="dnd">D&D / High Fantasy</option>
-                        <option value="anime">Anime / Japanese</option>
-                        <option value="scifi">Sci-Fi</option>
-                        <option value="medieval">Medieval</option>
-                        <option value="mythological">Mythological</option>
-                        <option value="dark">Dark / Gothic</option>
-                    </select>
+                <div class="control-row three-col" id="charOptions">
+                    <div class="control-group">
+                        <label>Gender</label>
+                        <select id="gender">
+                            <option value="any">Any</option>
+                            <option value="masculine">Masculine</option>
+                            <option value="feminine">Feminine</option>
+                            <option value="neutral">Neutral</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Length</label>
+                        <select id="length">
+                            <option value="any">Any</option>
+                            <option value="short">Short</option>
+                            <option value="medium">Medium</option>
+                            <option value="long">Long</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>Results</label>
+                        <select id="count">
+                            <option value="5">5</option>
+                            <option value="10" selected>10</option>
+                            <option value="20">20</option>
+                            <option value="50">50</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="control-row">
+                    <div class="control-group full-width">
+                        <label>Keywords (optional)</label>
+                        <input type="text" id="keywords" placeholder='e.g. "Elf", "Fire", "Shadow"'>
+                    </div>
+                </div>
+                <div class="btn-row">
+                    <button class="generate-btn" id="generateBtn">Generate Names</button>
+                    <button class="secondary-btn" id="copyAllBtn" style="display:none;">Copy All</button>
                 </div>
             </div>
-            <div class="control-row">
-                <div class="control-group">
-                    <label for="nameType">Name Type</label>
-                    <select id="nameType">
-                        <option value="any">Any</option>
-                        <option value="first">First Name Only</option>
-                        <option value="full">Full Name</option>
-                        <option value="title">With Title/Epithet</option>
-                        <option value="alias">Alias / Nickname</option>
-                    </select>
+            <div class="results-section">
+                <div class="results-header" id="resultsHeader" style="display:none;">
+                    <span class="results-title">Generated Names</span>
+                    <span id="resultsCount"></span>
                 </div>
-                <!-- Place name types (hidden by default) -->
-                <div class="control-group" id="placeTypeGroup" style="display:none;">
-                    <label for="placeType">Name Type</label>
-                    <select id="placeType">
-                        <option value="any">Any</option>
-                        <option value="settlement">Settlement</option>
-                        <option value="landmark">Landmark / Feature</option>
-                        <option value="region">Region / Territory</option>
-                        <option value="structure">Structure / Building</option>
-                        <option value="sacred">Sacred / Mystical</option>
-                    </select>
-                </div>
-                <!-- Creature name types (hidden by default) -->
-                <div class="control-group" id="creatureTypeGroup" style="display:none;">
-                    <label for="creatureType">Name Type</label>
-                    <select id="creatureType">
-                        <option value="any">Any</option>
-                        <option value="species">Species Name</option>
-                        <option value="individual">Individual Name</option>
-                        <option value="titled">With Title</option>
-                        <option value="beast">Beast / Monster</option>
-                        <option value="legendary">Legendary Being</option>
-                    </select>
-                </div>
-                <div class="control-group">
-                    <label for="tone">Tone</label>
-                    <select id="tone">
-                        <option value="any">Any</option>
-                        <option value="heroic">Heroic</option>
-                        <option value="mysterious">Mysterious</option>
-                        <option value="whimsical">Whimsical</option>
-                        <option value="menacing">Menacing</option>
-                        <option value="elegant">Elegant</option>
-                        <option value="ancient">Ancient</option>
-                    </select>
-                </div>
-            </div>
-            <div class="control-row">
-                <div class="control-group full-width">
-                    <label for="keywords">Keywords (optional)</label>
-                    <input type="text" id="keywords" placeholder='e.g. "Elf", "Samurai", "Fire", "Shadow"'>
-                </div>
-            </div>
-            <button class="generate-btn" id="generateBtn">Generate Names</button>
-            <div class="cooldown-text" id="cooldownText"></div>
-        </div>
-        <div class="divider"><span class="divider-icon">⚔</span></div>
-        <div class="results-section">
-            <div class="results-header" id="resultsHeader" style="display: none;">
-                <span class="results-title">Generated Names</span>
-                <span class="results-count" id="resultsCount"></span>
-            </div>
-            <div id="resultsContainer">
-                <div class="empty-state">
-                    <div class="empty-icon">📜</div>
-                    <p>Choose your preferences and generate names</p>
+                <div id="resultsContainer">
+                    <div class="empty-state"><div class="empty-icon">📜</div><p>Choose your preferences and generate names</p></div>
                 </div>
             </div>
         </div>
         
-        <!-- Ad Placement: Below Results -->
-        <div class="ad-container ad-rectangle" id="ad-bottom">
-            <ins class="adsbygoogle"
-                style="display:block"
-                data-ad-client="ca-pub-3396661218169624"
-                data-ad-slot="auto"
-                data-ad-format="rectangle"
-                data-full-width-responsive="true"></ins>
+        <!-- Race Names Tab -->
+        <div class="tab-content" id="tab-races">
+            <div class="info-box">Select a race to generate names specifically tailored to that fantasy race.</div>
+            <div class="race-grid" id="raceGrid">
+                <div class="race-card" data-race="elf"><div class="race-icon">🧝</div><div class="race-name">Elf</div></div>
+                <div class="race-card" data-race="dwarf"><div class="race-icon">⛏️</div><div class="race-name">Dwarf</div></div>
+                <div class="race-card" data-race="orc"><div class="race-icon">👹</div><div class="race-name">Orc</div></div>
+                <div class="race-card" data-race="human"><div class="race-icon">👤</div><div class="race-name">Human</div></div>
+                <div class="race-card" data-race="halfling"><div class="race-icon">🦶</div><div class="race-name">Halfling</div></div>
+                <div class="race-card" data-race="gnome"><div class="race-icon">🎩</div><div class="race-name">Gnome</div></div>
+                <div class="race-card" data-race="tiefling"><div class="race-icon">😈</div><div class="race-name">Tiefling</div></div>
+                <div class="race-card" data-race="dragonborn"><div class="race-icon">🐉</div><div class="race-name">Dragonborn</div></div>
+                <div class="race-card" data-race="vampire"><div class="race-icon">🧛</div><div class="race-name">Vampire</div></div>
+                <div class="race-card" data-race="angel"><div class="race-icon">👼</div><div class="race-name">Angel</div></div>
+                <div class="race-card" data-race="demon"><div class="race-icon">👿</div><div class="race-name">Demon</div></div>
+                <div class="race-card" data-race="fairy"><div class="race-icon">🧚</div><div class="race-name">Fairy</div></div>
+            </div>
+            <div class="controls-panel" style="margin-top:1rem;">
+                <div class="control-row three-col">
+                    <div class="control-group"><label>Gender</label><select id="raceGender"><option value="any">Any</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option></select></div>
+                    <div class="control-group"><label>Results</label><select id="raceCount"><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option></select></div>
+                    <div class="control-group"><label>&nbsp;</label><button class="generate-btn" id="generateRaceBtn" style="padding:0.55rem;">Generate</button></div>
+                </div>
+            </div>
+            <div id="raceResultsContainer" style="margin-top:1rem;"></div>
+        </div>
+        
+        <!-- Name Packs Tab -->
+        <div class="tab-content" id="tab-packs">
+            <div class="info-box">Name packs are curated collections for specific themes and scenarios.</div>
+            <div class="pack-grid" id="packGrid">
+                <div class="pack-card" data-pack="villains"><div class="pack-icon">🦹</div><div class="pack-name">Villains Pack</div><div class="pack-desc">Dark lords and sinister foes</div></div>
+                <div class="pack-card" data-pack="heroes"><div class="pack-icon">⚔️</div><div class="pack-name">Heroes Pack</div><div class="pack-desc">Brave warriors and champions</div></div>
+                <div class="pack-card" data-pack="royalty"><div class="pack-icon">👑</div><div class="pack-name">Royal Court</div><div class="pack-desc">Kings, queens, and nobles</div></div>
+                <div class="pack-card" data-pack="wizards"><div class="pack-icon">🧙</div><div class="pack-name">Wizards & Mages</div><div class="pack-desc">Archmages and mystics</div></div>
+                <div class="pack-card" data-pack="rogues"><div class="pack-icon">🗡️</div><div class="pack-name">Rogues & Thieves</div><div class="pack-desc">Assassins and shadows</div></div>
+                <div class="pack-card" data-pack="merchants"><div class="pack-icon">💰</div><div class="pack-name">Merchants & NPCs</div><div class="pack-desc">Shopkeepers and commoners</div></div>
+                <div class="pack-card" data-pack="party"><div class="pack-icon">🎭</div><div class="pack-name">Adventuring Party</div><div class="pack-desc">A balanced group of 5</div></div>
+                <div class="pack-card" data-pack="monsters"><div class="pack-icon">👾</div><div class="pack-name">Monsters & Beasts</div><div class="pack-desc">Legendary creatures</div></div>
+            </div>
+            <div id="packResultsContainer" style="margin-top:1.25rem;"></div>
+        </div>
+        
+        <!-- Character Creator Tab -->
+        <div class="tab-content" id="tab-character">
+            <div class="info-box">Generate a complete character with name, race, class, and backstory.</div>
+            <div class="controls-panel">
+                <div class="control-row three-col">
+                    <div class="control-group"><label>Race</label><select id="charRace"><option value="random">Random</option><option value="human">Human</option><option value="elf">Elf</option><option value="dwarf">Dwarf</option><option value="halfling">Halfling</option><option value="gnome">Gnome</option><option value="tiefling">Tiefling</option><option value="dragonborn">Dragonborn</option></select></div>
+                    <div class="control-group"><label>Class</label><select id="charClass"><option value="random">Random</option><option value="warrior">Warrior</option><option value="mage">Mage</option><option value="rogue">Rogue</option><option value="cleric">Cleric</option><option value="ranger">Ranger</option><option value="paladin">Paladin</option><option value="bard">Bard</option></select></div>
+                    <div class="control-group"><label>Gender</label><select id="charGender"><option value="random">Random</option><option value="masculine">Masculine</option><option value="feminine">Feminine</option></select></div>
+                </div>
+                <div class="btn-row"><button class="generate-btn" id="generateCharBtn">Generate Character</button></div>
+            </div>
+            <div id="characterContainer"></div>
+        </div>
+        
+        <!-- Ad Placement: Bottom Rectangle (disabled during AdSense review)
+        <div class="ad-container" id="ad-bottom">
+            <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-3396661218169624" data-ad-slot="auto" data-ad-format="rectangle" data-full-width-responsive="true"></ins>
             <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
         </div>
+        -->
         
-        <!-- FAQ Section for SEO -->
         <section class="faq-section">
             <h2 class="faq-title">Frequently Asked Questions</h2>
             
             <article class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">How does the fantasy name generator work?</div>
-                <div class="faq-answer">
-                    <p>MythicNames uses sophisticated algorithms combining syllable patterns, linguistic rules, and style-specific naming conventions to generate unique, authentic-sounding names for your characters, places, and creatures.</p>
-                </div>
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">How does the MythicNames fantasy name generator work?</h3>
+                <div class="faq-answer"><p>MythicNames uses sophisticated algorithms combining syllable patterns, linguistic rules, and style-specific naming conventions to generate unique, authentic-sounding fantasy names. Each name comes with a pronunciation guide and meaning. You can also generate full character backstories with factions, secrets, and personality traits.</p></div>
             </article>
             
             <article class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Can I use these names for my D&D campaign?</div>
-                <div class="faq-answer">
-                    <p>Yes! All names generated by MythicNames are completely free to use for any purpose, including D&D campaigns, novels, video games, tabletop RPGs, and other creative projects. No attribution required.</p>
-                </div>
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">Can I use these names for my D&D campaign or commercial project?</h3>
+                <div class="faq-answer"><p>Yes! All generated names are completely free to use for any purpose, including D&D campaigns, Pathfinder games, novels, video games, and commercial projects. The names are procedurally generated and not copyrighted.</p></div>
             </article>
             
             <article class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">What styles of names can I generate?</div>
-                <div class="faq-answer">
-                    <p>MythicNames supports multiple styles including classic Fantasy, D&D/High Fantasy, Anime/Japanese, Sci-Fi, Medieval, Mythological, and Dark/Gothic themes. Each style has unique syllable patterns and naming conventions.</p>
-                </div>
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">What races can I generate names for?</h3>
+                <div class="faq-answer"><p>MythicNames supports 12 fantasy races: Elf, Dwarf, Orc, Human, Halfling, Gnome, Tiefling, Dragonborn, Vampire, Angel, Demon, and Fairy. Each race has unique naming patterns with masculine, feminine, and neutral gender options.</p></div>
             </article>
             
             <article class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Can I generate names for specific races like elves or dwarves?</div>
-                <div class="faq-answer">
-                    <p>Yes! Use the Keywords field to specify races or themes like "Elf", "Dwarf", "Orc", "Dragon", "Samurai", or "Vampire". The generator will incorporate these themes into the names it creates.</p>
-                </div>
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">What types of names can I generate besides character names?</h3>
+                <div class="faq-answer"><p>Beyond character names, you can generate: Kingdoms and empires, Places and landmarks, Taverns and inns, Ships and vessels, Weapons with epic titles, Spells and magic abilities, Guilds and organizations, plus Creatures and monsters.</p></div>
             </article>
             
             <article class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">Is this name generator free to use?</div>
-                <div class="faq-answer">
-                    <p>Absolutely! MythicNames is 100% free with no limits on how many names you can generate. Bookmark us and come back whenever you need inspiration for your creative projects.</p>
-                </div>
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">How does the backstory generator work?</h3>
+                <div class="faq-answer"><p>Each generated name includes a backstory preview. Click "Read full backstory" to see a complete character history including: origin, childhood, defining events, personality traits, faction affiliations, secrets, flaws, and motivations. Regenerate until you find one you love!</p></div>
+            </article>
+            
+            <article class="faq-item">
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">What name styles are available?</h3>
+                <div class="faq-answer"><p>MythicNames offers 13 naming styles: Fantasy, D&D/High Fantasy, Anime/Japanese, Sci-Fi, Medieval, Mythological, Dark/Gothic, Lovecraftian, Steampunk, Pirate, Norse/Viking, Celtic, and Arabic/Persian. Each produces names with authentic linguistic patterns.</p></div>
+            </article>
+            
+            <article class="faq-item">
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">What do the pronunciation guides mean?</h3>
+                <div class="faq-answer"><p>Each name includes a phonetic pronunciation guide. Stressed syllables appear in CAPITALS. For example, "Aelindra" shows as "ay-LIN-drah", indicating the middle syllable is emphasized. This helps players pronounce names consistently.</p></div>
+            </article>
+            
+            <article class="faq-item">
+                <h3 class="faq-question" onclick="this.parentElement.classList.toggle('open')">Is MythicNames free to use?</h3>
+                <div class="faq-answer"><p>Yes, MythicNames is completely free with no registration required. Generate unlimited names, backstories, and characters. All features including race-specific generators, name packs, and the character creator are 100% free.</p></div>
             </article>
         </section>
         
-        <footer><p>© 2025 MythicNames — Free Fantasy Name Generator for Writers, Game Masters & Creators</p></footer>
+        <footer>
+            <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator for D&D, Pathfinder, Writers & Game Masters</p>
+            <p style="margin-top:0.5rem;font-size:0.8rem;">Elf Names • Dwarf Names • Orc Names • Character Backstories • Kingdom Names • Tavern Names</p>
+        </footer>
     </div>
-    <div class="toast" id="toast">Name copied to clipboard</div>
+    <div class="toast" id="toast">Copied to clipboard</div>
+    <div class="modal-overlay" id="backstoryModal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 class="modal-title" id="modalTitle">Character Backstory</h3>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+            <div class="modal-actions">
+                <button class="secondary-btn" onclick="copyBackstory()">Copy Backstory</button>
+                <button class="generate-btn" onclick="regenerateBackstory()" style="flex:1">Regenerate</button>
+            </div>
+        </div>
+    </div>
 
-    <script>
-    const NameData = {
-        syllables: {
-            fantasy: {
-                prefixes: ['Ael','Ara','Bal','Cae','Dar','Eld','Fae','Gal','Hel','Ith','Jas','Kal','Lor','Mal','Nar','Ond','Pyr','Quen','Ral','Syl','Tar','Ul','Val','Wyr','Xan','Yar','Zeph'],
-                middles: ['an','ar','el','en','ia','il','ir','on','or','ra','ri','ro','th','ur','ys','ae','ei','au','ow','al','am','as','ax','ez'],
-                suffixes: ['a','ac','ad','ae','al','am','an','ar','as','ax','el','en','er','es','ia','ic','id','il','im','in','ion','ir','is','ius','ix','on','or','os','ra','ric','rin','ron','rus','th','um','un','ur','us','yn']
-            },
-            dnd: {
-                prefixes: ['Aer','Baldr','Crom','Drak','Elar','Fend','Grim','Helm','Iron','Jorn','Krag','Luth','Mord','Nord','Orl','Raven','Storm','Thor','Ulr','Vorn','Wulf','Xorn','Yond','Zorn'],
-                middles: ['ak','an','ar','ax','dr','ek','gn','gr','kr','ld','nd','ng','nk','rd','rg','rk','rm','rn','sk','st','th','tr','ulf','und'],
-                suffixes: ['ack','ald','an','and','ar','ard','ax','bane','born','brand','dar','dor','en','er','gard','grim','guard','heim','ic','in','ir','kar','mir','mund','nar','or','orn','rad','ric','rim','rin','rock','ron','shield','son','th','thar','thor','ur','urn','vald','var','wulf','wyn']
-            },
-            anime: {
-                prefixes: ['Aki','Ao','Haru','Hika','Hiro','Ichi','Izu','Kai','Kazu','Ken','Kira','Ko','Kuro','Masa','Mika','Mina','Mitsu','Natsu','Nobu','Rei','Rin','Ryu','Saku','Shin','Shiro','Sora','Taka','Teru','Yasu','Yori','Yu','Yuki','Yumi'],
-                middles: ['chi','da','fu','ga','gi','go','ha','hi','ho','ji','ka','ke','ki','ko','ku','ma','me','mi','mo','mu','na','ne','ni','no','ra','re','ri','ro','ru','sa','se','shi','so','su','ta','te','to','tsu','ya','yo','yu','za','zo'],
-                suffixes: ['a','chi','e','go','ha','hei','hi','hiko','hime','hiro','i','ji','ka','ke','ki','ko','ma','maru','mi','moto','na','ne','no','nori','nosuke','o','ra','ri','ro','rou','ru','saki','shi','shiro','suke','ta','taro','to','ya','yo','yoshi','yu','yuki','zo']
-            },
-            scifi: {
-                prefixes: ['Aex','Bex','Cyr','Dax','Exa','Fyx','Gex','Hex','Ixa','Jax','Kex','Lex','Max','Nex','Orix','Pax','Qex','Rex','Syx','Tex','Ux','Vex','Wex','Xel','Yex','Zax','Zyr','Nova','Nyx','Astra','Neo','Vector','Zero','Alpha','Omega','Delta','Sigma'],
-                middles: ['ax','ex','ix','ox','ux','yr','an','en','on','ar','er','or','al','el','il','ol','ul','tr','dr','pr','kr','zr','xt','ct'],
-                suffixes: ['a','ax','ex','ix','on','or','us','is','os','an','en','in','ar','er','ir','al','el','x','z','yx','tron','nex','lex','tech','core','byte','node','link','wave','flux','prime','null']
-            },
-            medieval: {
-                prefixes: ['Ald','Bald','Ced','Dun','Ed','Frid','God','Had','Ivo','Jon','Kon','Leon','Mald','Nor','Os','Perc','Quin','Rod','Sted','Theo','Ulb','Vald','Wald','Xav','Yvor','Zach'],
-                middles: ['al','an','ar','bert','brecht','el','en','er','fried','hard','helm','man','mar','mund','rad','ric','wald','ward','win'],
-                suffixes: ['ald','an','and','ard','art','bert','brand','ed','er','ert','fried','gard','hard','helm','ic','in','ine','ius','man','mar','mond','mund','rad','ram','ric','rich','stan','ulf','us','wald','ward','wig','win','wolf']
-            },
-            mythological: {
-                prefixes: ['Aeon','Ares','Athe','Chro','Dae','Eos','Gaia','Hel','Hyper','Io','Kron','Leth','Mnem','Neme','Nym','Oly','Pan','Perse','Prome','Pyth','Selen','Styx','Teth','Titan','Ura','Xeno','Zeph'],
-                middles: ['ae','ai','au','ea','ei','eo','eu','ia','io','iu','oa','oe','oi','ou','ua','ue','ui','yn','yr','ys'],
-                suffixes: ['a','ae','aeon','aia','an','ane','as','ea','eia','ene','eon','es','eus','ia','ias','ides','ine','io','ion','ios','is','ius','ne','nia','nos','nus','on','one','or','os','ous','s','sia','sis','te','tes','theus','thos','thus','ton','us','yx']
-            },
-            dark: {
-                prefixes: ['Abys','Bane','Blak','Carn','Crypt','Deth','Drac','Dread','Fell','Grav','Grim','Mala','Mal','Mor','Mort','Nec','Nox','Nul','Ombr','Phan','Rav','Scor','Shad','Skel','Tomb','Umr','Vex','Vile','Void','Wych','Xul','Zul'],
-                middles: ['ak','al','an','ar','as','ax','dr','ek','er','eth','ex','gr','ith','ix','kr','or','oth','rr','sk','th','tr','ul','ur','ux','yr','zz'],
-                suffixes: ['ach','ak','al','an','ane','ar','as','ax','bane','born','dar','doom','dread','ek','en','er','eth','ex','fang','grim','ik','in','ir','is','ith','ix','mor','morn','mus','nox','ok','on','or','os','oth','shade','shadow','thorn','uk','ul','ur','us','ux','wraith','yx']
-            }
-        },
-        placeTypes: {
-            settlement: ['Village','Town','City','Haven','Hold','Stead','Borough','Hamlet','Township','Outpost'],
-            landmark: ['Peak','Falls','Canyon','Cliff','Ridge','Gorge','Valley','Mesa','Bluff','Crag'],
-            region: ['Reaches','Expanse','Territory','Domain','Province','Wilds','Frontier','Borderlands','Heartland','Realm'],
-            structure: ['Tower','Fortress','Citadel','Keep','Castle','Bastion','Stronghold','Palace','Temple','Sanctuary'],
-            sacred: ['Shrine','Sanctum','Oracle','Altar','Grove','Spring','Wellspring','Nexus','Threshold','Asylum']
-        },
-        creatureTypes: {
-            species: { suffixes: ['kin','folk','spawn','breed','strain','type','born','blood','touched'] },
-            individual: { useName: true },
-            titled: { titles: ['the Devourer','the Ancient','the Eternal','the Primordial','the Awakened','the Undying','the Colossal','the Venerable','the Dreaded','the Magnificent','the Terrible','the Legendary'] },
-            beast: { prefixes: ['Greater','Lesser','Elder','Young','Alpha','Dire','Savage','Feral','Rabid','Monstrous'] },
-            legendary: { prefixes: ['Mythic','Divine','Celestial','Infernal','Primordial','Eternal','Immortal','Ancient','Legendary','Epic'], suffixes: [' of Legend',' of Myth',' the Destroyer',' the Creator',' the Eternal',' the Undying'] }
-        },
-        places: {
-            fantasy: {
-                prefixes: ['Silver','Crystal','Moon','Star','Sun','Shadow','Mist','Dawn','Dusk','Storm','Thunder','Frost','Fire','Iron','Golden','Emerald','Dragon','Phoenix','Raven','Wolf','Ancient','Eternal','Hidden','Lost'],
-                suffixes: ['vale','dale','hollow','haven','hold','keep','spire','tower','gate','bridge','ford','port','wood','grove','glen','moor','fell','peak','mount','cliff','shore','isle','bay','reach','realm']
-            },
-            dnd: {
-                prefixes: ['Sword','Shield','Hammer','Axe','Blade','Arrow','Helm','Crown','Battle','War','Blood','Stone','Iron','Steel','Mithril','Obsidian','Orc','Goblin','Dwarf','Elf','Dragon','Demon'],
-                suffixes: ['forge','hold','helm','guard','watch','wall','gate','pass','gorge','pit','mine','delve','deep','hall','barrow','tomb','crypt','dungeon','fortress','citadel','bastion','stronghold','keep','castle','spire','peak']
-            },
-            anime: {
-                prefixes: ['Sakura','Kaze','Yuki','Hana','Tsuki','Hoshi','Kumo','Ame','Nami','Yama','Mori','Kawa','Umi','Sora','Hikari','Kage','Honoo','Mizu','Tetsu','Kin','Gin','Aka','Ao','Shiro','Kuro','Tora','Ryu'],
-                suffixes: [' Village',' Town',' City',' Temple',' Shrine',' Academy',' Castle',' Palace',' Garden',' Forest',' Mountain',' Valley',' Island',' Bay',' Tower',' Hall','-mura','-cho','-shi','-ji','-jinja','-jo','-yama','-shima']
-            },
-            scifi: {
-                prefixes: ['Neo','Nova','Cyber','Tech','Data','Quantum','Plasma','Ion','Photon','Omega','Alpha','Delta','Sigma','Vector','Matrix','Digital','Orbital','Stellar','Solar','Lunar','Astro','Xeno','Exo','Hyper'],
-                suffixes: [' Station',' Colony',' Outpost',' Hub',' Nexus',' Core',' Prime',' Central',' Command',' Base',' Port',' Array',' Grid',' Sector',' Zone',' Quadrant','-7','-9','-X','-Prime','-Alpha',' Megacity',' Arcology',' Citadel']
-            },
-            medieval: {
-                prefixes: ['King\'s','Queen\'s','Lord\'s','Baron\'s','Duke\'s','Knight\'s','Abbey','Castle','Fort','Old','New','Great','Little','Upper','Lower','East','West','North','South','White','Black','Red','Green'],
-                suffixes: ['ton','ham','bury','ford','bridge','wick','stead','worth','field','brook','well','spring','wood','hurst','leigh','ley','thorpe','by','caster','chester','mouth','minster','borough',' Castle',' Abbey',' Manor',' Hall',' Keep']
-            },
-            mythological: {
-                prefixes: ['Olymp','Elys','Hades\'','Zeus\'','Athena\'s','Apollo\'s','Poseidon\'s','Titan','Gorgon','Cyclop','Centaur','Siren','Nymph','Oracle','Sacred','Divine','Eternal','Celestial','Golden','Silver','Bronze','Marble'],
-                suffixes: ['us','ia','ion','ium','eia',' Mount',' Isle',' Realm',' Domain',' Gardens',' Temple',' Sanctuary',' Grotto',' Labyrinth',' Citadel',' Gate',' River',' Sea',' Grove',' Spring',' Palace',' Abyss',' Peak',' Fields']
-            },
-            dark: {
-                prefixes: ['Shadow','Dark','Black','Dead','Death','Doom','Dread','Cursed','Haunted','Forsaken','Blighted','Withered','Bleeding','Weeping','Silent','Fallen','Broken','Hollow','Void','Abyssal','Spectral','Grim','Ashen'],
-                suffixes: [' Hollow',' Mire',' Marsh',' Bog',' Wastes',' Barrens',' Depths',' Pit',' Chasm',' Abyss',' Tomb',' Crypt',' Catacomb',' Mausoleum',' Graveyard',' Gallows',' Keep',' Fortress',' Spire',' Tower',' Gate',' Throne','moor']
-            }
-        },
-        creatures: {
-            fantasy: {
-                prefixes: ['Wyrm','Drake','Griff','Chim','Basil','Phoe','Pega','Uni','Cerb','Sphin','Mino','Gorg','Harpy','Siren','Nymph','Faer','Pixie','Sprite','Sylph','Djinn','Golem','Treant','Wisp','Shade','Wraith','Spectr','Bansh','Lich'],
-                suffixes: ['on','ix','us','a','eon','ian','kin','ling','born','spawn','beast','fiend','bane','wing','claw','fang','horn','scale','maw','soul','flame','frost','storm','shadow']
-            },
-            dnd: {
-                prefixes: ['Beholder','Mind','Drow','Dire','Hell','Pit','Shadow','Death','Bone','Blood','Fire','Frost','Storm','Thunder','Stone','Iron','Mithral','Abyssal','Infernal','Celestial','Fey','Elder','Ancient','Eldritch','Void','Astral'],
-                suffixes: [' Fiend',' Devil',' Demon',' Elemental',' Aberration',' Monstrosity',' Beast',' Dragon',' Wyrm',' Spider',' Hound',' Wolf',' Serpent',' Stalker',' Hunter',' Lurker',' Flayer',' Eater',' Devourer',' Terror',' Horror',' Bane',' Lord']
-            },
-            anime: {
-                prefixes: ['Kitsune','Tanuki','Tengu','Oni','Yuki','Kappa','Baku','Neko','Inu','Tori','Hebi','Ryu','Tatsu','Tora','Usagi','Saru','Uma','Kuma','Nezumi','Tsuru','Koi','Cho','Kumo','Youkai','Kami','Rei'],
-                suffixes: ['-maru','-hime','-sama','-spirit','-beast','-demon','-god','-fairy','-dragon','-phoenix','-tiger','-wolf','-fox','-cat','-serpent','-guardian','-protector','-warrior','-hunter','-master','-lord']
-            },
-            scifi: {
-                prefixes: ['Xeno','Bio','Cyber','Mech','Synth','Nano','Quantum','Psi','Neuro','Gene','Plasma','Ion','Void','Chrono','Phase','Warp','Hive','Swarm','Prime','Alpha','Omega','Null','Anti','Meta','Proto'],
-                suffixes: ['morph','form','phage','vore','pod','droid','bot','mech','core','mind','spawn','breed','strain','type','unit','entity','being','creature','predator','hunter','stalker','drone','construct','hybrid','mutant']
-            },
-            medieval: {
-                prefixes: ['Great','Giant','Dire','Wild','Savage','Feral','War','Battle','Armored','Horned','Tusked','Fanged','Clawed','Winged','Scaled','Forest','Mountain','Cave','Swamp','Sea','Sky','Night'],
-                suffixes: [' Boar',' Stag',' Bear',' Wolf',' Hound',' Lion',' Tiger',' Panther',' Serpent',' Viper',' Eagle',' Hawk',' Raven',' Owl',' Bull',' Ram',' Stallion',' Elk',' Badger',' Fox',' Bat',' Kraken',' Leviathan']
-            },
-            mythological: {
-                prefixes: ['Hydra','Chimer','Manticor','Griffin','Pegasu','Unicor','Centaur','Minotaur','Satyr','Gorgon','Harpy','Siren','Scylla','Cyclo','Titan','Sphinx','Phoenix','Basilisk','Wyvern','Wyrm','Leviathan','Cerberus','Nemean'],
-                suffixes: ['','a','e','us','is','os','ion','-born','-spawn','-kin','-blood',' Prime',' Elder',' Ancient',' Primordial',' Divine',' Titanic',' Colossal',' Legendary',' Mythic',' Eternal']
-            },
-            dark: {
-                prefixes: ['Ghoul','Ghast','Wight','Wraith','Specter','Phantom','Shade','Revenant','Lich','Vampire','Nosferatu','Werewolf','Wendigo','Banshee','Demon','Devil','Imp','Succubus','Hellspawn','Nightmare','Terror','Horror','Abomination','Eldritch','Void'],
-                suffixes: ['','ling','spawn','born','touched','walker','stalker','hunter','eater','lord','king','queen','fiend','beast','horror','terror','bane','doom','death','plague','curse','shadow','void','abyss']
-            }
-        },
-        titles: {
-            heroic: ['the Brave','the Bold','the Valiant','the Mighty','the Strong','the Fearless','the Lionheart','the Defender','the Champion','the Victor','the Conqueror','the Unbroken','the Invincible','the Glorious'],
-            mysterious: ['the Enigma','the Unknown','the Veiled','the Hidden','the Silent','the Whisper','the Shadow','the Phantom','the Ghost','the Faceless','the Nameless','the Forgotten','the Wanderer'],
-            whimsical: ['the Merry','the Jolly','the Lucky','the Wild','the Free','the Dreamer','the Dancer','the Trickster','the Fool','the Jester','the Storyteller','the Curious','the Spark'],
-            menacing: ['the Dread','the Terrible','the Cruel','the Merciless','the Ruthless','the Feared','the Destroyer','the Butcher','the Slayer','the Deathbringer','the Scourge','the Bane','the Terror'],
-            elegant: ['the Fair','the Graceful','the Noble','the Regal','the Radiant','the Magnificent','the Splendid','the Illustrious','the Exalted','the Sublime','the Divine','the Serene','the Wise'],
-            ancient: ['the Elder','the Ancient','the Eternal','the Ageless','the Timeless','the Primordial','the First','the Venerable','the Sage','the Oracle','the Prophet','the Seer','the Keeper','the Guardian']
-        },
-        aliases: {
-            heroic: ['Lightbringer','Dawnbreaker','Sunfire','Starborn','Stormcaller','Thunderstrike','Ironheart','Steelsoul','Trueblade','Swiftarrow','Shieldbearer','Oathkeeper','Honorbound','Kingslayer'],
-            mysterious: ['Nightshade','Shadowmere','Whisperwind','Silentfoot','Ghostwalker','Phantomblade','Voidtouched','Mistweaver','Dreamwalker','Fateweaver','Soulreader','Mindbender','Spellthief','Oraclesight'],
-            whimsical: ['Sparklefoot','Moonbeam','Starshine','Sunpetal','Dewdrop','Willowisp','Breezesong','Meadowlark','Honeybee','Buttercup','Thistledown','Cloverleaf','Puddlejump'],
-            menacing: ['Deathwhisper','Doomhammer','Bloodfang','Bonecrusher','Skullsplitter','Soulreaver','Voidbringer','Shadowbane','Nightterror','Fearmonger','Plaguebringer','Gravedigger','Fleshrender','Darkblood'],
-            elegant: ['Silverblade','Goldenheart','Crystalwind','Diamondgaze','Moonsilver','Stardust','Sunweaver','Dawnlight','Twilightrose','Evenstar','Morningglory','Gracewing','Noblehart'],
-            ancient: ['Worldkeeper','Timewalker','Eternalflame','Agelessone','Firstborn','Lastlight','Endwalker','Cyclebreaker','Fatebound','Prophecykeeper','Loreguard','Runemaster','Spellweaver']
-        },
-        lastNames: {
-            fantasy: {
-                prefixes: ['Star','Moon','Sun','Sky','Storm','Wind','Fire','Frost','Shadow','Light','Dawn','Dusk','Night','Silver','Gold','Iron','Stone','Crystal','Dragon','Phoenix','Raven','Wolf','Eagle','Oak','Willow','Thorn'],
-                suffixes: ['wood','vale','brook','field','stone','hill','dale','ford','well','spring','ridge','peak','cliff','shore','haven','hold','guard','ward','song','heart','soul','blade','shield','crown','wing','claw']
-            },
-            dnd: {
-                prefixes: ['Battle','War','Sword','Shield','Axe','Hammer','Iron','Steel','Stone','Mountain','Thunder','Storm','Fire','Frost','Shadow','Dark','Light','Blood','Bone','Dragon','Rune','Spell','Elder'],
-                suffixes: ['breaker','slayer','bane','doom','fire','forge','hammer','axe','blade','sword','shield','helm','guard','born','blood','heart','soul','walker','rider','hunter','seeker','keeper','master','lord']
-            },
-            anime: {
-                first: ['Yama','Kawa','Mori','Haya','Taka','Naka','Ishi','Mura','Fuji','Saka','Shima','Hara','Matsu','Oka','Kuro','Shiro','Ao','Aka','Kin','Gin'],
-                second: ['moto','guchi','zaki','hashi','kawa','yama','ta','da','mura','shima','saki','hara','oka','bayashi','no','i','naga','tani','uchi']
-            },
-            scifi: {
-                prefixes: ['X-','Z-','Q-','K-','V-','Neo-','Cyber-','Tech-','Data-','Prime-','Alpha-','Omega-','Delta-','Vector-','Nova-','Void-','Null-'],
-                suffixes: ['tron','nex','lex','plex','core','tech','byte','node','link','net','wave','flux','prime','null','void','star','nova','sol','lux']
-            },
-            medieval: {
-                prefixes: ['Fitz','Mac','O\'','Von','Van','De','Black','White','Red','Green','Brown','Gold','Silver','Iron','Stone','Wood'],
-                suffixes: ['son','sen','ton','ham','worth','ford','bridge','well','wood','field','hill','dale','brook','wright','smith','ward','man']
-            },
-            mythological: {
-                prefixes: ['Olymp','Titan','Aether','Nyx','Eos','Helios','Selene','Gaia','Chronos','Thanatos','Eros','Nemesis','Nike','Astra','Chaos','Cosmos'],
-                suffixes: ['ides','ades','eus','ios','ias','aeon','ion','is','os','us','a','ia','eia','born','blessed','touched','blood']
-            },
-            dark: {
-                prefixes: ['Grave','Tomb','Crypt','Death','Doom','Dark','Black','Shadow','Night','Blood','Bone','Skull','Soul','Ghost','Wraith','Shade','Void','Hell'],
-                suffixes: ['born','spawn','touched','cursed','bound','walker','stalker','bringer','reaper','render','drinker','lord','master','keeper','warden','bane','doom']
-            }
-        },
-        keywordModifiers: {
-            'elf': { prefixes: ['Ael','Cel','Eil','Fae','Gal','Iel','Lir','Mir','Nil','Sil','Tel','Thil','Ven','Yl'], suffixes: ['ael','iel','wen','wynn','leth','las','ros','riel','rian','thien','lyn','wyn','nis'] },
-            'dwarf': { prefixes: ['Bal','Bom','Dor','Dur','Gim','Gloin','Gror','Kil','Mor','Nor','Thor','Thror','Tor'], suffixes: ['in','ur','li','ri','din','dor','dur','bur','fur','gur','mur','thur','zar'] },
-            'orc': { prefixes: ['Azog','Bolg','Gorg','Grak','Grim','Gruk','Krag','Lurg','Morg','Narg','Shag','Skar','Thok','Ugg'], suffixes: ['ak','ash','gash','gor','gul','mak','nak','og','ok','rak','rot','uk','zog'] },
-            'dragon': { prefixes: ['Drac','Fyr','Igni','Pyrr','Scal','Sear','Wyrm','Blaz','Char','Ember','Flam','Scorch'], suffixes: ['ax','ix','yx','or','ur','us','ion','fire','flame','wing','scale','fang','claw'] },
-            'fire': { prefixes: ['Ash','Blaz','Burn','Char','Cind','Ember','Flam','Fyr','Heat','Igni','Pyr','Scor','Sear'], suffixes: ['burn','fire','flame','blaze','ember','ash','char','scorch','brand','spark','pyre','flare'] },
-            'ice': { prefixes: ['Bliz','Bor','Cryo','Fros','Glac','Hail','Ice','Nord','Rim','Shiv','Sleet','Snow','Wint'], suffixes: ['frost','ice','snow','chill','cold','freeze','glacier','winter','hail','rime','blizzard'] },
-            'shadow': { prefixes: ['Dar','Dusk','Gloom','Mur','Night','Nox','Ombr','Shad','Twi','Umb','Veil','Void','Murk'], suffixes: ['shade','shadow','dark','night','gloom','murk','dusk','veil','shroud','cloak','void','umbra','eclipse'] },
-            'light': { prefixes: ['Aur','Bril','Dawn','Day','Glow','Lum','Lux','Rad','Ray','Shin','Sol','Star','Sun'], suffixes: ['light','glow','shine','ray','beam','bright','dawn','sun','star','radiance','gleam','spark'] },
-            'samurai': { prefixes: ['Ken','Ryu','Masa','Nobu','Taka','Yoshi','Hiro','Shin','Katsu','Mune','Tada','Hide'], suffixes: ['moto','yoshi','masa','taka','hiro','naga','katsu','hide','nobu','suke','mune','kane'] },
-            'ninja': { prefixes: ['Kage','Shino','Haya','Kuro','Zan','Gen','Ran','Sai','Rei','Kai','Jin','Ren','Sen'], suffixes: ['maru','kage','bi','suke','zo','nosuke','hiko','emon','ta','ji','ro','ya','shi'] },
-            'wizard': { prefixes: ['Arch','Elder','Grand','High','Myst','Sage','Spell','Wise','Mage','Sorc','Rune','Arcane'], suffixes: ['mage','wizard','sage','weaver','caster','binder','caller','shaper','master','lord','keeper','seeker'] },
-            'knight': { prefixes: ['Sir','Lord','Brave','Bold','True','Noble','Honor','Valor','Steel','Iron','Shield','Sword'], suffixes: ['guard','ward','shield','helm','blade','sword','heart','honor','valor','might','glory','sworn'] },
-            'demon': { prefixes: ['Abys','Baal','Bel','Infern','Mal','Neth','Pit','Rak','Styx','Sul','Tar','Vex','Zar'], suffixes: ['oth','ael','iel','ion','ius','or','ur','ax','ex','ix','ul','al','el'] },
-            'angel': { prefixes: ['Cel','Div','Eter','Grac','Hal','Heav','Lum','Rad','Sacr','Sanct','Ser','Sol','Zeph'], suffixes: ['iel','ael','ial','ius','ion','ine','ara','ira','ora','ura'] },
-            'wolf': { prefixes: ['Fang','Fenr','Gray','Grey','How','Lob','Lup','Moon','Pack','Prowl','Snarl','Wild','Winter'], suffixes: ['fang','claw','fur','howl','pack','paw','run','snarl','wolf','moon','hunt','wild','silver'] },
-            'vampire': { prefixes: ['Alucard','Blood','Count','Crim','Dark','Drac','Fang','Lest','Mort','Night','Nos','Sang','Vlad'], suffixes: ['cula','ire','ius','ael','iel','fang','blood','night','shade','vein','thirst'] },
-            'pirate': { prefixes: ['Black','Bloody','Bone','Crimson','Dread','Iron','Mad','Peg','Red','Salt','Scar','Sea','Storm'], suffixes: ['beard','bones','eye','hand','hook','jaw','leg','scar','skull','tooth','wave','wind','salt'] }
-        }
-    };
+<script>
+const D={
+    gender:{masculine:{end:['or','us','an','on','ar','orn','ric','ram','thor','grim'],pre:['Thor','Bran','Gor','Krag','Storm','Iron','Wolf']},feminine:{end:['a','ia','elle','ina','ara','wen','lyn','eth','iel','anna'],pre:['Ael','Cel','Luna','Sera','Aria','Rose','Dawn']},neutral:{end:['en','in','al','el','yn','ax','ey'],pre:['Ash','Sky','Storm','Sage','Wren','Raven']}},
+    syl:{fantasy:{pre:['Ael','Ara','Bal','Cae','Dar','Eld','Fae','Gal','Ith','Kal','Lor','Mal','Nar','Pyr','Syl','Tar','Val','Xan','Zeph'],mid:['an','ar','el','en','ia','il','on','ra','ri','th','ur'],suf:['a','al','an','ar','el','en','ia','il','in','ion','ir','is','on','or','ra','rin','th','us']},dnd:{pre:['Aer','Baldr','Crom','Drak','Grim','Helm','Iron','Krag','Mord','Raven','Storm','Thor','Vorn','Wulf'],mid:['ak','an','ax','dr','gr','kr','nd','rk','rm','sk','th','tr'],suf:['ack','ald','an','ar','ax','bane','born','dar','gard','grim','heim','mir','orn','ric','rock','th','ur','wulf']},anime:{pre:['Aki','Haru','Hika','Hiro','Kai','Ken','Kira','Kuro','Mika','Natsu','Rei','Rin','Ryu','Shin','Sora','Taka','Yu','Yuki'],mid:['chi','ha','hi','ka','ki','ko','ma','mi','na','ra','ri','ro','ru','ta','to','ya'],suf:['a','chi','hiko','hime','hiro','i','ka','ki','ko','maru','mi','na','o','ra','ro','suke','ta','to','ya']},scifi:{pre:['Aex','Cyr','Dax','Jax','Lex','Max','Nex','Nova','Nyx','Rex','Vex','Xel','Zax','Neo','Vector'],mid:['ax','ex','ix','ox','an','en','ar','or','tr'],suf:['ax','ex','ix','on','or','us','is','an','ar','x','tron','nex','tech','core']},dark:{pre:['Abys','Bane','Crypt','Drac','Dread','Grim','Mal','Mor','Nec','Nox','Shad','Tomb','Void','Xul'],mid:['ak','al','ar','ax','dr','eth','gr','ith','kr','oth','th','ul'],suf:['ak','al','ane','ax','bane','doom','eth','fang','grim','is','ith','mor','nox','or','oth','shade','ul','yx']},medieval:{pre:['Ald','Bald','Ced','Ed','God','Had','Jon','Leon','Nor','Rod','Theo','Wald'],mid:['al','an','bert','el','er','hard','helm','mar','ric','wald'],suf:['ald','an','ard','bert','ed','er','hard','helm','ic','man','ric','stan','us','wald','win']},norse:{pre:['Thor','Odin','Frey','Bjorn','Erik','Leif','Sven','Ulf','Gunn','Hild'],mid:['unn','ald','ulf','orn','rik','mar','vald'],suf:['r','ir','ar','son','heim','ulf','orn','rik','mund','bjorn','thor','hild']},lovecraftian:{pre:['Cth','Nyar','Azath','Shub','Yog','Dagon','Hastur','Zhar'],mid:['ulu','oth','agg','ugg','yth','og'],suf:['oth','hu','ul','ogtha','tur','mog']},steampunk:{pre:['Brass','Copper','Iron','Steam','Clock','Gear','Cog','Tesla','Fulton'],mid:['work','smith','ton','wick','well','gear'],suf:['worth','ington','wright','smith','ton','wick','gear','bolt']},pirate:{pre:['Black','Red','Bloody','Salt','Storm','Dread','Iron','Mad','Scarlet'],mid:['beard','bone','eye','hand','hook','jaw','skull'],suf:['beard','bones','eye','hand','hook','jaw','skull','wave','jack']},celtic:{pre:['Ael','Bran','Cael','Conn','Fionn','Lugh','Niamh','Rhian','Tara'],mid:['wyn','wen','ael','iel','ean','ian'],suf:['wyn','wen','an','en','ael','iel','aine','in','agh']},arabic:{pre:['Al','Abd','Abu','Nur','Sal','Zah','Kar','Mal','Jam','Khal'],mid:['ad','ah','am','ar','ed','id','im','ud'],suf:['a','ah','al','am','an','ar','i','id','im','ir','adin']}},
+    race:{elf:{pre:['Ael','Cel','Eil','Fae','Gal','Lir','Mir','Sil','Tel','Thil','Ven'],mid:['an','ar','el','en','ia','ri','wen'],suf:{m:['andir','orn','ion','iel','orin','ril','thas'],f:['wen','iel','ara','ria','eth','lyn','thien'],n:['el','is','yn','ael','en']},mean:['star','moon','silver','light','wind','leaf','dream']},dwarf:{pre:['Bal','Bom','Dor','Dur','Gim','Kil','Mor','Thor','Thror','Tor'],mid:['in','ur','din','dor','dur','bur'],suf:{m:['in','ur','din','dor','dur','grim','rek','thur'],f:['a','dis','hild','lin','ra','da'],n:['i','in','ur','ak']},mean:['stone','iron','gold','hammer','anvil','forge','mountain']},orc:{pre:['Azog','Bolg','Grak','Grim','Gruk','Krag','Morg','Shag','Thok','Ugg'],mid:['ak','ash','gor','gul','mak','og','uk'],suf:{m:['ak','ash','gor','gul','mak','og','uk','zog','grom'],f:['a','ra','sha','ga','za','na'],n:['ak','ok','ug','og']},mean:['blood','war','skull','rage','battle','fury']},human:{pre:['Al','Bran','Cor','Dar','Ed','Gar','Hal','Ian','Lor','Mar','Per','Val','Wil'],mid:['an','ar','el','en','er','on','ton'],suf:{m:['an','ar','en','ic','on','or','us','ric','ton','win'],f:['a','ia','ine','lyn','ra','wen','ette','ina'],n:['e','i','y','en','an']},mean:['brave','noble','strong','wise','swift','true']},halfling:{pre:['Bil','Fro','Mer','Per','Sam','Pip','Dro','Ham','Wil','Ros','Tan'],mid:['do','go','bo','lo','ri','li','di'],suf:{m:['bo','do','go','lo','rin','bert','wise','good'],f:['a','ina','ella','ula','ie','y'],n:['i','y','o','ie']},mean:['home','hearth','luck','feast','merry','garden']},gnome:{pre:['Fiz','Gim','Nim','Zook','Bim','Glim','Pip','Spark','Tink','Wiz'],mid:['ble','ck','nk','pp','rk','zz'],suf:{m:['ble','ck','nk','pp','wick','wort','sprocket'],f:['a','i','ette','ine','ia','ie'],n:['i','ix','yx','o']},mean:['clever','bright','tinker','spark','gadget','trick']},tiefling:{pre:['Akm','Bar','Dam','Kair','Luc','Mor','Nem','Ori','Raz','Val','Zar'],mid:['ae','ai','ei','ia','az','ez','iz'],suf:{m:['eus','ion','ius','os','us','emon','ias'],f:['a','ia','is','ys','ira','ora','yra'],n:['is','ys','ax','ex','ix']},mean:['flame','shadow','sin','pride','wrath','cunning']},dragonborn:{pre:['Arj','Bal','Bharash','Ghesh','Hesk','Kri','Med','Nadar','Raz','Sham','Tor'],mid:['aash','ash','dar','gar','kar','rath','thra'],suf:{m:['aan','asar','inn','ash','dar','gar','rash','thar'],f:['a','ira','ora','ann','yra','ra'],n:['ash','ar','ax','or']},mean:['fire','honor','scale','claw','breath','might']},vampire:{pre:['Vlad','Alucard','Carm','Drac','Lest','Nos','Strah','Var','Vel','Mal'],mid:['an','en','in','or','ar','el'],suf:{m:['ius','os','us','an','en','ir','or'],f:['a','ia','ina','ella','ira','ana'],n:['is','ys','ax','ex']},mean:['blood','night','eternal','shadow','thirst','pale']},demon:{pre:['Abr','Azr','Bal','Bel','Mal','Xar','Zar','Gor','Meph','Asmo'],mid:['az','ez','iz','oz','ael','oth'],suf:{m:['oth','ael','iel','ion','ius','or','az'],f:['ith','yth','ael','ia','yra','ura'],n:['oth','ith','ax','ex','ix']},mean:['chaos','torment','fire','abyss','corruption','malice']},angel:{pre:['Aur','Cel','Gab','Mich','Raph','Ser','Uri','Zad','Soph','Zeph'],mid:['ae','ia','ie','ael','iel','ara'],suf:{m:['ael','iel','ion','ius','el','on'],f:['ael','iel','ia','ara','ira','iah'],n:['el','iel','ael','ion']},mean:['light','grace','divine','heaven','radiance','hope']},fairy:{pre:['Bri','Dew','Fern','Glow','Ivy','Luna','Moss','Petal','Rose','Star','Wisp'],mid:['an','el','ia','in','ow','le'],suf:{m:['an','en','in','ow','le','or'],f:['a','ia','belle','ette','ina','wyn'],n:['i','y','ie','sy']},mean:['sparkle','dew','petal','moonbeam','whisper','shimmer']}},
+    pack:{villains:{titles:['the Dread','the Terrible','the Cruel','the Dark','Lord of Shadows','the Betrayer','Bane of Light'],style:'dark'},heroes:{titles:['the Brave','the Bold','the Valiant','Champion of Light','the Lionheart','Shield of the Realm'],style:'fantasy'},royalty:{titles:['King','Queen','Prince','Princess','Duke','Duchess','Lord','Lady','Count'],style:'medieval'},wizards:{titles:['the Wise','the Arcane','Master of the Tower','Keeper of Secrets','Sage of Ages'],style:'mythological'},rogues:{titles:['Shadow','Whisper','the Silent','Nightblade','the Ghost','the Unseen'],style:'dark'},merchants:{titles:['the Trader','the Honest','Master','Goodman','the Keeper'],style:'medieval'},party:{roles:['Warrior','Mage','Rogue','Cleric','Ranger'],style:'fantasy'},monsters:{titles:['the Terrible','the Ancient','Devourer','the Undying','Terror of Night'],style:'dark'}},
+    mean:{fantasy:['star walker','moon blessed','shadow dancer','light bringer','storm caller','dream seeker'],dnd:['dragon slayer','oath keeper','battle born','iron will','war bringer'],anime:['cherry blossom','eternal flame','silent moon','swift blade','pure heart'],dark:['death whisper','soul reaver','night terror','void walker','doom bringer'],scifi:['star navigator','void pilot','quantum mind','cyber enhanced'],medieval:['noble born','true heart','honor bound','realm defender']},
+    back:{
+        origin:[
+            'Born in a small village on the outskirts of the realm',
+            'Raised in the bustling streets of a great city',
+            'Grew up among wandering nomads who traveled the endless plains',
+            'Orphaned at a young age and raised by monks in a secluded monastery',
+            'Descended from a long line of legendary warriors',
+            'The youngest child of a noble family fallen from grace',
+            'Found abandoned as an infant on the steps of a temple',
+            'Born during a celestial event of great significance',
+            'Grew up in the shadow of an ancient fortress',
+            'Raised in secret by a hidden order of protectors',
+            'Spent their childhood on merchant ships crossing dangerous seas',
+            'Born into a family of renowned scholars and sages',
+            'Raised by a reclusive mage in a tower filled with mysteries',
+            'Grew up on the harsh frontier, learning to survive',
+            'The sole survivor of a village destroyed by unknown forces',
+            'Born to traveling performers and entertainers',
+            'Raised among the outcast and forgotten of society',
+            'Grew up in the court of a foreign kingdom as a ward',
+            'Descended from an ancient bloodline thought to be extinct',
+            'Found and raised by a retired adventurer seeking redemption'
+        ],
+        event:[
+            'witnessed a great tragedy that changed everything',
+            'discovered a hidden talent that set them apart from others',
+            'was visited by a mysterious stranger bearing a prophecy',
+            'survived an attack that claimed the lives of many they loved',
+            'found an ancient artifact that seemed to call to them',
+            'was betrayed by someone they trusted completely',
+            'saved a life and gained a powerful ally',
+            'uncovered a dark secret about their own past',
+            'made a desperate pact with an unknown entity',
+            'received a vision that revealed fragments of their destiny',
+            'was marked by a strange magical phenomenon',
+            'discovered they possessed abilities no one could explain',
+            'witnessed something that should have been impossible',
+            'was chosen by an ancient weapon or artifact',
+            'escaped from captivity against all odds',
+            'found a forbidden tome containing dangerous knowledge',
+            'was cursed by a dying enemy',
+            'encountered a being from another plane of existence',
+            'lost everything in a single fateful night',
+            'discovered the truth about their real parentage'
+        ],
+        motive:[
+            'Now they seek to uncover the truth of their mysterious origins.',
+            'They adventure to prove themselves worthy of their heritage.',
+            'Revenge burns in their heart as they hunt those who wronged them.',
+            'They search desperately for a cure to lift a terrible curse.',
+            'Glory and gold call to them on the open road.',
+            'They have sworn to protect others from the darkness they have seen.',
+            'A promise made long ago compels them ever onward.',
+            'They hunt for ancient knowledge lost to the ages.',
+            'Redemption for past mistakes fuels their dangerous journey.',
+            'They follow whispers of destiny wherever they may lead.',
+            'A debt of honor must be repaid, no matter the cost.',
+            'They seek to rebuild what was taken from them.',
+            'The memory of fallen comrades drives them forward.',
+            'They must find someone who vanished without a trace.',
+            'An unfinished mission from their past demands completion.',
+            'They hope to earn enough to save their homeland.',
+            'A mysterious summons has set them on this path.',
+            'They flee from something too terrible to face alone.',
+            'The answer to a lifelong question lies somewhere ahead.',
+            'They seek to master powers they barely understand.'
+        ],
+        trait:[
+            'Known for their quick wit and sharp tongue',
+            'Quiet and observant, they miss nothing',
+            'Fiercely loyal to those they call friend',
+            'Haunted by memories that refuse to fade',
+            'Optimistic despite the hardships they have faced',
+            'Cautious and calculating, always planning ahead',
+            'Bold to the point of recklessness',
+            'Compassionate, always helping those in need',
+            'Secretive, sharing little of their true self',
+            'Determined, never giving up once committed',
+            'Charming and persuasive, able to talk their way through anything',
+            'Hot-tempered but fiercely protective of the innocent',
+            'Melancholic, carrying a deep sadness within',
+            'Curious about everything, sometimes dangerously so',
+            'Stoic and unshakeable in the face of danger',
+            'Cynical from years of disappointment',
+            'Idealistic, believing in a better world',
+            'Pragmatic, doing whatever is necessary',
+            'Honorable to a fault, even with enemies',
+            'Unpredictable, keeping everyone guessing'
+        ],
+        faction:[
+            {name:'The Silver Dawn',desc:'a secretive order dedicated to fighting darkness',role:['initiate','agent','seeker','warden']},
+            {name:'The Merchant Princes',desc:'a powerful trading consortium with vast influence',role:['associate','factor','envoy','partner']},
+            {name:'The Arcane Collective',desc:'a loose alliance of mages sharing forbidden knowledge',role:['apprentice','scholar','researcher','arcanist']},
+            {name:'The Raven Court',desc:'a network of spies and information brokers',role:['informant','shadow','whisper','keeper']},
+            {name:'The Iron Covenant',desc:'a brotherhood of warriors bound by sacred oaths',role:['sworn blade','champion','sentinel','commander']},
+            {name:'The Verdant Circle',desc:'druids and rangers protecting the wild places',role:['guardian','watcher','voice','elder']},
+            {name:'The Crimson Hand',desc:'a guild of assassins with a strict code',role:['initiate','blade','phantom','master']},
+            {name:'The Seekers of Truth',desc:'scholars dedicated to uncovering lost history',role:['scribe','researcher','expeditioner','sage']},
+            {name:'The Wandering Stars',desc:'a caravan of travelers, performers, and outcasts',role:['traveler','performer','storyteller','elder']},
+            {name:'The Twilight Watch',desc:'guardians who patrol the borders between worlds',role:['watchman','ranger','keeper','commander']},
+            {name:'The Golden Scales',desc:'judges and arbiters who settle disputes',role:['witness','arbiter','judge','magistrate']},
+            {name:'The Storm Riders',desc:'sailors and pirates who rule the seas',role:['deckhand','navigator','captain','admiral']}
+        ],
+        secret:[
+            'They carry a sealed letter they have never opened, addressed to someone they cannot find.',
+            'A voice sometimes whispers to them in dreams, offering guidance—or temptation.',
+            'They once killed someone who did not deserve to die.',
+            'Their body bears a mark that matches an ancient prophecy.',
+            'They are not who they claim to be; their true identity must remain hidden.',
+            'They possess a fragment of something powerful that others would kill to obtain.',
+            'Someone they believed dead is actually alive—and hunting them.',
+            'They made a promise to a dying person that conflicts with their current goals.',
+            'Their powers come from a source they dare not reveal.',
+            'They witnessed a crime committed by someone powerful and have kept silent.',
+            'A part of their memory has been magically erased.',
+            'They are bound by a magical contract they do not fully understand.',
+            'Their bloodline carries a dormant curse that could awaken at any time.',
+            'They are being watched by an entity they have never seen.',
+            'They hold the key to something ancient and dangerous.',
+            'Their closest companion harbors a terrible secret of their own.'
+        ],
+        flaw:[
+            'They cannot resist a game of chance, often betting more than they can afford.',
+            'Old wounds ache when danger approaches, sometimes freezing them at critical moments.',
+            'They trust too easily, having been burned by this before.',
+            'Nightmares plague their sleep, leaving them exhausted and irritable.',
+            'They cannot walk away from a challenge to their honor.',
+            'Strong drink has been both comfort and weakness.',
+            'They are haunted by guilt over someone they failed to save.',
+            'Arrogance blinds them to their own limitations.',
+            'They hoard wealth obsessively, terrified of returning to poverty.',
+            'A phobia—of heights, enclosed spaces, or something else—can paralyze them.',
+            'They lie compulsively, even when the truth would serve better.',
+            'Jealousy poisons their relationships with others.',
+            'They cannot forgive a slight, nursing grudges for years.',
+            'Overconfidence in their abilities has nearly killed them before.',
+            'They are easily manipulated by appeals to their emotions.',
+            'They freeze when facing a specific type of enemy from their past.'
+        ],
+        childhood:[
+            'Their earliest memory is of a fire consuming everything they knew.',
+            'They learned to fight before they learned to read.',
+            'Books and scrolls were their only companions in a lonely childhood.',
+            'They were always different from the other children, set apart by fate.',
+            'A mentor figure shaped their early years with harsh but fair lessons.',
+            'They spent years on the streets, learning to survive by any means.',
+            'Their family expected greatness, and the pressure nearly broke them.',
+            'A single act of kindness from a stranger changed their path forever.',
+            'They discovered their abilities by accident, with terrifying results.',
+            'War touched their childhood, leaving scars that never fully healed.'
+        ],
+        turning:[
+            'The day they took up their weapon for the first time, they knew their purpose.',
+            'A near-death experience showed them what truly mattered.',
+            'Meeting their future mentor opened doors they never knew existed.',
+            'Leaving home was the hardest—and best—decision they ever made.',
+            'The first time they took a life, everything changed.',
+            'Discovering the truth about their family set them on this path.',
+            'A moment of cowardice they have never forgiven themselves for.',
+            'The first time they saved an innocent, they found their calling.',
+            'Witnessing true evil convinced them to stand against it.',
+            'A betrayal taught them that trust must be earned, not given.'
+        ],
+        goal:[
+            'They dream of founding a sanctuary for others like themselves.',
+            'Somewhere out there, answers await—about their past, their powers, their purpose.',
+            'They will not rest until justice is served upon those who wronged them.',
+            'A homeland lost must be reclaimed or avenged.',
+            'They seek to master their abilities and push beyond all known limits.',
+            'The faces of those they have lost drive them to ensure no one else suffers the same fate.',
+            'Wealth and power are the only securities in an uncertain world.',
+            'They hope to find a place where they truly belong.',
+            'An ancient wrong must be set right, no matter how long it takes.',
+            'They wish only to live in peace—but the world will not allow it.'
+        ]
+    },
+    cls:{warrior:{wep:['sword','axe','hammer'],tr:['brave','strong','battle-hardened']},mage:{wep:['staff','wand','tome'],tr:['intelligent','powerful','mysterious']},rogue:{wep:['daggers','shortbow','rapier'],tr:['cunning','quick','stealthy']},cleric:{wep:['mace','holy symbol','staff'],tr:['faithful','compassionate','wise']},ranger:{wep:['longbow','twin swords','spear'],tr:['perceptive','patient','skilled']},paladin:{wep:['longsword','warhammer','shield'],tr:['righteous','devoted','courageous']},bard:{wep:['rapier','lute','short sword'],tr:['charismatic','creative','clever']}}
+};
 
-    function random(arr) { return arr[Math.floor(Math.random() * arr.length)]; }
-    function capitalize(str) { return str.charAt(0).toUpperCase() + str.slice(1); }
+const r=a=>a[Math.floor(Math.random()*a.length)];
+const cap=s=>s.charAt(0).toUpperCase()+s.slice(1).toLowerCase();
 
-    function generateBaseName(style) {
-        const data = NameData.syllables[style] || NameData.syllables.fantasy;
-        let name = random(data.prefixes);
-        if (Math.random() > 0.4) name += random(data.middles);
-        name += random(data.suffixes);
-        return capitalize(name.toLowerCase());
+function pron(n){const s=n.toLowerCase().replace(/[^a-z]/g,'').match(/[^aeiou]*[aeiou]+[^aeiou]*/gi)||[n];const st=Math.floor(s.length/2);return s.map((x,i)=>i===st?x.toUpperCase():x).join('-');}
+function mean(st){const m=D.mean[st]||D.mean.fantasy;return '"'+r(m)+'"';}
+function lenOk(n,l){const len=n.replace(/[^a-zA-Z]/g,'').length;if(l==='short')return len<=6;if(l==='medium')return len>=5&&len<=10;if(l==='long')return len>=9;return true;}
+
+function baseName(st,g='any',l='any'){
+    const d=D.syl[st]||D.syl.fantasy;const gd=D.gender[g];let att=0;
+    while(att<20){
+        let n='';n=(gd&&Math.random()>0.5)?r(gd.pre):r(d.pre);
+        if(Math.random()>0.4)n+=r(d.mid);
+        n+=(gd&&Math.random()>0.3)?r(gd.end):r(d.suf);
+        n=cap(n);if(lenOk(n,l))return n;att++;
     }
+    return cap(r(d.pre)+r(d.suf));
+}
 
-    function generateLastName(style) {
-        const data = NameData.lastNames[style] || NameData.lastNames.fantasy;
-        if (style === 'anime') return capitalize(random(data.first) + random(data.second));
-        return capitalize(random(data.prefixes).toLowerCase() + random(data.suffixes).toLowerCase());
+function lastName(st){const d=D.syl[st]||D.syl.fantasy;return cap(r(d.pre).toLowerCase()+r(d.suf).toLowerCase());}
+
+function raceName(rc,g='any'){
+    const rd=D.race[rc];if(!rd)return baseName('fantasy',g);
+    let n=r(rd.pre);if(Math.random()>0.4&&rd.mid)n+=r(rd.mid);
+    const gk=g==='any'?r(['m','f','n']):g[0];
+    n+=r(rd.suf[gk]||rd.suf.n);return cap(n);
+}
+function raceMean(rc){const rd=D.race[rc];return rd&&rd.mean?'"'+r(rd.mean)+'"':'';}
+
+function genNames(cnt,opt){
+    const{cat,st,g,l}=opt;const names=new Set();let att=0;
+    while(names.size<cnt&&att<cnt*5){
+        let n='';
+        if(cat==='characters'){n=baseName(st,g,l);if(Math.random()>0.5)n+=' '+lastName(st);}
+        else if(cat==='places'){const adj=['Silver','Crystal','Moon','Shadow','Storm','Dragon','Ancient','Hidden'];const suf=['vale','haven','hold','spire','gate','wood','peak','reach'];n=r(adj)+r(suf);}
+        else if(cat==='creatures'){n=baseName(st==='dark'?'dark':'fantasy','n',l);if(Math.random()>0.5)n+=' '+r(['Beast','Horror','Fiend','Terror']);}
+        else if(cat==='kingdoms'){n=baseName(st,'n','medium')+r(['ia','land','or','heim','gar']);}
+        else if(cat==='ships'){n=r(['','The '])+r(['Swift','Black','Golden','Storm','Iron','Crimson','Phantom'])+' '+r(['Serpent','Dragon','Wave','Star','Maiden','Revenge','Spirit']);}
+        else if(cat==='taverns'){n='The '+r(['Prancing','Golden','Rusty','Laughing','Drunken','Merry'])+' '+r(['Pony','Dragon','Boar','Stag','Giant','Goblin']);}
+        else if(cat==='weapons'){n=baseName(st,'n','short')+', '+r(['Blade','Sword','Axe','Hammer'])+' of '+r(['Doom','Light','Shadows','Fire','Thunder']);}
+        else if(cat==='spells'){n=baseName(st,'any','short')+"'s "+r(['Fire','Lightning','Frost','Shadow','Spirit'])+' '+r(['Bolt','Wave','Storm','Shield','Curse']);}
+        else if(cat==='guilds'){n='The '+r(['Silver','Golden','Shadow','Crimson','Hidden'])+' '+r(['Hand','Eye','Blade','Serpent','Phoenix'])+' '+r(['Guild','Order','Brotherhood','Circle']);}
+        else{n=baseName(st,g,l);}
+        if(n&&n.length>2)names.add(n);att++;
     }
+    return Array.from(names).map(n=>({name:n,pron:pron(n.split(' ')[0]),mean:mean(st)}));
+}
 
-    function generatePlaceName(style, placeType) {
-        const data = NameData.places[style] || NameData.places.fantasy;
-        const prefix = random(data.prefixes);
-        let suffix = random(data.suffixes);
-        
-        // Apply place type specific suffixes
-        if (placeType && placeType !== 'any' && NameData.placeTypes[placeType]) {
-            if (Math.random() > 0.3) {
-                suffix = ' ' + random(NameData.placeTypes[placeType]);
-            }
-        }
-        
-        return suffix.startsWith(' ') || suffix.startsWith('-') ? prefix + suffix : prefix + suffix;
+function packNames(pk){
+    const p=D.pack[pk];if(!p)return[];const names=[];const cnt=pk==='party'?5:10;
+    for(let i=0;i<cnt;i++){
+        let n=baseName(p.style,'any','medium');
+        if(pk==='party')n+=' the '+p.roles[i];
+        else if(p.titles)n+=' '+r(p.titles);
+        names.push({name:n,pron:pron(n.split(' ')[0]),mean:mean(p.style)});
     }
+    return names;
+}
 
-    function generateCreatureName(style, creatureType) {
-        const data = NameData.creatures[style] || NameData.creatures.fantasy;
-        let prefix = random(data.prefixes);
-        let suffix = random(data.suffixes);
-        
-        // Apply creature type specific modifications
-        if (creatureType && creatureType !== 'any') {
-            const typeData = NameData.creatureTypes[creatureType];
-            if (typeData) {
-                if (creatureType === 'species' && Math.random() > 0.4) {
-                    suffix = random(typeData.suffixes);
-                } else if (creatureType === 'individual') {
-                    // Generate a proper name for the creature
-                    const name = generateBaseName(style);
-                    return name + ' the ' + prefix + suffix.replace(/^ /, '');
-                } else if (creatureType === 'titled') {
-                    return prefix + suffix + ' ' + random(typeData.titles);
-                } else if (creatureType === 'beast' && Math.random() > 0.3) {
-                    prefix = random(typeData.prefixes) + ' ' + prefix;
-                } else if (creatureType === 'legendary') {
-                    if (Math.random() > 0.5) {
-                        prefix = random(typeData.prefixes) + ' ' + prefix;
-                    }
-                    if (Math.random() > 0.5) {
-                        suffix = suffix + random(typeData.suffixes);
-                    }
-                }
-            }
-        }
-        
-        return suffix.startsWith(' ') || suffix.startsWith('-') ? prefix + suffix : prefix + suffix;
-    }
-
-    function applyKeywordModifiers(baseName, keywords) {
-        if (!keywords) return baseName;
-        const keywordList = keywords.toLowerCase().split(/[,\s]+/).filter(k => k.length > 0);
-        for (const keyword of keywordList) {
-            if (NameData.keywordModifiers[keyword] && Math.random() > 0.5) {
-                const mods = NameData.keywordModifiers[keyword];
-                return capitalize(random(mods.prefixes).toLowerCase() + random(mods.suffixes).toLowerCase());
-            }
-        }
-        return baseName;
-    }
-
-    function generateName(category, style, nameType, tone, keywords, placeType, creatureType) {
-        let name = '';
-        if (category === 'characters') {
-            name = generateBaseName(style);
-            name = applyKeywordModifiers(name, keywords);
-            if (nameType === 'full' || (nameType === 'any' && Math.random() > 0.5)) {
-                name += ' ' + generateLastName(style);
-            } else if (nameType === 'title' || (nameType === 'any' && Math.random() > 0.7)) {
-                const toneKey = tone === 'any' ? random(['heroic','mysterious','whimsical','menacing','elegant','ancient']) : tone;
-                name += ' ' + random(NameData.titles[toneKey]);
-            } else if (nameType === 'alias') {
-                const toneKey = tone === 'any' ? random(['heroic','mysterious','whimsical','menacing','elegant','ancient']) : tone;
-                name = random(NameData.aliases[toneKey]);
-            }
-        } else if (category === 'places') {
-            name = generatePlaceName(style, placeType);
-            name = applyKeywordModifiers(name, keywords);
-        } else if (category === 'creatures') {
-            name = generateCreatureName(style, creatureType);
-            name = applyKeywordModifiers(name, keywords);
-        }
-        return name;
-    }
-
-    function generateNames(count = 10) {
-        const category = document.getElementById('category').value;
-        const style = document.getElementById('style').value;
-        const nameType = document.getElementById('nameType').value;
-        const placeType = document.getElementById('placeType').value;
-        const creatureType = document.getElementById('creatureType').value;
-        const tone = document.getElementById('tone').value;
-        const keywords = document.getElementById('keywords').value.trim();
-        const names = new Set();
-        let attempts = 0;
-        while (names.size < count && attempts < count * 3) {
-            const name = generateName(category, style, nameType, tone, keywords, placeType, creatureType);
-            if (name && name.length > 2) names.add(name);
-            attempts++;
-        }
-        return Array.from(names);
-    }
-
-    const generateBtn = document.getElementById('generateBtn');
-    const resultsContainer = document.getElementById('resultsContainer');
-    const resultsHeader = document.getElementById('resultsHeader');
-    const resultsCount = document.getElementById('resultsCount');
-    const cooldownText = document.getElementById('cooldownText');
-    const toast = document.getElementById('toast');
-    let cooldownTimer = null, cooldownSeconds = 0, hasGenerated = false;
-
-    function displayNames(names) {
-        resultsHeader.style.display = 'flex';
-        resultsCount.textContent = `${names.length} names`;
-        resultsContainer.innerHTML = `<div class="names-list">${names.map((name, i) => `
-            <div class="name-item" style="animation-delay:${i*0.03}s">
-                <span class="name-text">${escapeHtml(name)}</span>
-                <button class="copy-btn" onclick="copyName(this,'${escapeHtml(name).replace(/'/g,"\\'")}')">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <rect x="9" y="9" width="13" height="13" rx="2"></rect>
-                        <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                    </svg>
-                </button>
-            </div>`).join('')}</div>`;
-        
-        // Update button text after first generation
-        if (!hasGenerated) {
-            hasGenerated = true;
-            generateBtn.textContent = 'Generate New Names';
-        }
-    }
-
-    async function copyName(button, name) {
-        try {
-            await navigator.clipboard.writeText(name);
-            button.classList.add('copied');
-            button.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>`;
-            showToast();
-            setTimeout(() => {
-                button.classList.remove('copied');
-                button.innerHTML = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>`;
-            }, 1500);
-        } catch (e) { console.error('Copy failed:', e); }
-    }
-
-    function showToast() {
-        toast.classList.add('show');
-        setTimeout(() => toast.classList.remove('show'), 2000);
-    }
-
-    function startCooldown(seconds) {
-        cooldownSeconds = seconds;
-        generateBtn.disabled = true;
-        cooldownTimer = setTimeout(() => {
-            cooldownSeconds = 0;
-            generateBtn.disabled = false;
-            cooldownText.textContent = '';
-        }, seconds * 1000);
-    }
-
-    function escapeHtml(text) {
-        const div = document.createElement('div');
-        div.textContent = text;
-        return div.innerHTML;
-    }
-
-    function handleGenerate() {
-        if (cooldownSeconds > 0) return;
-        displayNames(generateNames(10));
-        startCooldown(0.2);
-    }
-
-    // Category change handler to show/hide appropriate name type selectors
-    function handleCategoryChange() {
-        const category = document.getElementById('category').value;
-        const nameTypeGroup = document.getElementById('nameType').parentElement;
-        const placeTypeGroup = document.getElementById('placeTypeGroup');
-        const creatureTypeGroup = document.getElementById('creatureTypeGroup');
-        
-        // Hide all type selectors first
-        nameTypeGroup.style.display = 'none';
-        placeTypeGroup.style.display = 'none';
-        creatureTypeGroup.style.display = 'none';
-        
-        // Show the appropriate one
-        if (category === 'characters') {
-            nameTypeGroup.style.display = 'flex';
-        } else if (category === 'places') {
-            placeTypeGroup.style.display = 'flex';
-        } else if (category === 'creatures') {
-            creatureTypeGroup.style.display = 'flex';
-        }
-    }
-
-    generateBtn.addEventListener('click', handleGenerate);
-    document.getElementById('category').addEventListener('change', handleCategoryChange);
-    document.getElementById('keywords').addEventListener('keypress', e => { if (e.key === 'Enter') handleGenerate(); });
+function genChar(opt){
+    const races=['human','elf','dwarf','halfling','gnome','tiefling','dragonborn'];
+    const classes=Object.keys(D.cls);
+    const rc=opt.race==='random'?r(races):opt.race;
+    const cl=opt.cls==='random'?r(classes):opt.cls;
+    const gn=opt.gender==='random'?r(['masculine','feminine']):opt.gender;
+    const fn=raceName(rc,gn);const ln=lastName('fantasy');const full=fn+' '+ln;
+    const cd=D.cls[cl]||D.cls.warrior;const bd=D.back;
     
-    // FAQ Toggle
-    function toggleFaq(element) {
-        const faqItem = element.parentElement;
-        faqItem.classList.toggle('open');
+    // Generate rich backstory
+    const pronoun=gn==='feminine'?'she':'he';
+    const pPoss=gn==='feminine'?'her':'his';
+    const pObj=gn==='feminine'?'her':'him';
+    const pRef=gn==='feminine'?'herself':'himself';
+    
+    // Select faction with role
+    const faction=r(bd.faction);
+    const factionRole=r(faction.role);
+    const hasFaction=Math.random()>0.4;
+    
+    // Build backstory paragraphs
+    let back='';
+    
+    // Paragraph 1: Origin and childhood
+    back+=bd.origin[Math.floor(Math.random()*bd.origin.length)]+', '+full+' '+r(bd.childhood).toLowerCase()+' ';
+    
+    // Paragraph 2: Defining event and turning point
+    back+='\n\nIn '+pPoss+' youth, '+pronoun+' '+r(bd.event)+'. '+r(bd.turning)+' ';
+    
+    // Paragraph 3: Personality and faction
+    back+='\n\n'+r(bd.trait)+', '+pronoun+' wields a '+r(cd.wep)+' with '+r(cd.tr)+' determination. ';
+    if(hasFaction){
+        back+='As a '+factionRole+' of '+faction.name+', '+faction.desc+', '+pronoun+' has access to resources and contacts—but also obligations that sometimes conflict with '+pPoss+' personal goals. ';
     }
-    </script>
+    
+    // Paragraph 4: Secret and flaw
+    back+='\n\n'+r(bd.secret)+' ';
+    back+='Those who know '+pObj+' well have noticed that '+r(bd.flaw).toLowerCase()+' ';
+    
+    // Paragraph 5: Motivation and goal
+    back+='\n\n'+r(bd.motive)+' '+r(bd.goal);
+    
+    return{
+        name:full,
+        race:cap(rc),
+        cls:cap(cl),
+        gender:cap(gn),
+        back,
+        wep:r(cd.wep),
+        trait:r(cd.tr),
+        faction:hasFaction?{name:faction.name,role:factionRole}:null,
+        secret:r(bd.secret),
+        flaw:r(bd.flaw)
+    };
+}
+
+let genNames_=[],hasGen=false,selRace=null,cdActive=false;
+const genBtn=document.getElementById('generateBtn'),copyAllBtn=document.getElementById('copyAllBtn'),resCont=document.getElementById('resultsContainer'),resHead=document.getElementById('resultsHeader'),resCnt=document.getElementById('resultsCount'),toast=document.getElementById('toast');
+
+function showToast(m='Copied!'){toast.textContent=m;toast.classList.add('show');setTimeout(()=>toast.classList.remove('show'),2000);}
+function esc(t){const d=document.createElement('div');d.textContent=t;return d.innerHTML;}
+
+function displayNames(names,cont=resCont){
+    genNames_=names.map(n=>({...n,backstory:genBackstoryForName(n.name)}));
+    if(cont===resCont){resHead.style.display='flex';resCnt.textContent=names.length+' names';copyAllBtn.style.display='inline-flex';if(!hasGen){hasGen=true;genBtn.textContent='Generate New Names';}}
+    cont.innerHTML='<div class="names-list">'+genNames_.map((it,i)=>{
+        const previewText=it.backstory.back.split('\n\n')[0].substring(0,150)+'...';
+        return `<div class="name-item" style="animation-delay:${i*0.02}s">
+            <div class="name-row">
+                <div class="name-main">
+                    <span class="name-text">${esc(it.name)}</span>
+                    <span class="name-pronunciation">${it.pron}</span>
+                    <span class="name-meaning">${it.mean}</span>
+                </div>
+                <div class="name-actions">
+                    <button class="copy-btn" onclick="event.stopPropagation();copyN(this,'${esc(it.name).replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></button>
+                </div>
+            </div>
+            <div class="name-preview">
+                <div class="name-preview-text">${esc(previewText)}</div>
+                <button class="name-expand" onclick="event.stopPropagation();openBackstoryFromList(${i})">Read full backstory →</button>
+            </div>
+        </div>`;
+    }).join('')+'</div>';
+}
+
+async function copyN(btn,n){try{await navigator.clipboard.writeText(n);btn.classList.add('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>';showToast('Copied!');setTimeout(()=>{btn.classList.remove('copied');btn.innerHTML='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';},1500);}catch(e){}}
+async function copyAll(){try{await navigator.clipboard.writeText(genNames_.map(n=>n.name).join('\n'));showToast('All copied!');}catch(e){}}
+
+function startCD(){cdActive=true;genBtn.disabled=true;setTimeout(()=>{cdActive=false;genBtn.disabled=false;},200);}
+
+function handleGen(){
+    if(cdActive)return;
+    const opt={cat:document.getElementById('category').value,st:document.getElementById('style').value,g:document.getElementById('gender').value,l:document.getElementById('length').value};
+    const cnt=parseInt(document.getElementById('count').value);
+    displayNames(genNames(cnt,opt));startCD();
+}
+
+document.querySelectorAll('.tab-btn').forEach(b=>{b.addEventListener('click',()=>{document.querySelectorAll('.tab-btn').forEach(x=>x.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(x=>x.classList.remove('active'));b.classList.add('active');document.getElementById('tab-'+b.dataset.tab).classList.add('active');});});
+document.querySelectorAll('.race-card').forEach(c=>{c.addEventListener('click',()=>{document.querySelectorAll('.race-card').forEach(x=>x.classList.remove('active'));c.classList.add('active');selRace=c.dataset.race;});});
+document.getElementById('generateRaceBtn').addEventListener('click',()=>{if(!selRace){showToast('Select a race first');return;}const g=document.getElementById('raceGender').value;const cnt=parseInt(document.getElementById('raceCount').value);const names=[];for(let i=0;i<cnt;i++){const n=raceName(selRace,g);names.push({name:n,pron:pron(n),mean:raceMean(selRace)});}displayNames(names,document.getElementById('raceResultsContainer'));});
+document.querySelectorAll('.pack-card').forEach(c=>{c.addEventListener('click',()=>{displayNames(packNames(c.dataset.pack),document.getElementById('packResultsContainer'));});});
+document.getElementById('generateCharBtn').addEventListener('click',()=>{const ch=genChar({race:document.getElementById('charRace').value,cls:document.getElementById('charClass').value,gender:document.getElementById('charGender').value});const factionHtml=ch.faction?`<div class="stat-item"><div class="stat-label">Faction</div><div class="stat-value">${ch.faction.name}</div></div><div class="stat-item"><div class="stat-label">Role</div><div class="stat-value">${cap(ch.faction.role)}</div></div>`:'';document.getElementById('characterContainer').innerHTML=`<div class="character-card"><h3>${esc(ch.name)}</h3><div class="character-subtitle">${ch.gender} ${ch.race} ${ch.cls}</div><div class="character-stats"><div class="stat-item"><div class="stat-label">Race</div><div class="stat-value">${ch.race}</div></div><div class="stat-item"><div class="stat-label">Class</div><div class="stat-value">${ch.cls}</div></div><div class="stat-item"><div class="stat-label">Weapon</div><div class="stat-value">${cap(ch.wep)}</div></div><div class="stat-item"><div class="stat-label">Trait</div><div class="stat-value">${cap(ch.trait)}</div></div>${factionHtml}</div><div class="character-backstory">${ch.back.split('\n\n').map(p=>'<p>'+p+'</p>').join('')}</div><div class="character-actions"><button class="secondary-btn" onclick="copyChar()">Copy Character</button><button class="generate-btn" onclick="document.getElementById('generateCharBtn').click()" style="flex:1">Generate Another</button></div></div>`;});
+async function copyChar(){const c=document.querySelector('.character-card');if(!c)return;const name=c.querySelector('h3').textContent;const subtitle=c.querySelector('.character-subtitle').textContent;const stats=Array.from(c.querySelectorAll('.stat-item')).map(s=>s.querySelector('.stat-label').textContent+': '+s.querySelector('.stat-value').textContent).join('\n');const backstory=Array.from(c.querySelectorAll('.character-backstory p')).map(p=>p.textContent).join('\n\n');const t='═══════════════════════════════════\n'+name.toUpperCase()+'\n'+subtitle+'\n═══════════════════════════════════\n\n'+stats+'\n\n───────────────────────────────────\nBACKSTORY\n───────────────────────────────────\n\n'+backstory;try{await navigator.clipboard.writeText(t);showToast('Character copied!');}catch(e){}}
+
+genBtn.addEventListener('click',handleGen);
+copyAllBtn.addEventListener('click',copyAll);
+document.getElementById('keywords').addEventListener('keypress',e=>{if(e.key==='Enter')handleGen();});
+
+// Backstory modal functions
+let currentBackstoryName='';
+let currentBackstoryData=null;
+let currentBackstoryIndex=-1;
+
+function genBackstoryForName(name){
+    const bd=D.back;
+    const gn=Math.random()>0.5?'masculine':'feminine';
+    const pronoun=gn==='feminine'?'she':'he';
+    const pPoss=gn==='feminine'?'her':'his';
+    const pObj=gn==='feminine'?'her':'him';
+    
+    // Determine class from context or random
+    const classes=Object.keys(D.cls);
+    const cl=r(classes);
+    const cd=D.cls[cl];
+    
+    // Select faction
+    const faction=r(bd.faction);
+    const factionRole=r(faction.role);
+    const hasFaction=Math.random()>0.35;
+    
+    // Build backstory
+    let back='';
+    back+=r(bd.origin)+', '+name+' '+r(bd.childhood).toLowerCase()+' ';
+    back+='\n\n'+'In '+pPoss+' youth, '+pronoun+' '+r(bd.event)+'. '+r(bd.turning)+' ';
+    back+='\n\n'+r(bd.trait)+', '+pronoun+' wields a '+r(cd.wep)+' with '+r(cd.tr)+' determination. ';
+    if(hasFaction){
+        back+='As a '+factionRole+' of '+faction.name+', '+faction.desc+', '+pronoun+' has access to resources and contacts—but also obligations that sometimes conflict with '+pPoss+' personal goals. ';
+    }
+    back+='\n\n'+r(bd.secret)+' ';
+    back+='Those who know '+pObj+' well have noticed that '+r(bd.flaw).toLowerCase()+' ';
+    back+='\n\n'+r(bd.motive)+' '+r(bd.goal);
+    
+    return{
+        name:name,
+        cls:cap(cl),
+        gender:cap(gn),
+        wep:cap(r(cd.wep)),
+        trait:cap(r(cd.tr)),
+        faction:hasFaction?{name:faction.name,role:cap(factionRole)}:null,
+        back:back
+    };
+}
+
+function openBackstoryFromList(index){
+    currentBackstoryIndex=index;
+    currentBackstoryName=genNames_[index].name;
+    currentBackstoryData=genNames_[index].backstory;
+    renderBackstoryModal();
+    document.getElementById('backstoryModal').classList.add('show');
+    document.body.style.overflow='hidden';
+}
+
+function openBackstory(name){
+    currentBackstoryIndex=-1;
+    currentBackstoryName=name;
+    currentBackstoryData=genBackstoryForName(name);
+    renderBackstoryModal();
+    document.getElementById('backstoryModal').classList.add('show');
+    document.body.style.overflow='hidden';
+}
+
+function renderBackstoryModal(){
+    const d=currentBackstoryData;
+    document.getElementById('modalTitle').textContent=d.name;
+    let statsHtml=`<div class="modal-stats">
+        <div class="modal-stat"><div class="modal-stat-label">Class</div><div class="modal-stat-value">${d.cls}</div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Gender</div><div class="modal-stat-value">${d.gender}</div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Weapon</div><div class="modal-stat-value">${d.wep}</div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Trait</div><div class="modal-stat-value">${d.trait}</div></div>`;
+    if(d.faction){
+        statsHtml+=`<div class="modal-stat"><div class="modal-stat-label">Faction</div><div class="modal-stat-value">${d.faction.name}</div></div>
+        <div class="modal-stat"><div class="modal-stat-label">Role</div><div class="modal-stat-value">${d.faction.role}</div></div>`;
+    }
+    statsHtml+='</div>';
+    const backstoryHtml=d.back.split('\n\n').map(p=>'<p>'+p+'</p>').join('');
+    document.getElementById('modalBody').innerHTML=statsHtml+backstoryHtml;
+}
+
+function closeModal(){
+    document.getElementById('backstoryModal').classList.remove('show');
+    document.body.style.overflow='';
+}
+
+function regenerateBackstory(){
+    currentBackstoryData=genBackstoryForName(currentBackstoryName);
+    // Update the stored backstory if it came from the list
+    if(currentBackstoryIndex>=0&&genNames_[currentBackstoryIndex]){
+        genNames_[currentBackstoryIndex].backstory=currentBackstoryData;
+        // Update the preview in the list
+        const items=document.querySelectorAll('.name-item');
+        if(items[currentBackstoryIndex]){
+            const previewText=currentBackstoryData.back.split('\n\n')[0].substring(0,150)+'...';
+            items[currentBackstoryIndex].querySelector('.name-preview-text').textContent=previewText;
+        }
+    }
+    renderBackstoryModal();
+    showToast('Backstory regenerated!');
+}
+
+async function copyBackstory(){
+    const d=currentBackstoryData;
+    let t='═══════════════════════════════════\n'+d.name.toUpperCase()+'\n═══════════════════════════════════\n\n';
+    t+='Class: '+d.cls+'\nGender: '+d.gender+'\nWeapon: '+d.wep+'\nTrait: '+d.trait+'\n';
+    if(d.faction){t+='Faction: '+d.faction.name+'\nRole: '+d.faction.role+'\n';}
+    t+='\n───────────────────────────────────\nBACKSTORY\n───────────────────────────────────\n\n';
+    t+=d.back.split('\n\n').join('\n\n');
+    try{await navigator.clipboard.writeText(t);showToast('Backstory copied!');}catch(e){}
+}
+
+// Close modal on overlay click
+document.getElementById('backstoryModal').addEventListener('click',e=>{if(e.target.id==='backstoryModal')closeModal();});
+
+// Close modal on Escape key
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal();});
+</script>
 </body>
 </html>
