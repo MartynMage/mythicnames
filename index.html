@@ -33,9 +33,25 @@
         *{margin:0;padding:0;box-sizing:border-box}
         body{font-family:'Crimson Pro',Georgia,serif;background:var(--bg-deep);color:var(--text-primary);min-height:100vh;line-height:1.6}
         body::before{content:'';position:fixed;top:0;left:0;width:100%;height:100%;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");opacity:0.03;pointer-events:none;z-index:0}
-        .ambient-glow{position:fixed;width:800px;height:800px;border-radius:50%;filter:blur(200px);opacity:0.07;pointer-events:none;z-index:0}
-        .glow-1{top:-400px;left:50%;transform:translateX(-50%);background:var(--accent-gold)}
-        .glow-2{bottom:-400px;right:-200px;background:var(--accent-ember)}
+        .ambient-glow{position:fixed;width:800px;height:800px;border-radius:50%;filter:blur(200px);opacity:0.07;pointer-events:none;z-index:0;animation:glowPulse 8s ease-in-out infinite}
+        .glow-1{top:-400px;left:50%;transform:translateX(-50%);background:var(--accent-gold);animation-delay:0s}
+        .glow-2{bottom:-400px;right:-200px;background:var(--accent-ember);animation-delay:2s}
+        .glow-3{top:30%;left:-300px;background:var(--accent-purple);width:600px;height:600px;animation-delay:4s}
+        .glow-4{bottom:20%;right:-250px;background:var(--accent-blue);width:500px;height:500px;animation-delay:6s}
+        .glow-5{top:60%;left:60%;background:var(--accent-gold);width:400px;height:400px;opacity:0.04;animation-delay:3s}
+        @keyframes glowPulse{0%,100%{opacity:0.05;transform:scale(1)}50%{opacity:0.1;transform:scale(1.1)}}
+        .particles{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+        .particle{position:absolute;width:4px;height:4px;background:var(--accent-gold);border-radius:50%;opacity:0.3;animation:floatParticle 15s infinite linear}
+        .particle:nth-child(2){left:10%;animation-delay:-2s;animation-duration:18s}
+        .particle:nth-child(3){left:20%;animation-delay:-4s;animation-duration:14s}
+        .particle:nth-child(4){left:30%;animation-delay:-6s;animation-duration:20s}
+        .particle:nth-child(5){left:40%;animation-delay:-8s;animation-duration:16s}
+        .particle:nth-child(6){left:50%;animation-delay:-10s;animation-duration:19s}
+        .particle:nth-child(7){left:60%;animation-delay:-12s;animation-duration:13s}
+        .particle:nth-child(8){left:70%;animation-delay:-14s;animation-duration:17s}
+        .particle:nth-child(9){left:80%;animation-delay:-3s;animation-duration:21s}
+        .particle:nth-child(10){left:90%;animation-delay:-7s;animation-duration:15s}
+        @keyframes floatParticle{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.4}90%{opacity:0.4}100%{transform:translateY(-100vh) rotate(720deg);opacity:0}}
         /* Theme Toggle */
         .theme-toggle{position:absolute;top:1rem;right:1rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:50%;width:42px;height:42px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.3s;z-index:10}
         .theme-toggle:hover{border-color:var(--accent-gold);transform:scale(1.1)}
@@ -69,6 +85,7 @@
         @keyframes popIn{from{opacity:0;transform:scale(0.8)}to{opacity:1;transform:scale(1)}}
         @keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
         .controls-panel{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:1.25rem;margin-bottom:1.25rem}
+        #characterContainer{display:block;width:100%}
         .control-row{display:grid;grid-template-columns:repeat(2,1fr);gap:0.75rem;margin-bottom:0.75rem}
         .control-row.three-col{grid-template-columns:repeat(3,1fr)}
         .control-row.four-col{grid-template-columns:repeat(4,1fr)}
@@ -136,6 +153,8 @@
         .name-expand{display:inline-flex;align-items:center;gap:0.3rem;margin-top:0.5rem;font-size:0.75rem;color:var(--accent-gold);cursor:pointer;background:none;border:none;padding:0;font-family:'Cinzel',serif;text-transform:uppercase;letter-spacing:0.05em}
         .name-expand:hover{color:var(--accent-amber);text-decoration:underline}
         .copy-btn,.action-btn{display:flex;align-items:center;justify-content:center;width:32px;height:32px;background:transparent;border:1px solid var(--border-subtle);border-radius:5px;color:var(--text-secondary);cursor:pointer;transition:all 0.2s}
+        .share-card-btn{display:flex;align-items:center;gap:0.3rem;background:var(--bg-parchment);border:1px solid var(--border-glow);padding:0.4rem 0.65rem;cursor:pointer;color:var(--accent-gold);font-size:0.7rem;font-weight:600;border-radius:5px;transition:all 0.2s;font-family:'Cinzel',serif;white-space:nowrap}
+        .share-card-btn:hover{background:rgba(212,168,87,0.15);border-color:var(--accent-gold)}
         .copy-btn:hover{background:var(--accent-gold);border-color:var(--accent-gold);color:var(--bg-deep)}
         .copy-btn.copied{background:var(--accent-green);border-color:var(--accent-green);color:white}
         .action-btn:hover{border-color:var(--accent-gold);color:var(--accent-gold)}
@@ -154,6 +173,9 @@
         .history-item:hover{background:var(--bg-parchment)}
         .history-item span{font-family:'Cinzel',serif;color:var(--text-primary)}
         .history-clear{font-size:0.75rem;color:var(--accent-ember);cursor:pointer;background:none;border:none}
+        .history-item{display:flex;justify-content:space-between;align-items:center}
+        .history-item .name-row{flex:1}
+        .history-item .copy-btn{flex-shrink:0}
         .danger-btn{border-color:var(--accent-red)!important;color:var(--accent-red)!important}
         .danger-btn:hover{background:var(--accent-red)!important;color:white!important}
         /* Party Generator */
@@ -179,7 +201,10 @@
         .party-member-name{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--text-primary);margin-bottom:0.25rem}
         .party-member-info{font-size:0.85rem;color:var(--text-secondary)}
         .party-member-preview{font-size:0.8rem;color:var(--text-faded);margin-top:0.75rem;line-height:1.5;font-style:italic}
-        .party-read-more{background:none;border:none;color:var(--accent-gold);font-size:0.8rem;padding:0;margin-top:0.5rem;cursor:pointer}
+        .party-member-actions{display:flex;align-items:center;gap:0.5rem;margin-top:0.5rem}
+        .party-card-btn{background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:4px;padding:0.25rem 0.5rem;font-size:0.8rem;cursor:pointer;transition:all 0.2s}
+        .party-card-btn:hover{border-color:var(--accent-gold);background:rgba(212,168,87,0.1)}
+        .party-read-more{background:none;border:none;color:var(--accent-gold);font-size:0.8rem;padding:0;cursor:pointer}
         .party-read-more:hover{text-decoration:underline}
         .party-relationships{margin-top:1.5rem;padding:1rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px}
         .party-relationships h3{font-family:'Cinzel',serif;font-size:1rem;color:var(--accent-gold);margin-bottom:0.75rem}
@@ -198,15 +223,15 @@
         .world-item-name{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--text-primary)}
         .world-item-desc{font-size:0.8rem;color:var(--text-secondary);margin-top:0.25rem}
         /* Character Card */
-        .character-card{background:var(--bg-card);border:1px solid var(--accent-gold);border-radius:10px;padding:1.35rem;margin-top:1.25rem;animation:popIn 0.3s ease-out}
-        .character-card h3{font-family:'Cinzel',serif;font-size:1.35rem;color:var(--accent-gold);margin-bottom:0.25rem}
-        .character-subtitle{font-size:1rem;color:var(--accent-amber);margin-bottom:0.85rem}
-        .character-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0.65rem;margin-bottom:0.85rem}
-        .stat-item{background:var(--bg-parchment);padding:0.5rem 0.7rem;border-radius:5px}
-        .stat-label{font-size:0.65rem;color:var(--text-faded);text-transform:uppercase;letter-spacing:0.1em}
-        .stat-value{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--text-primary)}
-        .character-backstory{background:var(--bg-parchment);padding:1.1rem;border-radius:6px;border-left:3px solid var(--accent-gold);max-height:400px;overflow-y:auto}
-        .character-backstory p{font-size:1rem;color:var(--text-secondary);line-height:1.75;margin-bottom:0.85rem}
+        .character-card{background:var(--bg-card);border:1px solid var(--accent-gold);border-radius:10px;padding:1.35rem;margin-top:1.25rem;animation:popIn 0.3s ease-out;display:block;width:100%;box-sizing:border-box}
+        .character-card h3{font-family:'Cinzel',serif;font-size:1.35rem;color:var(--accent-gold);margin-bottom:0.25rem;text-align:center;width:100%}
+        .character-subtitle{font-size:1rem;color:var(--accent-amber);margin-bottom:0.85rem;text-align:center;width:100%}
+        .character-stats{display:grid;grid-template-columns:repeat(2,1fr);gap:0.65rem;margin-bottom:0.85rem;width:100%}
+        .stat-item{background:var(--bg-parchment);padding:0.5rem 0.7rem;border-radius:5px;min-width:0;overflow:hidden}
+        .stat-label{font-size:0.65rem;color:var(--text-faded);text-transform:uppercase;letter-spacing:0.1em;display:block}
+        .stat-value{font-family:'Cinzel',serif;font-size:0.95rem;color:var(--text-primary);display:block;word-wrap:break-word;overflow-wrap:break-word}
+        .character-backstory{background:var(--bg-parchment);padding:1.1rem;border-radius:6px;border-left:3px solid var(--accent-gold);max-height:400px;overflow-y:auto;width:100%;box-sizing:border-box}
+        .character-backstory p{font-size:1rem;color:var(--text-secondary);line-height:1.75;margin-bottom:0.85rem;white-space:normal;word-wrap:break-word;overflow-wrap:break-word;width:100%}
         .character-backstory p:last-child{margin-bottom:0}
         .character-actions{display:flex;gap:0.6rem;margin-top:1rem;flex-wrap:wrap}
         /* Share buttons */
@@ -291,8 +316,9 @@
         .particle.rune{width:12px;height:12px;background:transparent;border:1px solid var(--accent-gold);opacity:0;font-size:10px;display:flex;align-items:center;justify-content:center;color:var(--accent-gold)}
         @keyframes particle-float{0%{transform:translateY(100vh) rotate(0deg);opacity:0}10%{opacity:0.3}90%{opacity:0.3}100%{transform:translateY(-100vh) rotate(360deg);opacity:0}}
         /* Character Portrait */
-        .character-portrait{width:140px;height:140px;margin:0 auto 1.25rem;position:relative}
+        .character-portrait{width:140px;height:140px;margin:0 auto 1.25rem;position:relative;flex-shrink:0}
         .portrait-frame{width:100%;height:100%;border-radius:50%;border:3px solid var(--accent-gold);overflow:hidden;background:var(--bg-parchment);display:flex;align-items:center;justify-content:center;box-shadow:0 0 30px var(--shadow-gold),inset 0 0 20px rgba(0,0,0,0.5)}
+        .portrait-frame svg,.portrait-svg{width:100%;height:100%;display:block}
         /* PDF Export */
         .pdf-preview{background:white;color:#333;padding:2rem;border-radius:8px;margin-bottom:1rem}
         /* FAQ */
@@ -391,6 +417,21 @@
     </div>
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
+    <div class="ambient-glow glow-3"></div>
+    <div class="ambient-glow glow-4"></div>
+    <div class="ambient-glow glow-5"></div>
+    <div class="particles">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
     <div class="container">
         <button class="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">
             <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
@@ -750,9 +791,9 @@
                 </div>
                 <div class="modal-body" id="modalBody"></div>
                 <div class="modal-actions">
+                    <button class="secondary-btn" onclick="createCardFromModal()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>Share Card</button>
                     <button class="secondary-btn" onclick="copyBackstory()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button>
                     <button class="secondary-btn" onclick="shareTwitter()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</button>
-                    <button class="secondary-btn" onclick="shareReddit()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0zm5.01 4.744c.688 0 1.25.561 1.25 1.249a1.25 1.25 0 0 1-2.498.056l-2.597-.547-.8 3.747c1.824.07 3.48.632 4.674 1.488.308-.309.73-.491 1.207-.491.968 0 1.754.786 1.754 1.754 0 .716-.435 1.333-1.01 1.614a3.111 3.111 0 0 1 .042.52c0 2.694-3.13 4.87-7.004 4.87-3.874 0-7.004-2.176-7.004-4.87 0-.183.015-.366.043-.534A1.748 1.748 0 0 1 4.028 12c0-.968.786-1.754 1.754-1.754.463 0 .898.196 1.207.49 1.207-.883 2.878-1.43 4.744-1.487l.885-4.182a.342.342 0 0 1 .14-.197.35.35 0 0 1 .238-.042l2.906.617a1.214 1.214 0 0 1 1.108-.701zM9.25 12C8.561 12 8 12.562 8 13.25c0 .687.561 1.248 1.25 1.248.687 0 1.248-.561 1.248-1.249 0-.688-.561-1.249-1.249-1.249zm5.5 0c-.687 0-1.248.561-1.248 1.25 0 .687.561 1.248 1.249 1.248.688 0 1.249-.561 1.249-1.249 0-.687-.562-1.249-1.25-1.249zm-5.466 3.99a.327.327 0 0 0-.231.094.33.33 0 0 0 0 .463c.842.842 2.484.913 2.961.913.477 0 2.105-.056 2.961-.913a.361.361 0 0 0 .029-.463.33.33 0 0 0-.464 0c-.547.533-1.684.73-2.512.73-.828 0-1.979-.196-2.512-.73a.326.326 0 0 0-.232-.095z"/></svg>Reddit</button>
                     <button class="generate-btn" onclick="regenerateBackstory()" style="flex:1">Regenerate</button>
                 </div>
             </div>
@@ -1059,7 +1100,16 @@
             list.innerHTML = '<div class="empty-state"><p>No names in history yet</p></div>';
             return;
         }
-        list.innerHTML = nameHistory.map(h => `<div class="name-item" style="cursor:pointer" onclick="copyN(this,'${esc(h.name).replace(/'/g,"\\'")}')"><div class="name-row"><span class="name-text">${esc(h.name)}</span><span style="font-size:0.8rem;color:var(--text-faded)">${new Date(h.time).toLocaleTimeString()}</span></div></div>`).join('');
+        list.innerHTML = nameHistory.map(h => `<div class="name-item history-item"><div class="name-row"><span class="name-text">${esc(h.name)}</span><span style="font-size:0.8rem;color:var(--text-faded)">${new Date(h.time).toLocaleTimeString()}</span></div><button class="copy-btn" onclick="copyHistoryName(this,'${esc(h.name).replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div>`).join('');
+    }
+    
+    async function copyHistoryName(btn, name) {
+        try {
+            await navigator.clipboard.writeText(name);
+            btn.classList.add('copied');
+            showToast('Copied: ' + name);
+            setTimeout(() => btn.classList.remove('copied'), 1500);
+        } catch(e) {}
     }
     
     // Pronunciation
@@ -1188,6 +1238,15 @@
         const names = [];
         const seen = new Set();
         
+        // Easter egg: Check for bmatt or rodaky keywords
+        const kw = (keywords || '').toLowerCase();
+        const ridiculousMode = kw.includes('bmatt') || kw.includes('rodaky');
+        
+        if (ridiculousMode) {
+            showToast('🤪 RIDICULOUS MODE ACTIVATED!');
+            return generateRidiculousNames(count, cat, gender);
+        }
+        
         for (let i = 0; i < count * 3 && names.length < count; i++) {
             let name, attempts = 0;
             do {
@@ -1225,6 +1284,108 @@
                 names.push(nm);
                 addToHistory(name);
             }
+        }
+        return names;
+    }
+    
+    // Ridiculous Names Easter Egg for bmatt/rodaky
+    function generateRidiculousNames(count, cat, gender) {
+        const ridiculousFirstNames = [
+            'Bumblefart', 'Wizzlebottom', 'Dingleberry', 'Snorkelwhack', 'Fluffernutter',
+            'Sporkington', 'Wobblecheeks', 'Noodlebrain', 'Gigglemuffin', 'Squeakybuns',
+            'Tootswaddle', 'Picklenose', 'Bumblebiscuit', 'Wafflebutt', 'Snickerdoodle',
+            'Flibbertigibbet', 'Wobbleknees', 'Derpington', 'Goofygoober', 'Sillypants',
+            'Chonkmaster', 'Boogerface', 'Stinkybeard', 'Fartblaster', 'Poopsmith',
+            'Wigglebottom', 'Noodlearms', 'Buttercup', 'Sprinkletoes', 'Jigglypuff',
+            'Blunderbuss', 'Clumsyfoot', 'Dimwit', 'Dorkface', 'Fumblefingers',
+            'Goobersnatch', 'Honkmaster', 'Lumpkin', 'Meatball', 'Nuggethead',
+            'Oopsiedaisy', 'Pudding', 'Quirkmaster', 'Rumpelstumper', 'Snortface',
+            'Taterhead', 'Uglyknees', 'Vomitcomet', 'Weirdo', 'Yoloswag', 'Zitface'
+        ];
+        
+        const ridiculousLastNames = [
+            'McStupidface', 'von Dinglehopper', 'the Constipated', 'Thunderthighs', 'Boogerbreath',
+            'McFartsalot', 'Buttwhistle', 'Crotchrot', 'Droolmaster', 'Earwaxington',
+            'Fungustoe', 'Gassypants', 'Hairball', 'Itchybottom', 'Jerkface',
+            'Knucklehead', 'Loserface', 'Mucusmaster', 'Nosepicker', 'Odorbutt',
+            'Pimplepopper', 'Queefington', 'Rancidbreath', 'Snot-rocket', 'Toesucker',
+            'Underpants', 'Vomitbreath', 'Wetwilly', 'Yuckmouth', 'Zitpopper',
+            'the Flatulent', 'the Incompetent', 'the Obnoxious', 'the Smelly', 'the Useless',
+            'Clumsybottom', 'Failsworth', 'Losertown', 'Messypants', 'Oopsington'
+        ];
+        
+        const ridiculousTitles = [
+            'Professional Couch Potato', 'Supreme Overlord of Nothing', 'Champion of Bad Decisions',
+            'Master of Disaster', 'Lord of the Dance (But Badly)', 'Duke of Dumb', 'Baron of Blunders',
+            'Earl of Embarrassment', 'Viscount of Very Bad Ideas', 'Marquis of Mediocrity',
+            'Knight of the Awkward Silence', 'Guardian of the Last Slice', 'Protector of the TV Remote',
+            'Defender of Procrastination', 'Hero of Zero Accomplishments', 'Sage of Snacking',
+            'Oracle of Obvious Things', 'Prophet of Poor Choices', 'Wizard of Doing Nothing',
+            'Paladin of Pajamas', 'Ranger of the Refrigerator', 'Cleric of Complaining',
+            'Bard of Bad Jokes', 'Rogue of Really Bad Ideas', 'Warlock of Wasting Time'
+        ];
+        
+        const ridiculousBackstories = [
+            "was born during a total eclipse of common sense. Their mother took one look and said 'well, that's unfortunate.' They've been disappointing people ever since.",
+            "once tried to fight a duck and lost. The duck now rules a small kingdom. They don't like to talk about it.",
+            "accidentally burned down three villages trying to make toast. They're now banned from kitchens across the realm.",
+            "claims to have slain a dragon, but witnesses say it was actually a large chicken. A very angry chicken.",
+            "was raised by wolves, but the wolves eventually asked them to leave because they were 'too weird, even for wolves.'",
+            "spent ten years training to be a wizard, only to discover they're allergic to magic. They sneeze fireballs now.",
+            "once got lost in their own house for three days. Search parties were involved.",
+            "has a nemesis: a particularly aggressive goose named Gerald. Gerald is winning.",
+            "tried to become a bard but was banned from every tavern for singing too badly. Even the deaf complained.",
+            "accidentally started a cult. They didn't mean to. It just sort of happened. The cult worships cheese.",
+            "was cursed by a witch to always trip at the worst possible moment. Stairs are their mortal enemy.",
+            "believes they're the chosen one. Chosen for what? Nobody knows. Probably something embarrassing.",
+            "once challenged Death to a game and chose Tic-Tac-Toe. They still lost somehow.",
+            "has been struck by lightning seventeen times. They're either very unlucky or the sky just hates them.",
+            "tried to ride a dragon but got the wrong end. The dragon was equally traumatized."
+        ];
+        
+        const ridiculousTraits = [
+            'Chronically flatulent', 'Pathologically honest about the wrong things', 'Allergic to success',
+            'Weaponized incompetence', 'Uncontrollable eyebrow waggling', 'Speaks only in puns',
+            'Falls up stairs', 'Magnetically attracted to bird droppings', 'Cannot whisper',
+            'Involuntary jazz hands', 'Sweats profusely when lying', 'Sneezes at plot-critical moments',
+            'Constantly hungry', 'Afraid of butterflies', 'Talks to inanimate objects',
+            'Terrible sense of direction', 'Laughs at inappropriate times', 'Cannot keep secrets'
+        ];
+        
+        const ridiculousWeapons = [
+            'Wet Noodle of Destiny', 'Rubber Chicken of Chaos', 'Spork of Doom',
+            'Slightly Stale Baguette', 'Sock Puppet of Terror', 'Aggressive Kazoo',
+            'Squeaky Hammer', 'Banana of Justice', 'Deadly Pillow', 'Sarcasm (weaponized)',
+            'Disappointment (inherited)', 'Bad Jokes', 'Aggressive Hugging', 'Flailing Wildly',
+            'Running Away (very fast)', 'Crying Uncontrollably', 'Sheer Luck'
+        ];
+        
+        const names = [];
+        for (let i = 0; i < count; i++) {
+            const firstName = r(ridiculousFirstNames);
+            const lastName = r(ridiculousLastNames);
+            const title = r(ridiculousTitles);
+            const name = firstName + ' ' + lastName;
+            const backstoryIntro = r(ridiculousBackstories);
+            const trait = r(ridiculousTraits);
+            const weapon = r(ridiculousWeapons);
+            
+            const fullBackstory = `${name}, ${title}, ${backstoryIntro}\n\nTheir signature move is called "The Accident" because that's what everything they do turns into. Fellow adventurers describe them as "an experience" and "technically not a war crime."\n\nDespite all evidence to the contrary, they remain convinced that greatness is just around the corner. It isn't. But don't tell them that.`;
+            
+            names.push({
+                name: name,
+                pron: firstName.toLowerCase() + ' ' + lastName.split(' ')[0].toLowerCase(),
+                mean: '"' + title + '"',
+                backstory: {
+                    name: name,
+                    cls: r(['Village Idiot', 'Professional Disappointment', 'Chaos Agent', 'Walking Disaster', 'Certified Clown', 'Hot Mess', 'Disaster Artist']),
+                    gender: gender === 'any' ? r(['Masculine', 'Feminine', 'Questionable']) : cap(gender),
+                    wep: weapon,
+                    trait: trait,
+                    back: fullBackstory,
+                    faction: { name: r(['The Losers Club', 'The Magnificent Idiots', 'Team Rocket But Worse', 'The Fellowship of the Wrong Turn', 'Dumb & Dumber Inc.']), role: r(['Mascot', 'Liability', 'Comic Relief', 'The One We Don\'t Talk About', 'Designated Distraction']) }
+                }
+            });
         }
         return names;
     }
@@ -1438,7 +1599,10 @@
                 <div class="party-member-name">${esc(m.name)}</div>
                 <div class="party-member-info">${cap(m.gender)} • ${cap(m.wep)}<br><em>${cap(m.trait)}</em></div>
                 <div class="party-member-preview">${m.backstory ? esc(m.backstory.substring(0, 80)) + '...' : ''}</div>
-                <button class="party-read-more">Read backstory →</button>
+                <div class="party-member-actions">
+                    <button class="party-card-btn" onclick="event.stopPropagation();createPartyMemberCard(${i})" title="Create Share Card">🖼️</button>
+                    <button class="party-read-more" onclick="event.stopPropagation();openPartyMemberBackstory(${i})">Read backstory →</button>
+                </div>
             </div>`;
             addToHistory(m.name);
         });
@@ -1480,6 +1644,21 @@
         renderBackstoryModal();
         document.getElementById('backstoryModal').classList.add('show');
         document.body.style.overflow = 'hidden';
+    }
+    
+    function createPartyMemberCard(index) {
+        const member = window.currentParty[index];
+        if (!member) return;
+        
+        openShareCard({
+            name: member.name,
+            gender: cap(member.gender),
+            race: cap(member.race || 'Human'),
+            cls: cap(member.role),
+            wep: cap(member.wep),
+            trait: cap(member.trait),
+            back: member.backstory
+        });
     }
     
     // ============ WORLD BUILDER ============
@@ -1580,6 +1759,7 @@
                         <span class="name-meaning">${it.mean}</span>
                     </div>
                     <div class="name-actions">
+                        <button class="share-card-btn" onclick="event.stopPropagation();createCardFromList(${i})" title="Create Share Card">🖼️ Card</button>
                         <button class="action-btn" onclick="event.stopPropagation();toggleFavorite(this,'${esc(it.name).replace(/'/g,"\\'")}')" title="Favorite"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg></button>
                         <button class="copy-btn" onclick="event.stopPropagation();copyN(this,'${esc(it.name).replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button>
                     </div>
@@ -1590,6 +1770,41 @@
                 </div>
             </div>`;
         }).join('') + '</div>';
+    }
+    
+    function createCardFromList(index) {
+        const item = genNames_[index];
+        const cat = document.getElementById('category')?.value || 'characters';
+        const raceMap = {elf:'elf',dwarf:'dwarf',orc:'orc',tiefling:'tiefling',dragonborn:'dragonborn',halfling:'halfling',gnome:'gnome',human:'human'};
+        const race = raceMap[cat] || 'Human';
+        
+        openShareCard({
+            name: item.name,
+            gender: item.backstory.gender,
+            race: race.charAt(0).toUpperCase() + race.slice(1),
+            cls: item.backstory.cls,
+            wep: item.backstory.wep,
+            trait: item.backstory.trait,
+            back: item.backstory.back
+        });
+    }
+    
+    function createCardFromModal() {
+        const d = currentBackstoryData;
+        const cat = document.getElementById('category')?.value || 'characters';
+        const raceMap = {elf:'Elf',dwarf:'Dwarf',orc:'Orc',tiefling:'Tiefling',dragonborn:'Dragonborn',halfling:'Halfling',gnome:'Gnome',human:'Human'};
+        const race = raceMap[cat] || 'Human';
+        
+        closeModal();
+        openShareCard({
+            name: d.name,
+            gender: d.gender,
+            race: race,
+            cls: d.cls,
+            wep: d.wep,
+            trait: d.trait,
+            back: d.back
+        });
     }
     
     function toggleFavorite(btn, name) {
@@ -1795,25 +2010,195 @@
         shareCardData = data;
         const canvas = document.getElementById('shareCanvas');
         const ctx = canvas.getContext('2d');
-        ctx.fillStyle = '#1a1714';
-        ctx.fillRect(0, 0, 500, 300);
+        const W = 500;
+        
+        // First, calculate how many lines the backstory needs
+        ctx.font = '14px Georgia, serif';
+        const backstoryText = (data.back || '').replace(/\n+/g, ' ').trim();
+        const words = backstoryText.split(' ');
+        const maxWidth = 440;
+        const lineHeight = 20;
+        let tempLine = '';
+        let lineCount = 0;
+        
+        for (let i = 0; i < words.length; i++) {
+            const testLine = tempLine + words[i] + ' ';
+            const metrics = ctx.measureText(testLine);
+            if (metrics.width > maxWidth && tempLine !== '') {
+                lineCount++;
+                tempLine = words[i] + ' ';
+            } else {
+                tempLine = testLine;
+            }
+        }
+        if (tempLine.trim()) lineCount++;
+        
+        // Calculate dynamic height: header(100) + backstory + gap(15) + stats(55) + footer(25)
+        const backstoryHeight = Math.max(lineCount * lineHeight, 60);
+        const H = 100 + backstoryHeight + 15 + 55 + 25;
+        
+        // Resize canvas
+        canvas.height = H;
+        
+        // === BACKGROUND ===
+        const bgGrad = ctx.createLinearGradient(0, 0, W, H);
+        bgGrad.addColorStop(0, '#0f0d0a');
+        bgGrad.addColorStop(0.5, '#1a1510');
+        bgGrad.addColorStop(1, '#0f0d0a');
+        ctx.fillStyle = bgGrad;
+        ctx.fillRect(0, 0, W, H);
+        
+        // Subtle noise texture effect
+        ctx.fillStyle = 'rgba(255,255,255,0.02)';
+        for (let i = 0; i < 300; i++) {
+            ctx.beginPath();
+            ctx.arc(Math.random() * W, Math.random() * H, Math.random() * 1.5, 0, Math.PI * 2);
+            ctx.fill();
+        }
+        
+        // Corner decorations (top only)
+        ctx.strokeStyle = '#d4a857';
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.moveTo(15, 40); ctx.lineTo(15, 15); ctx.lineTo(40, 15);
+        ctx.stroke();
+        ctx.beginPath();
+        ctx.moveTo(W-40, 15); ctx.lineTo(W-15, 15); ctx.lineTo(W-15, 40);
+        ctx.stroke();
+        
+        // === HEADER SECTION ===
+        const orbGrad = ctx.createRadialGradient(W/2, 55, 0, W/2, 55, 120);
+        orbGrad.addColorStop(0, 'rgba(212,168,87,0.15)');
+        orbGrad.addColorStop(0.5, 'rgba(212,168,87,0.05)');
+        orbGrad.addColorStop(1, 'rgba(212,168,87,0)');
+        ctx.fillStyle = orbGrad;
+        ctx.fillRect(0, 0, W, 120);
+        
+        // Character name with shadow
+        ctx.textAlign = 'center';
+        ctx.font = 'bold 32px Georgia, serif';
+        ctx.fillStyle = 'rgba(0,0,0,0.5)';
+        ctx.fillText(data.name || 'Unknown', W/2 + 2, 47);
+        ctx.fillStyle = '#fff';
+        ctx.fillText(data.name || 'Unknown', W/2, 45);
+        
+        // Subtitle
+        const subtitle = [(data.gender || ''), (data.race || ''), (data.cls || '')].filter(Boolean).join('  ·  ');
+        ctx.font = '15px Georgia, serif';
         ctx.fillStyle = '#d4a857';
-        ctx.fillRect(0, 0, 500, 4);
-        ctx.font = 'bold 28px Cinzel, serif';
+        ctx.fillText('— ' + subtitle + ' —', W/2, 70);
+        
+        // Decorative line
+        const lineGrad = ctx.createLinearGradient(50, 0, W-50, 0);
+        lineGrad.addColorStop(0, 'rgba(212,168,87,0)');
+        lineGrad.addColorStop(0.2, 'rgba(212,168,87,0.6)');
+        lineGrad.addColorStop(0.5, 'rgba(212,168,87,1)');
+        lineGrad.addColorStop(0.8, 'rgba(212,168,87,0.6)');
+        lineGrad.addColorStop(1, 'rgba(212,168,87,0)');
+        ctx.strokeStyle = lineGrad;
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(50, 85);
+        ctx.lineTo(W-50, 85);
+        ctx.stroke();
+        
+        // Diamond ornament
         ctx.fillStyle = '#d4a857';
-        ctx.fillText(data.name, 30, 50);
-        ctx.font = '16px Crimson Pro, serif';
-        ctx.fillStyle = '#c4b8a8';
-        ctx.fillText((data.gender || '') + ' ' + (data.race || '') + ' ' + (data.cls || ''), 30, 80);
-        ctx.fillStyle = '#8a7d6d';
-        ctx.font = '14px Crimson Pro, serif';
-        const lines = (data.back || '').substring(0, 300).split(/(?=.{60})/g).slice(0, 4);
-        lines.forEach((line, i) => ctx.fillText(line.trim(), 30, 120 + i * 22));
-        ctx.fillStyle = '#3d352c';
-        ctx.fillRect(0, 260, 500, 40);
-        ctx.fillStyle = '#d4a857';
-        ctx.font = '12px Cinzel, serif';
-        ctx.fillText('MythicNames.io', 30, 285);
+        ctx.beginPath();
+        ctx.moveTo(W/2, 80);
+        ctx.lineTo(W/2 + 5, 85);
+        ctx.lineTo(W/2, 90);
+        ctx.lineTo(W/2 - 5, 85);
+        ctx.closePath();
+        ctx.fill();
+        
+        // === BACKSTORY SECTION (full text) ===
+        ctx.textAlign = 'left';
+        ctx.font = '14px Georgia, serif';
+        ctx.fillStyle = '#d8d0c4';
+        let line = '';
+        let y = 110;
+        
+        for (let i = 0; i < words.length; i++) {
+            const testLine = line + words[i] + ' ';
+            const metrics = ctx.measureText(testLine);
+            if (metrics.width > maxWidth && line !== '') {
+                ctx.fillText(line.trim(), 30, y);
+                line = words[i] + ' ';
+                y += lineHeight;
+            } else {
+                line = testLine;
+            }
+        }
+        if (line.trim()) {
+            ctx.fillText(line.trim(), 30, y);
+            y += lineHeight;
+        }
+        
+        // === STATS BAR ===
+        const statsY = 100 + backstoryHeight + 15;
+        
+        ctx.fillStyle = 'rgba(0,0,0,0.4)';
+        ctx.fillRect(0, statsY, W, 55);
+        
+        const edgeGrad = ctx.createLinearGradient(0, statsY, 0, statsY + 5);
+        edgeGrad.addColorStop(0, 'rgba(212,168,87,0.4)');
+        edgeGrad.addColorStop(1, 'rgba(212,168,87,0)');
+        ctx.fillStyle = edgeGrad;
+        ctx.fillRect(0, statsY, W, 5);
+        
+        const stats = [
+            { label: 'RACE', value: data.race || '—' },
+            { label: 'CLASS', value: data.cls || '—' },
+            { label: 'WEAPON', value: data.wep || '—' },
+            { label: 'TRAIT', value: data.trait || '—' }
+        ];
+        
+        const statWidth = W / stats.length;
+        stats.forEach((stat, i) => {
+            const x = i * statWidth + statWidth / 2;
+            
+            if (i > 0) {
+                ctx.strokeStyle = 'rgba(212,168,87,0.2)';
+                ctx.lineWidth = 1;
+                ctx.beginPath();
+                ctx.moveTo(i * statWidth, statsY + 8);
+                ctx.lineTo(i * statWidth, statsY + 48);
+                ctx.stroke();
+            }
+            
+            ctx.textAlign = 'center';
+            ctx.font = '9px Arial, sans-serif';
+            ctx.fillStyle = '#8a8070';
+            ctx.fillText(stat.label, x, statsY + 20);
+            
+            ctx.font = 'bold 14px Georgia, serif';
+            ctx.fillStyle = '#f4e8d4';
+            ctx.fillText(stat.value, x, statsY + 40);
+        });
+        
+        // === FOOTER ===
+        const footerY = H - 25;
+        ctx.fillStyle = '#1a1510';
+        ctx.fillRect(0, footerY, W, 25);
+        
+        ctx.strokeStyle = 'rgba(212,168,87,0.3)';
+        ctx.lineWidth = 1;
+        ctx.beginPath();
+        ctx.moveTo(0, footerY);
+        ctx.lineTo(W, footerY);
+        ctx.stroke();
+        
+        ctx.textAlign = 'left';
+        ctx.font = '11px Georgia, serif';
+        ctx.fillStyle = '#6a6050';
+        ctx.fillText('⚔  MythicNames.io', 20, footerY + 16);
+        
+        ctx.textAlign = 'right';
+        ctx.fillStyle = '#4a4540';
+        ctx.font = '10px Arial, sans-serif';
+        ctx.fillText('Fantasy Name Generator', W - 20, footerY + 16);
+        
         document.getElementById('shareCardModal').classList.add('show');
     }
     
@@ -1883,21 +2268,7 @@
         };
         const decor = raceDecor[race] || raceDecor.human;
         
-        return `<div class="character-portrait">
-            <div class="portrait-frame" style="background: radial-gradient(circle at 30% 30%, ${colors.secondary}, #0d0b0e); border-color: ${colors.primary};">
-                <svg class="portrait-svg" viewBox="0 0 100 100">
-                    <defs>
-                        <radialGradient id="glow${uid}" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%" stop-color="${colors.accent}" stop-opacity="0.2"/>
-                            <stop offset="100%" stop-color="${colors.accent}" stop-opacity="0"/>
-                        </radialGradient>
-                    </defs>
-                    <circle cx="50" cy="50" r="38" fill="url(#glow${uid})"/>
-                    ${decor}
-                    ${symbol}
-                </svg>
-            </div>
-        </div>`;
+        return `<div class="character-portrait"><div class="portrait-frame" style="background: radial-gradient(circle at 30% 30%, ${colors.secondary}, #0d0b0e); border-color: ${colors.primary};"><svg class="portrait-svg" viewBox="0 0 100 100"><defs><radialGradient id="glow${uid}" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${colors.accent}" stop-opacity="0.2"/><stop offset="100%" stop-color="${colors.accent}" stop-opacity="0"/></radialGradient></defs><circle cx="50" cy="50" r="38" fill="url(#glow${uid})"/>${decor}${symbol}</svg></div></div>`;
     }
     
     function generatePortraitSmall(race, cls) {
@@ -1932,14 +2303,7 @@
         };
         const symbol = symbols[clsLower] || symbols.warrior;
         
-        return `<div class="portrait-small" style="background: radial-gradient(circle at 30% 30%, ${colors.secondary}, #0d0b0e); border-color: ${colors.primary};">
-            <svg viewBox="0 0 100 100">
-                <defs><radialGradient id="gs${uid}" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${colors.accent}" stop-opacity="0.2"/><stop offset="100%" stop-color="${colors.accent}" stop-opacity="0"/></radialGradient></defs>
-                <circle cx="50" cy="50" r="45" fill="url(#gs${uid})"/>
-                <circle cx="50" cy="50" r="46" fill="none" stroke="${colors.primary}" stroke-width="4"/>
-                ${symbol}
-            </svg>
-        </div>`;
+        return `<div class="portrait-small" style="background: radial-gradient(circle at 30% 30%, ${colors.secondary}, #0d0b0e); border-color: ${colors.primary};"><svg viewBox="0 0 100 100"><defs><radialGradient id="gs${uid}" cx="50%" cy="50%" r="50%"><stop offset="0%" stop-color="${colors.accent}" stop-opacity="0.2"/><stop offset="100%" stop-color="${colors.accent}" stop-opacity="0"/></radialGradient></defs><circle cx="50" cy="50" r="45" fill="url(#gs${uid})"/><circle cx="50" cy="50" r="46" fill="none" stroke="${colors.primary}" stroke-width="4"/>${symbol}</svg></div>`;
     }
     
     function adjustColor(hex, amt) {
@@ -2193,7 +2557,8 @@ startxref
             const cont = document.getElementById('characterContainer');
             const factionHtml = char.faction ? `<div class="stat-item"><div class="stat-label">Faction</div><div class="stat-value">${char.faction.name}</div></div><div class="stat-item"><div class="stat-label">Role</div><div class="stat-value">${char.faction.role}</div></div>` : '';
             const portraitHtml = generatePortrait(char.race.toLowerCase(), char.cls, char.gender);
-            cont.innerHTML = `<div class="character-card">${portraitHtml}<h3>${esc(char.name)}</h3><div class="character-subtitle">${char.gender} ${char.race} ${char.cls}</div><div class="character-stats"><div class="stat-item"><div class="stat-label">Race</div><div class="stat-value">${char.race}</div></div><div class="stat-item"><div class="stat-label">Class</div><div class="stat-value">${char.cls}</div></div><div class="stat-item"><div class="stat-label">Weapon</div><div class="stat-value">${char.wep}</div></div><div class="stat-item"><div class="stat-label">Trait</div><div class="stat-value">${char.trait}</div></div>${factionHtml}</div><div class="character-backstory">${char.back.split('\n\n').map(p => '<p>' + p + '</p>').join('')}</div><div class="character-actions"><button class="secondary-btn" onclick="copyCharacter()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button><button class="secondary-btn" onclick="downloadPDF()">📄 PDF</button><button class="secondary-btn" onclick="addToCampaign('character', currentBackstoryData)">📚 Save</button><button class="secondary-btn" onclick="openShareCard(currentBackstoryData)">🖼️ Card</button><button class="share-btn twitter" onclick="shareTwitter()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</button><button class="generate-btn" onclick="document.getElementById('generateCharBtn').click()">Generate Another</button></div></div>`;
+            const backstoryParagraphs = char.back.split(/\n\n+/).filter(p => p.trim()).map(p => '<p>' + esc(p.trim()) + '</p>').join('');
+            cont.innerHTML = `<div class="character-card">${portraitHtml}<h3>${esc(char.name)}</h3><div class="character-subtitle">${char.gender} ${char.race} ${char.cls}</div><div class="character-stats"><div class="stat-item"><div class="stat-label">Race</div><div class="stat-value">${char.race}</div></div><div class="stat-item"><div class="stat-label">Class</div><div class="stat-value">${char.cls}</div></div><div class="stat-item"><div class="stat-label">Weapon</div><div class="stat-value">${char.wep}</div></div><div class="stat-item"><div class="stat-label">Trait</div><div class="stat-value">${char.trait}</div></div>${factionHtml}</div><div class="character-backstory">${backstoryParagraphs}</div><div class="character-actions"><button class="secondary-btn" onclick="copyCharacter()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>Copy</button><button class="secondary-btn" onclick="downloadPDF()">📄 PDF</button><button class="secondary-btn" onclick="addToCampaign('character', currentBackstoryData)">📚 Save</button><button class="secondary-btn" onclick="openShareCard(currentBackstoryData)">🖼️ Card</button><button class="share-btn twitter" onclick="shareTwitter()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>Tweet</button><button class="generate-btn" onclick="document.getElementById('generateCharBtn').click()">Generate Another</button></div></div>`;
             
             currentBackstoryData = char;
             }, 400); // end setTimeout
@@ -2217,6 +2582,396 @@ startxref
         const t = '═══════════════════════════════════\n' + name.toUpperCase() + '\n' + subtitle + '\n═══════════════════════════════════\n\n' + stats + '\n\n───────────────────────────────────\nBACKSTORY\n───────────────────────────────────\n\n' + backstory;
         try { await navigator.clipboard.writeText(t); showToast('Character copied!'); } catch(e) {}
     }
+    
+    // ============ EASTER EGGS ============
+    
+    // 1. Konami Code: ↑↑↓↓←→←→BA - Legendary Mode
+    let konamiSequence = [];
+    const konamiCode = ['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'];
+    let legendaryMode = false;
+    
+    document.addEventListener('keydown', (e) => {
+        konamiSequence.push(e.code);
+        konamiSequence = konamiSequence.slice(-10);
+        if (konamiSequence.join(',') === konamiCode.join(',')) {
+            activateLegendaryMode();
+        }
+    });
+    
+    function activateLegendaryMode() {
+        if (legendaryMode) return;
+        legendaryMode = true;
+        
+        // Epic visual effect
+        document.body.style.transition = 'all 0.5s';
+        const flash = document.createElement('div');
+        flash.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:radial-gradient(circle,rgba(212,168,87,0.8),transparent);z-index:9999;pointer-events:none;animation:legendaryFlash 1.5s forwards';
+        document.body.appendChild(flash);
+        
+        // Add legendary particles
+        for (let i = 0; i < 50; i++) {
+            setTimeout(() => {
+                const particle = document.createElement('div');
+                particle.className = 'legendary-particle';
+                particle.style.cssText = `position:fixed;width:8px;height:8px;background:gold;border-radius:50%;pointer-events:none;z-index:9998;left:${Math.random()*100}%;top:100%;box-shadow:0 0 10px gold,0 0 20px orange;animation:legendaryRise ${3+Math.random()*2}s forwards`;
+                document.body.appendChild(particle);
+                setTimeout(() => particle.remove(), 5000);
+            }, i * 50);
+        }
+        
+        // Show toast
+        showToast('⚔️ LEGENDARY MODE ACTIVATED! ⚔️');
+        
+        // Add legendary badge to logo
+        const logo = document.querySelector('.logo');
+        if (logo) {
+            logo.innerHTML += ' <span style="color:#ffd700;text-shadow:0 0 10px gold;font-size:0.6em;">⚜️ LEGENDARY ⚜️</span>';
+        }
+        
+        setTimeout(() => flash.remove(), 1500);
+    }
+    
+    // Add CSS for legendary effects
+    const legendaryStyles = document.createElement('style');
+    legendaryStyles.textContent = `
+        @keyframes legendaryFlash{0%{opacity:0}20%{opacity:1}100%{opacity:0}}
+        @keyframes legendaryRise{0%{transform:translateY(0) rotate(0deg);opacity:1}100%{transform:translateY(-120vh) rotate(720deg);opacity:0}}
+        .legendary-particle{animation-timing-function:ease-out}
+    `;
+    document.head.appendChild(legendaryStyles);
+    
+    // 2. Secret Name Easter Eggs
+    const secretNameResponses = {
+        'gandalf': { toast: '🧙 A wizard is never late...', name: 'Mithrandir the Grey Wanderer' },
+        'frodo': { toast: '💍 Keep it secret, keep it safe...', name: 'Baggins the Ringbearer' },
+        'aragorn': { toast: '👑 The king has returned!', name: 'Strider of the Dúnedain' },
+        'legolas': { toast: '🏹 They\'re taking the hobbits to Isengard!', name: 'Greenleaf of the Woodland Realm' },
+        'gimli': { toast: '⛏️ And my axe!', name: 'Son of Glóin, Dwarf-lord' },
+        'sauron': { toast: '👁️ One ring to rule them all...', name: 'The Dark Lord of Mordor' },
+        'conan': { toast: '⚔️ What is best in life?', name: 'The Cimmerian Barbarian' },
+        'drizzt': { toast: '🗡️ The legend of the dark elf!', name: 'Do\'Urden of Menzoberranzan' },
+        'elminster': { toast: '📚 The Sage of Shadowdale approves!', name: 'Aumar the Mage of Mysteries' },
+        'raistlin': { toast: '⏳ The hourglass eyes see all...', name: 'Majere of the Black Robes' },
+        'tanis': { toast: '🌲 Half-elven, half-human, full hero!', name: 'Half-Elven of Qualinost' },
+        'geralt': { toast: '🐺 Toss a coin to your Witcher!', name: 'of Rivia, The White Wolf' },
+        'bilbo': { toast: '🏠 In a hole in the ground...', name: 'Baggins of Bag End' }
+    };
+    
+    // Hook into name generation to check for secret names
+    const originalGenerateNames = window.generateNames;
+    if (typeof generateNames === 'function') {
+        const _origGen = generateNames;
+        // We'll check backstory text input if it exists
+    }
+    
+    // Check for secret names in any text input
+    document.addEventListener('input', (e) => {
+        if (e.target.tagName === 'INPUT' && e.target.type === 'text') {
+            const val = e.target.value.toLowerCase().trim();
+            if (secretNameResponses[val]) {
+                const secret = secretNameResponses[val];
+                showToast(secret.toast);
+            }
+        }
+    });
+    
+    // 3. Logo Click Counter - Click 7 times for dragon
+    let logoClicks = 0;
+    let logoClickTimer = null;
+    const logoWrapper = document.querySelector('.logo-wrapper');
+    
+    if (logoWrapper) {
+        logoWrapper.style.cursor = 'pointer';
+        logoWrapper.addEventListener('click', () => {
+            logoClicks++;
+            clearTimeout(logoClickTimer);
+            
+            if (logoClicks >= 7) {
+                triggerDragonEasterEgg();
+                logoClicks = 0;
+            } else {
+                logoClickTimer = setTimeout(() => logoClicks = 0, 2000);
+            }
+        });
+    }
+    
+    function triggerDragonEasterEgg() {
+        showToast('🐉 You have awakened the dragon!');
+        
+        const dragon = document.createElement('div');
+        dragon.innerHTML = '🐉';
+        dragon.style.cssText = 'position:fixed;font-size:80px;z-index:9999;pointer-events:none;left:-100px;top:30%;filter:drop-shadow(0 0 20px orange);animation:dragonFly 4s forwards ease-in-out';
+        document.body.appendChild(dragon);
+        
+        // Add fire breath particles
+        setTimeout(() => {
+            for (let i = 0; i < 20; i++) {
+                setTimeout(() => {
+                    const fire = document.createElement('div');
+                    fire.innerHTML = '🔥';
+                    fire.style.cssText = `position:fixed;font-size:${20+Math.random()*30}px;z-index:9998;pointer-events:none;left:${50+Math.random()*30}%;top:${25+Math.random()*20}%;opacity:0;animation:fireBreath 1s forwards`;
+                    document.body.appendChild(fire);
+                    setTimeout(() => fire.remove(), 1000);
+                }, i * 100);
+            }
+        }, 1500);
+        
+        setTimeout(() => dragon.remove(), 4000);
+    }
+    
+    // Add dragon animation CSS
+    const dragonStyles = document.createElement('style');
+    dragonStyles.textContent = `
+        @keyframes dragonFly{
+            0%{left:-100px;transform:scaleX(1) rotate(-10deg)}
+            45%{top:25%;transform:scaleX(1) rotate(5deg)}
+            50%{transform:scaleX(1) rotate(0deg)}
+            55%{top:35%;transform:scaleX(1) rotate(-5deg)}
+            100%{left:calc(100% + 100px);transform:scaleX(1) rotate(10deg)}
+        }
+        @keyframes fireBreath{
+            0%{opacity:0;transform:scale(0.5)}
+            50%{opacity:1;transform:scale(1.2)}
+            100%{opacity:0;transform:scale(0.3) translateY(-50px)}
+        }
+    `;
+    document.head.appendChild(dragonStyles);
+    
+    // 5. Secret "Goblin Programmer" Class - Gnome + Rogue + click trait label 3 times
+    let traitClicks = 0;
+    let traitClickTimer = null;
+    
+    document.addEventListener('click', (e) => {
+        if (e.target.tagName === 'LABEL' && e.target.textContent.includes('Trait')) {
+            const raceSelect = document.getElementById('charRace');
+            const classSelect = document.getElementById('charClass');
+            
+            if (raceSelect?.value === 'gnome' && classSelect?.value === 'rogue') {
+                traitClicks++;
+                clearTimeout(traitClickTimer);
+                
+                if (traitClicks >= 3) {
+                    unlockGoblinProgrammer();
+                    traitClicks = 0;
+                } else {
+                    traitClickTimer = setTimeout(() => traitClicks = 0, 2000);
+                }
+            }
+        }
+    });
+    
+    let goblinProgrammerUnlocked = false;
+    function unlockGoblinProgrammer() {
+        if (goblinProgrammerUnlocked) return;
+        goblinProgrammerUnlocked = true;
+        
+        showToast('🖥️ SECRET CLASS UNLOCKED: Goblin Programmer!');
+        
+        // Add to class select
+        const classSelect = document.getElementById('charClass');
+        if (classSelect) {
+            const option = document.createElement('option');
+            option.value = 'programmer';
+            option.textContent = '🖥️ Goblin Programmer';
+            option.style.color = '#00ff00';
+            classSelect.appendChild(option);
+            classSelect.value = 'programmer';
+        }
+        
+        // Add programmer-specific traits and weapons to the generation
+        window.programmerTraits = ['Caffeine-dependent', 'Bug-obsessed', 'Stack Overflow devotee', 'Keyboard warrior', 'Rubber duck whisperer', 'Merge conflict survivor', 'Tab vs Space zealot', 'Legacy code archaeologist'];
+        window.programmerWeapons = ['Mechanical Keyboard of Clacking', 'Mouse of Infinite Clicks', 'USB Cable of Debugging', 'Monitor of Blue Light', 'Coffee Mug of Endless Refills', 'Rubber Duck of Wisdom'];
+    }
+    
+    // 6. D20 Roll - Press D, 2, 0 in sequence
+    let d20Sequence = [];
+    document.addEventListener('keydown', (e) => {
+        if (['KeyD', 'Digit2', 'Digit0'].includes(e.code)) {
+            d20Sequence.push(e.code);
+            d20Sequence = d20Sequence.slice(-3);
+            
+            if (d20Sequence.join(',') === 'KeyD,Digit2,Digit0') {
+                rollD20();
+                d20Sequence = [];
+            }
+        }
+    });
+    
+    function rollD20() {
+        const result = Math.floor(Math.random() * 20) + 1;
+        
+        const overlay = document.createElement('div');
+        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.8);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;animation:fadeIn 0.3s';
+        
+        const dice = document.createElement('div');
+        dice.style.cssText = 'font-size:120px;animation:diceRoll 1s ease-out';
+        dice.textContent = '🎲';
+        
+        const resultText = document.createElement('div');
+        resultText.style.cssText = 'font-size:72px;font-family:Cinzel,serif;margin-top:20px;opacity:0;animation:resultReveal 0.5s 0.8s forwards';
+        
+        let resultColor = '#fff';
+        let resultMessage = '';
+        if (result === 20) {
+            resultColor = '#ffd700';
+            resultMessage = 'CRITICAL SUCCESS!';
+        } else if (result === 1) {
+            resultColor = '#ff4444';
+            resultMessage = 'CRITICAL FAIL!';
+        } else if (result >= 15) {
+            resultColor = '#88ff88';
+            resultMessage = 'Great roll!';
+        } else if (result <= 5) {
+            resultColor = '#ffaa44';
+            resultMessage = 'Oof...';
+        }
+        
+        resultText.innerHTML = `<span style="color:${resultColor};text-shadow:0 0 20px ${resultColor}">${result}</span><br><span style="font-size:24px;color:var(--text-secondary)">${resultMessage}</span>`;
+        
+        overlay.appendChild(dice);
+        overlay.appendChild(resultText);
+        document.body.appendChild(overlay);
+        
+        overlay.addEventListener('click', () => overlay.remove());
+        setTimeout(() => overlay.remove(), 4000);
+        
+        showToast(`🎲 You rolled a ${result}!`);
+    }
+    
+    // Add D20 animation CSS
+    const d20Styles = document.createElement('style');
+    d20Styles.textContent = `
+        @keyframes diceRoll{
+            0%{transform:rotate(0deg) scale(0.5);opacity:0}
+            25%{transform:rotate(180deg) scale(1.2)}
+            50%{transform:rotate(360deg) scale(0.9)}
+            75%{transform:rotate(540deg) scale(1.1)}
+            100%{transform:rotate(720deg) scale(1);opacity:1}
+        }
+        @keyframes resultReveal{
+            0%{opacity:0;transform:scale(0.5)}
+            50%{transform:scale(1.2)}
+            100%{opacity:1;transform:scale(1)}
+        }
+    `;
+    document.head.appendChild(d20Styles);
+    
+    // 7. Right-click logo sword - Pull sword from stone mini-game
+    const logoIcon = document.querySelector('.logo-icon');
+    if (logoIcon) {
+        logoIcon.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+            startSwordGame();
+        });
+    }
+    
+    let swordPulls = 0;
+    function startSwordGame() {
+        swordPulls = 0;
+        
+        const overlay = document.createElement('div');
+        overlay.id = 'swordGame';
+        overlay.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.9);z-index:10000;display:flex;align-items:center;justify-content:center;flex-direction:column;cursor:pointer';
+        
+        overlay.innerHTML = `
+            <div style="font-size:24px;color:var(--text-secondary);margin-bottom:20px">Click rapidly to pull the sword!</div>
+            <div style="position:relative;font-size:100px">
+                <div id="swordStone" style="position:relative">🪨</div>
+                <div id="swordBlade" style="position:absolute;top:-60px;left:50%;transform:translateX(-50%);transition:top 0.1s">⚔️</div>
+            </div>
+            <div id="swordProgress" style="width:300px;height:20px;background:#333;border-radius:10px;margin-top:30px;overflow:hidden">
+                <div id="swordProgressBar" style="width:0%;height:100%;background:linear-gradient(90deg,#d4a857,#ffd700);transition:width 0.1s"></div>
+            </div>
+            <div id="swordCount" style="color:var(--accent-gold);font-size:18px;margin-top:10px">0 / 20 pulls</div>
+            <div style="color:var(--text-faded);font-size:14px;margin-top:20px">Press ESC to close</div>
+        `;
+        
+        document.body.appendChild(overlay);
+        
+        const blade = document.getElementById('swordBlade');
+        const progressBar = document.getElementById('swordProgressBar');
+        const countText = document.getElementById('swordCount');
+        
+        overlay.addEventListener('click', () => {
+            swordPulls++;
+            const progress = Math.min((swordPulls / 20) * 100, 100);
+            progressBar.style.width = progress + '%';
+            countText.textContent = `${swordPulls} / 20 pulls`;
+            
+            // Sword moves up slightly with each click
+            blade.style.top = (-60 - swordPulls * 3) + 'px';
+            
+            if (swordPulls >= 20) {
+                // Success!
+                blade.style.top = '-200px';
+                blade.style.transition = 'top 0.5s ease-out';
+                blade.style.transform = 'translateX(-50%) scale(1.5)';
+                
+                setTimeout(() => {
+                    overlay.innerHTML = `
+                        <div style="font-size:80px;animation:popIn 0.5s">👑</div>
+                        <div style="font-size:36px;color:#ffd700;font-family:Cinzel,serif;margin-top:20px;text-shadow:0 0 20px gold">THE SWORD IS YOURS!</div>
+                        <div style="font-size:18px;color:var(--text-secondary);margin-top:10px">You are the true ruler!</div>
+                    `;
+                    showToast('👑 You pulled the sword from the stone!');
+                    
+                    // Unlock a special title
+                    if (!legendaryMode) {
+                        const logo = document.querySelector('.logo');
+                        if (logo && !logo.innerHTML.includes('TRUE RULER')) {
+                            logo.innerHTML += ' <span style="color:#ffd700;font-size:0.5em;">👑</span>';
+                        }
+                    }
+                }, 500);
+                
+                setTimeout(() => overlay.remove(), 3000);
+            }
+        });
+        
+        document.addEventListener('keydown', function escHandler(e) {
+            if (e.key === 'Escape') {
+                overlay.remove();
+                document.removeEventListener('keydown', escHandler);
+            }
+        });
+    }
+    
+    // 8. Rick Roll Easter Egg - 1 in 500 chance (made slightly more common for fun)
+    const originalAddToHistory = window.addToHistory;
+    const rickRollBackstory = `Rick Astley was born in a small tavern, where his voice could charm even the most hardened warriors. He swore an oath to never give up on his companions, never let them down, never run around and desert them. His legendary ballads have been known to make grown orcs weep and dragons dance. He travels the realm, spreading his message of eternal commitment and surprisingly catchy melodies. Some say if you hear his song three times, you'll never be able to get it out of your head. His signature move, the "Astley Shuffle," has been adopted by bards across all kingdoms.`;
+    
+    function checkForRickRoll(names) {
+        if (Math.random() < 0.002) { // 1 in 500 chance
+            const rickIndex = Math.floor(Math.random() * names.length);
+            names[rickIndex] = {
+                name: 'Rick Astley the Bard',
+                pron: 'rik AST-lee',
+                mean: 'Never gonna give you up',
+                backstory: {
+                    name: 'Rick Astley the Bard',
+                    cls: 'Bard',
+                    gender: 'Masculine',
+                    wep: 'Microphone of Eternal Devotion',
+                    trait: 'Never gives up',
+                    back: rickRollBackstory,
+                    faction: { name: 'The Rickrollers Guild', role: 'Supreme Bard' }
+                }
+            };
+            setTimeout(() => showToast('🎤 You\'ve been rickrolled!'), 1000);
+        }
+        return names;
+    }
+    
+    // Hook into displayNames to check for rickroll
+    const _originalDisplayNames = displayNames;
+    displayNames = function(names, cont) {
+        names = checkForRickRoll(names);
+        _originalDisplayNames(names, cont);
+    };
+    
+    // Easter egg hint in console
+    console.log('%c🎮 MythicNames Easter Eggs Active!', 'color: gold; font-size: 16px; font-weight: bold;');
+    console.log('%cHints: Konami Code, Click the logo, Right-click the sword, Try typing famous fantasy names, Press D-2-0...', 'color: #888; font-size: 12px;');
     </script>
 </body>
 </html>
