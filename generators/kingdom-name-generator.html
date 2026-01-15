@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kingdom Name Generator | Fantasy Empire & Nation Names | MythicNames</title>
+    <meta name="description" content="Generate fantasy kingdom, empire, and nation names for worldbuilding. Create unique realm names for D&D campaigns, novels, and RPGs.">
+    <meta name="keywords" content="kingdom name generator, empire names, fantasy nation names, realm names, worldbuilding, country name generator">
+    <link rel="canonical" href="https://mythicnames.io/generators/kingdom-name-generator.html">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta property="og:title" content="Kingdom Name Generator | MythicNames">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kingdom Name Generator","description":"Generate fantasy kingdom and empire names","url":"https://mythicnames.io/generators/kingdom-name-generator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="container">
+        <header class="site-header">
+            <a href="../" class="logo-link"><img src="../icon-192.png" alt="MythicNames" class="logo-icon"><span class="logo">MythicNames</span></a>
+            <nav class="site-nav"><a href="../">Generator</a><a href="./">Race Names</a><a href="../blog/">Blog</a></nav>
+        </header>
+        <nav class="breadcrumbs"><a href="../">Home</a> <span>›</span> <a href="./">Generators</a> <span>›</span> Kingdom Names</nav>
+        
+        <h1 class="page-title">👑 Kingdom Name Generator</h1>
+        <p class="page-subtitle">Create empires, nations, and realms for your world</p>
+        
+        <div class="generator-box">
+            <div class="control-row">
+                <div class="control-group">
+                    <label>Kingdom Type</label>
+                    <select id="kingdomType">
+                        <option value="fantasy">High Fantasy</option>
+                        <option value="dark">Dark / Gothic</option>
+                        <option value="norse">Norse / Viking</option>
+                        <option value="desert">Desert Empire</option>
+                        <option value="elven">Elven Realm</option>
+                        <option value="dwarven">Dwarven Hold</option>
+                        <option value="asian">Eastern / Asian</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Count</label>
+                    <select id="kingdomCount">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="generate-btn" id="generateBtn">Generate Kingdom Names</button>
+        </div>
+        
+        <div class="results-section">
+            <div id="resultsContainer" class="names-list"></div>
+        </div>
+        
+        <section class="info-section">
+            <h2>About Kingdom Names</h2>
+            <p>A kingdom's name establishes its identity, culture, and place in your world. Good kingdom names feel authentic to their fictional culture while remaining memorable and pronounceable.</p>
+            
+            <h3>Common Naming Patterns</h3>
+            <ul>
+                <li><strong>-ia suffix</strong>: Valeria, Astoria (Latin feel)</li>
+                <li><strong>-land suffix</strong>: Nordland, Frostland (Germanic)</li>
+                <li><strong>-heim suffix</strong>: Stormheim, Ironheim (Norse)</li>
+                <li><strong>Compound names</strong>: Stormhold, Sunspire, Blackmoor</li>
+            </ul>
+        </section>
+        
+        <footer class="site-footer">
+            <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p>
+            <p><a href="../blog/how-to-name-your-fantasy-kingdom.html">Kingdom Naming Guide</a> • <a href="./">All Generators</a></p>
+        </footer>
+    </div>
+    
+    <script>
+    const kingdomData = {
+        fantasy: {pre:['Val','Aur','Cel','Lum','Sol','Sil','Cael','Eld','Astr','Ther'],suf:['ia','oria','heim','dale','mark','gard','realm','hold','spire','haven']},
+        dark: {pre:['Shad','Mor','Drak','Neth','Grim','Ash','Void','Dusk','Mal','Crypt'],suf:['moor','fell','hollow','vale','mere','gard','heim','reach','end','blight']},
+        norse: {pre:['Frost','Storm','Iron','Wolf','Raven','Thunder','Ice','Nord','Skal','Heim'],suf:['heim','gard','fell','mark','fjord','land','hold','vald','rim','peak']},
+        desert: {pre:['Al-','Sun','Sand','Gold','Phoenix','Oasis','Ember','Scorch','Dune','Mirage'],suf:['istan','ia','ar','abad','pur','khan','rim','sun','fire','wind']},
+        elven: {pre:['Syl','Ael','Lor','Cel','Fae','Star','Moon','Ever','Silv','Loth'],suf:['andor','iel','wen','dale','wood','haven','mere','glade','song','light']},
+        dwarven: {pre:['Iron','Stone','Gold','Mith','Granite','Anvil','Hammer','Deep','Under','Forge'],suf:['heim','hold','delve','deep','forge','hall','mine','peak','gate','throne']},
+        asian: {pre:['Jade','Dragon','Lotus','Phoenix','Tiger','Crane','Moon','Sun','Wind','Storm'],suf:[' Kingdom',' Empire',' Dynasty',' Realm',' Lands',' Domain',' Prefecture',' Province']}
+    };
+    
+    const r = a => a[Math.floor(Math.random() * a.length)];
+    const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
+    
+    function generateKingdom(type) {
+        const d = kingdomData[type] || kingdomData.fantasy;
+        return cap(r(d.pre) + r(d.suf));
+    }
+    
+    function generate() {
+        const type = document.getElementById('kingdomType').value;
+        const count = parseInt(document.getElementById('kingdomCount').value);
+        const names = new Set();
+        while (names.size < count) {
+            names.add(generateKingdom(type));
+        }
+        
+        document.getElementById('resultsContainer').innerHTML = Array.from(names).map(name => 
+            `<div class="name-item"><div class="name-row"><span class="name-text">${name}</span><button class="copy-btn" onclick="copyName(this,'${name}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div>`
+        ).join('');
+    }
+    
+    async function copyName(btn, name) {
+        await navigator.clipboard.writeText(name);
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
+        btn.style.background = 'var(--accent-green)';
+        setTimeout(() => {
+            btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            btn.style.background = '';
+        }, 1500);
+    }
+    
+    document.getElementById('generateBtn').addEventListener('click', generate);
+    generate();
+    </script>
+</body>
+</html>

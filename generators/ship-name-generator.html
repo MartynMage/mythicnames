@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ship Name Generator | Pirate, Naval & Fantasy Vessel Names | MythicNames</title>
+    <meta name="description" content="Generate fantasy ship names for pirates, naval fleets, merchant vessels, and ghost ships. Perfect for D&D seafaring campaigns.">
+    <meta name="keywords" content="ship name generator, pirate ship names, fantasy boat names, vessel names, naval ship names, ghost ship names">
+    <link rel="canonical" href="https://mythicnames.io/generators/ship-name-generator.html">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta property="og:title" content="Ship Name Generator | MythicNames">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Ship Name Generator","description":"Generate fantasy ship and vessel names","url":"https://mythicnames.io/generators/ship-name-generator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="container">
+        <header class="site-header">
+            <a href="../" class="logo-link"><img src="../icon-192.png" alt="MythicNames" class="logo-icon"><span class="logo">MythicNames</span></a>
+            <nav class="site-nav"><a href="../">Generator</a><a href="./">Race Names</a><a href="../blog/">Blog</a></nav>
+        </header>
+        <nav class="breadcrumbs"><a href="../">Home</a> <span>›</span> <a href="./">Generators</a> <span>›</span> Ship Names</nav>
+        
+        <h1 class="page-title">⚓ Ship Name Generator</h1>
+        <p class="page-subtitle">Name your vessels for seafaring adventures</p>
+        
+        <div class="generator-box">
+            <div class="control-row">
+                <div class="control-group">
+                    <label>Ship Type</label>
+                    <select id="shipType">
+                        <option value="pirate">Pirate Ship</option>
+                        <option value="naval">Naval Warship</option>
+                        <option value="merchant">Merchant Vessel</option>
+                        <option value="ghost">Ghost Ship</option>
+                        <option value="explorer">Explorer Ship</option>
+                        <option value="fantasy">Fantasy Vessel</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Count</label>
+                    <select id="shipCount">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="generate-btn" id="generateBtn">Generate Ship Names</button>
+        </div>
+        
+        <div class="results-section">
+            <div id="resultsContainer" class="names-list"></div>
+        </div>
+        
+        <section class="info-section">
+            <h2>About Ship Names</h2>
+            <p>A ship's name reflects its purpose, history, and the personality of its captain. Pirate ships intimidate, naval vessels inspire pride, and ghost ships haunt the imagination.</p>
+            
+            <h3>Ship Naming Conventions</h3>
+            <ul>
+                <li><strong>The [Adjective] [Noun]</strong>: The Swift Arrow, The Black Pearl</li>
+                <li><strong>[Possessive]'s [Noun]</strong>: Neptune's Wrath, Lady's Fortune</li>
+                <li><strong>Single Word</strong>: Tempest, Vengeance, Serenity</li>
+            </ul>
+        </section>
+        
+        <footer class="site-footer">
+            <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p>
+            <p><a href="../blog/ship-names-for-your-campaign.html">150 Ship Name Ideas</a> • <a href="./">All Generators</a></p>
+        </footer>
+    </div>
+    
+    <script>
+    const shipData = {
+        pirate: {adj:['Black','Crimson','Bloody','Dread','Dark','Scarlet','Dead','Wicked','Cursed','Devil\'s'],noun:['Revenge','Pearl','Fortune','Tide','Plunder','Skull','Serpent','Doom','Wrath','Cutlass']},
+        naval: {adj:['Royal','Iron','Swift','Valiant','Mighty','Proud','Noble','Sovereign','Stalwart','Glorious'],noun:['Defender','Victory','Justice','Thunder','Bastion','Guardian','Conquest','Triumph','Honor','Fury']},
+        merchant: {adj:['Golden','Prosperous','Lucky','Fair','Silver','Laden','Fortunate','Swift','Steady','Honest'],noun:['Venture','Fortune','Star','Wind','Horizon','Promise','Bounty','Hope','Trader','Harvest']},
+        ghost: {adj:['Pale','Spectral','Hollow','Forsaken','Eternal','Phantom','Drifting','Silent','Lost','Damned'],noun:['Wanderer','Specter','Shade','Whisper','Lament','Memory','Void','Passage','Wake','Mist']},
+        explorer: {adj:['Bold','Endless','New','Far','Brave','Intrepid','Daring','Curious','Wandering','Seeking'],noun:['Horizon','Discovery','Venture','Dawn','Quest','Journey','Frontier','Pathfinder','Seeker','Wonder']},
+        fantasy: {adj:['Star','Moon','Storm','Dragon','Phoenix','Crystal','Arcane','Ethereal','Celestial','Mystic'],noun:['Dancer','Dreamer','Song','Wing','Fire','Tide','Whisper','Seeker','Wanderer','Spirit']}
+    };
+    
+    const r = a => a[Math.floor(Math.random() * a.length)];
+    
+    function generateShip(type) {
+        const d = shipData[type] || shipData.fantasy;
+        return 'The ' + r(d.adj) + ' ' + r(d.noun);
+    }
+    
+    function generate() {
+        const type = document.getElementById('shipType').value;
+        const count = parseInt(document.getElementById('shipCount').value);
+        const names = new Set();
+        while (names.size < count) {
+            names.add(generateShip(type));
+        }
+        
+        document.getElementById('resultsContainer').innerHTML = Array.from(names).map(name => 
+            `<div class="name-item"><div class="name-row"><span class="name-text">${name}</span><button class="copy-btn" onclick="copyName(this,'${name.replace(/'/g,"\\'")}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div>`
+        ).join('');
+    }
+    
+    async function copyName(btn, name) {
+        await navigator.clipboard.writeText(name);
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
+        btn.style.background = 'var(--accent-green)';
+        setTimeout(() => {
+            btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            btn.style.background = '';
+        }, 1500);
+    }
+    
+    document.getElementById('generateBtn').addEventListener('click', generate);
+    generate();
+    </script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Not Found | MythicNames</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root{--bg-deep:#0d0b0e;--bg-card:#211d19;--accent-gold:#d4a857;--accent-amber:#e8c47c;--text-primary:#f5efe6;--text-secondary:#c4b8a8;--shadow-gold:rgba(212,168,87,0.15)}
+        *{margin:0;padding:0;box-sizing:border-box}
+        body{font-family:'Crimson Pro',Georgia,serif;background:var(--bg-deep);color:var(--text-primary);min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:2rem}
+        .container{max-width:500px}
+        .error-icon{font-size:6rem;margin-bottom:1rem;animation:float 3s ease-in-out infinite}
+        @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-15px)}}
+        h1{font-family:'Cinzel',serif;font-size:2.5rem;color:var(--accent-gold);margin-bottom:0.5rem}
+        .error-code{font-family:'Cinzel',serif;font-size:5rem;color:var(--accent-gold);opacity:0.2;margin-bottom:1rem}
+        p{font-size:1.2rem;color:var(--text-secondary);margin-bottom:2rem;line-height:1.6}
+        .cta-btn{display:inline-block;font-family:'Cinzel',serif;font-size:1rem;font-weight:600;padding:1rem 2rem;background:linear-gradient(135deg,var(--accent-gold),var(--accent-amber));color:var(--bg-deep);border:none;border-radius:6px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;text-decoration:none;transition:all 0.2s}
+        .cta-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow-gold)}
+        .links{margin-top:2rem}
+        .links a{color:var(--text-secondary);text-decoration:none;margin:0 1rem;font-size:0.9rem}
+        .links a:hover{color:var(--accent-gold)}
+        .random-name{font-family:'Cinzel',serif;font-size:1.3rem;color:var(--accent-amber);margin:1.5rem 0;padding:1rem;background:var(--bg-card);border-radius:8px;cursor:pointer;transition:all 0.2s}
+        .random-name:hover{transform:scale(1.02)}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="error-icon">🗺️</div>
+        <div class="error-code">404</div>
+        <h1>Lost in the Realm</h1>
+        <p>The page you seek has vanished into the mists. Perhaps it was claimed by dragons, or maybe it never existed at all.</p>
+        <div class="random-name" onclick="generateName()" id="randomName">Click for a consolation name</div>
+        <a href="/" class="cta-btn">Return to Safety</a>
+        <div class="links">
+            <a href="/generators/">Race Names</a>
+            <a href="/blog/">Blog</a>
+        </div>
+    </div>
+    <script>
+        const prefixes = ['Ael','Bran','Cor','Drak','Eld','Fae','Grim','Helm','Ir','Kel','Lor','Mor','Nyx','Pyr','Rav','Syl','Thal','Ur','Val','Wyr','Xan','Zeph'];
+        const middles = ['an','ar','el','en','ia','il','ir','on','or','ra','ri','th'];
+        const suffixes = ['or','us','in','an','ar','ion','ius','orn','ald','ric','a','ia','wen','elle'];
+        const r = a => a[Math.floor(Math.random() * a.length)];
+        function generateName() {
+            let name = r(prefixes);
+            if (Math.random() > 0.4) name += r(middles);
+            name += r(suffixes);
+            name = name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+            document.getElementById('randomName').textContent = name;
+            document.getElementById('randomName').style.animation = 'none';
+            setTimeout(() => document.getElementById('randomName').style.animation = '', 10);
+        }
+        generateName();
+    </script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tavern Name Generator | Free Inn & Pub Names for D&D | MythicNames</title>
+    <meta name="description" content="Generate memorable tavern, inn, and pub names for your D&D campaign. Create unique fantasy tavern names instantly with our free generator.">
+    <meta name="keywords" content="tavern name generator, inn name generator, pub names, dnd tavern names, fantasy tavern, bar name generator">
+    <link rel="canonical" href="https://mythicnames.io/generators/tavern-name-generator.html">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <meta property="og:title" content="Tavern Name Generator | MythicNames">
+    <meta property="og:description" content="Generate memorable tavern names for your D&D campaign.">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Tavern Name Generator","description":"Generate fantasy tavern and inn names for D&D and RPGs","url":"https://mythicnames.io/generators/tavern-name-generator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <div class="ambient-glow glow-1"></div>
+    <div class="ambient-glow glow-2"></div>
+    <div class="container">
+        <header class="site-header">
+            <a href="../" class="logo-link"><img src="../icon-192.png" alt="MythicNames" class="logo-icon"><span class="logo">MythicNames</span></a>
+            <nav class="site-nav"><a href="../">Generator</a><a href="./">Race Names</a><a href="../blog/">Blog</a></nav>
+        </header>
+        <nav class="breadcrumbs"><a href="../">Home</a> <span>›</span> <a href="./">Generators</a> <span>›</span> Tavern Names</nav>
+        
+        <h1 class="page-title">🍺 Tavern Name Generator</h1>
+        <p class="page-subtitle">Create memorable inns, pubs, and taverns for your campaign</p>
+        
+        <div class="generator-box">
+            <div class="control-row">
+                <div class="control-group">
+                    <label>Tavern Style</label>
+                    <select id="tavernStyle">
+                        <option value="classic">Classic Fantasy</option>
+                        <option value="rough">Rough & Rowdy</option>
+                        <option value="upscale">Noble & Upscale</option>
+                        <option value="mysterious">Mysterious</option>
+                        <option value="nautical">Nautical</option>
+                        <option value="cozy">Cozy & Welcoming</option>
+                    </select>
+                </div>
+                <div class="control-group">
+                    <label>Count</label>
+                    <select id="tavernCount">
+                        <option value="5">5</option>
+                        <option value="10" selected>10</option>
+                        <option value="20">20</option>
+                    </select>
+                </div>
+            </div>
+            <button type="button" class="generate-btn" id="generateBtn">Generate Tavern Names</button>
+        </div>
+        
+        <div class="results-section">
+            <div id="resultsContainer" class="names-list"></div>
+        </div>
+        
+        <section class="info-section">
+            <h2>About Tavern Names</h2>
+            <p>Every adventuring party needs a good tavern—a place to rest, gather rumors, and find their next quest. A memorable tavern name sets the mood before your players even walk through the door.</p>
+            
+            <h3>Classic Tavern Naming Formula</h3>
+            <p>Most fantasy tavern names follow the pattern: <strong>The [Adjective] [Noun]</strong></p>
+            <ul>
+                <li><strong>The Prancing Pony</strong> — Cheerful, welcoming</li>
+                <li><strong>The Rusty Dagger</strong> — Rough, dangerous</li>
+                <li><strong>The Golden Chalice</strong> — Upscale, expensive</li>
+            </ul>
+            
+            <h3>Tips for Using Tavern Names</h3>
+            <ul>
+                <li>Match the name to the establishment's personality</li>
+                <li>Create a signature drink or dish that relates to the name</li>
+                <li>Give the tavern a memorable bartender or owner</li>
+                <li>Add a quirky detail about why it has that name</li>
+            </ul>
+        </section>
+        
+        <footer class="site-footer">
+            <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p>
+            <p><a href="../blog/fantasy-tavern-names.html">200 Tavern Name Ideas</a> • <a href="./">All Generators</a></p>
+        </footer>
+    </div>
+    
+    <script>
+    const tavernData = {
+        classic: {
+            adj: ['Prancing','Dancing','Sleeping','Golden','Silver','Jolly','Merry','Wandering','Lucky','Laughing'],
+            noun: ['Pony','Dragon','Griffin','Stag','Unicorn','Phoenix','Lion','Raven','Oak','Tankard']
+        },
+        rough: {
+            adj: ['Broken','Rusty','Bloody','Drunken','Scarred','Crooked','Salty','Grim','Rowdy','Shattered'],
+            noun: ['Blade','Anchor','Skull','Dagger','Axe','Fist','Dog','Boar','Chain','Hammer']
+        },
+        upscale: {
+            adj: ['Gilded','Royal','Noble','Velvet','Crystal','Platinum','Ivory','Emerald','Sapphire','Diamond'],
+            noun: ['Rose','Crown','Throne','Chalice','Peacock','Swan','Lily','Spire','Palace','Fountain']
+        },
+        mysterious: {
+            adj: ['Whispering','Shrouded','Hidden','Veiled','Moonlit','Shadowed','Silent','Blind','Hooded','Secret'],
+            noun: ['Eye','Mask','Cloak','Lantern','Mirror','Oracle','Riddle','Phantom','Specter','Veil']
+        },
+        nautical: {
+            adj: ['Salty','Drowned','Leaky','Storm-Tossed','Anchored','Drifting','Sunken','Foaming','Beached','Windswept'],
+            noun: ['Sailor','Mermaid','Anchor','Kraken','Whale','Compass','Barrel','Serpent','Tide','Helm']
+        },
+        cozy: {
+            adj: ['Warm','Friendly','Snug','Hearty','Homely','Gentle','Kind','Rosy','Plump','Toasty'],
+            noun: ['Hearth','Kettle','Pillow','Blanket','Candle','Fireside','Nook','Cottage','Lamb','Pie']
+        }
+    };
+    
+    const r = a => a[Math.floor(Math.random() * a.length)];
+    
+    function generateTavern(style) {
+        const d = tavernData[style] || tavernData.classic;
+        return 'The ' + r(d.adj) + ' ' + r(d.noun);
+    }
+    
+    function generate() {
+        const style = document.getElementById('tavernStyle').value;
+        const count = parseInt(document.getElementById('tavernCount').value);
+        const names = new Set();
+        while (names.size < count) {
+            names.add(generateTavern(style));
+        }
+        
+        document.getElementById('resultsContainer').innerHTML = Array.from(names).map(name => 
+            `<div class="name-item"><div class="name-row"><span class="name-text">${name}</span><button class="copy-btn" onclick="copyName(this,'${name}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div>`
+        ).join('');
+    }
+    
+    async function copyName(btn, name) {
+        await navigator.clipboard.writeText(name);
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
+        btn.style.background = 'var(--accent-green)';
+        setTimeout(() => {
+            btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+            btn.style.background = '';
+        }, 1500);
+    }
+    
+    document.getElementById('generateBtn').addEventListener('click', generate);
+    generate();
+    </script>
+</body>
+</html>
