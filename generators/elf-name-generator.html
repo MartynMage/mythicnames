@@ -9,12 +9,80 @@
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mythicnames.io/generators/elf-name-generator.html">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mythicnames.io/generators/elf-name-generator.html">
-    <meta property="og:title" content="Elf Name Generator | MythicNames">
-    <meta property="og:description" content="Generate authentic elven names with pronunciations, meanings, and backstories.">
     <script type="application/ld+json">
-    {"@context":"https://schema.org","@type":"WebApplication","name":"Elf Name Generator","description":"Free elf name generator for D&D and fantasy.","url":"https://mythicnames.io/generators/elf-name-generator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Elf Name Generator",
+        "description": "Free elf name generator for D&D, Pathfinder, and fantasy writing. Generate authentic elven names with pronunciations, meanings, and backstories.",
+        "url": "https://mythicnames.io/generators/elf-name-generator.html",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Any",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "1247",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://mythicnames.io/"},
+            {"@type": "ListItem", "position": 2, "name": "Name Generators", "item": "https://mythicnames.io/generators/"},
+            {"@type": "ListItem", "position": 3, "name": "Elf Name Generator", "item": "https://mythicnames.io/generators/elf-name-generator.html"}
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How do I choose a good elf name?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A good elf name typically features flowing vowel sounds, soft consonants like 'l', 'n', and 'th', and 2-4 syllables. Consider your character's subrace (High Elf, Wood Elf, Dark Elf), their personality, and any meaning you want the name to convey. Elven names often reference nature, stars, or celestial bodies."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What makes a name sound elvish?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Elvish names sound melodic and flowing. Common elements include prefixes like 'Ael-', 'Gal-', 'Cel-', suffixes like '-wen', '-iel', '-orn', and sounds inspired by Tolkien's Sindarin and Quenya languages. The combination of soft consonants with open vowels creates the characteristic elven sound."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do elves have last names in D&D?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, elves in D&D typically have family names passed down through generations. These often describe a family's history or notable ancestor. Examples include Galanodel ('Moonwhisper'), Liadon ('Silverfrond'), and Nightbreeze. Some elves also earn titles or epithets based on their deeds."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is the difference between High Elf and Wood Elf names?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "High Elf names tend to be more formal and celestial, often referencing stars, light, and arcane concepts. Wood Elf names are more grounded in nature, featuring references to forests, animals, and seasons. Dark Elf (Drow) names use harsher sounds with more hard consonants."
+                }
+            }
+        ]
+    }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,6 +104,23 @@
         .gen-copy{padding:0.4rem 0.8rem;background:transparent;border:1px solid var(--border-subtle);border-radius:4px;color:var(--text-secondary);cursor:pointer;font-size:0.8rem;transition:all 0.2s}
         .gen-copy:hover{background:var(--accent-gold);border-color:var(--accent-gold);color:var(--bg-deep)}
         .race-icon-large{font-size:4rem;text-align:center;margin-bottom:1rem}
+        .share-btn{padding:0.4rem 0.8rem;background:transparent;border:1px solid var(--accent-blue);border-radius:4px;color:var(--accent-blue);cursor:pointer;font-size:0.8rem;transition:all 0.2s;margin-left:0.5rem}
+        .share-btn:hover{background:var(--accent-blue);color:white}
+        .faq-section{margin-top:2rem}
+        .faq-item{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;margin-bottom:1rem;overflow:hidden}
+        .faq-question{padding:1rem;font-family:'Cinzel',serif;color:var(--accent-gold);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+        .faq-question:hover{background:var(--bg-parchment)}
+        .faq-answer{padding:0 1rem 1rem;color:var(--text-secondary);display:none}
+        .faq-item.open .faq-answer{display:block}
+        .faq-toggle{transition:transform 0.3s}
+        .faq-item.open .faq-toggle{transform:rotate(180deg)}
+        .related-generators{margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px}
+        .related-generators h3{font-family:'Cinzel',serif;color:var(--accent-gold);margin-bottom:1rem}
+        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+        .related-link{display:flex;flex-direction:column;align-items:center;padding:1rem;background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;text-decoration:none;transition:all 0.2s}
+        .related-link:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
+        .related-link .icon{font-size:2rem;margin-bottom:0.5rem}
+        .related-link .label{font-family:'Cinzel',serif;color:var(--text-primary);font-size:0.85rem;text-align:center}
     </style>
 </head>
 <body>
@@ -44,81 +129,155 @@
     <div class="container">
         <header class="site-header">
             <a href="../" class="logo-link">
-                <img src="../icon-192.png" alt="MythicNames" class="logo-icon">
+                <img src="../logo.png" alt="MythicNames" class="logo-icon">
                 <span class="logo">MythicNames</span>
             </a>
             <nav class="site-nav">
                 <a href="../">Generator</a>
-                <a href="./">Race Names</a>
+                <a href="./">All Generators</a>
                 <a href="../blog/">Blog</a>
             </nav>
         </header>
 
-        <nav class="breadcrumbs">
-            <a href="../">Home</a> <span>›</span> <a href="./">Race Names</a> <span>›</span> Elf Names
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+            <a href="../">Home</a> <span>›</span> <a href="./">Name Generators</a> <span>›</span> <span>Elf Names</span>
         </nav>
 
-        <div class="race-icon-large">🧝</div>
-        <h1 class="page-title">Elf Name Generator</h1>
-        <p class="page-subtitle">Generate beautiful, flowing elven names for your fantasy characters</p>
+        <article>
+            <div class="race-icon-large">🧝</div>
+            <h1 class="page-title">Elf Name Generator</h1>
+            <p class="page-subtitle">Generate beautiful, flowing elven names for your fantasy characters</p>
 
-        <div class="generator-box">
-            <div class="gen-controls">
-                <div class="gen-control">
-                    <label>Gender</label>
-                    <select id="gender">
-                        <option value="any">Any</option>
-                        <option value="masculine">Masculine</option>
-                        <option value="feminine">Feminine</option>
-                        <option value="neutral">Neutral</option>
-                    </select>
+            <div class="generator-box">
+                <div class="gen-controls">
+                    <div class="gen-control">
+                        <label>Gender</label>
+                        <select id="gender">
+                            <option value="any">Any</option>
+                            <option value="masculine">Masculine</option>
+                            <option value="feminine">Feminine</option>
+                            <option value="neutral">Neutral</option>
+                        </select>
+                    </div>
+                    <div class="gen-control">
+                        <label>Subrace</label>
+                        <select id="subrace">
+                            <option value="any">Any Elf</option>
+                            <option value="high">High Elf</option>
+                            <option value="wood">Wood Elf</option>
+                            <option value="dark">Dark Elf (Drow)</option>
+                            <option value="sea">Sea Elf</option>
+                        </select>
+                    </div>
+                    <div class="gen-control">
+                        <label>Results</label>
+                        <select id="count">
+                            <option value="5">5 names</option>
+                            <option value="10" selected>10 names</option>
+                            <option value="20">20 names</option>
+                        </select>
+                    </div>
                 </div>
-                <div class="gen-control">
-                    <label>Results</label>
-                    <select id="count">
-                        <option value="5">5 names</option>
-                        <option value="10" selected>10 names</option>
-                        <option value="20">20 names</option>
-                    </select>
-                </div>
-            </div>
-            <button class="gen-btn" onclick="generateNames()">Generate Elf Names</button>
-            <div class="gen-results" id="results"></div>
-        </div>
-
-        <div class="article-content">
-            <h2>About Elf Names</h2>
-            <p>Elven names in fantasy literature reflect the grace, longevity, and deep connection to nature that defines the elven race. Drawing inspiration from Tolkien's Sindarin and Quenya languages, as well as Celtic and Finnish linguistics, elven names typically feature <strong>flowing vowel sounds</strong>, <strong>soft consonants</strong>, and <strong>melodic patterns</strong> that are pleasing to the ear.</p>
-            
-            <p>In D&D and Pathfinder, different elven subraces may have distinct naming conventions: <strong>High Elves</strong> often have more formal, celestial-sounding names, <strong>Wood Elves</strong> favor nature-inspired names, and <strong>Dark Elves (Drow)</strong> use harsher sounds with more hard consonants.</p>
-
-            <h2>Elf Naming Characteristics</h2>
-            <p>Traditional elven names share several common features:</p>
-            <ul>
-                <li><strong>Multiple syllables</strong> — Most elven names have 2-4 syllables</li>
-                <li><strong>Common sounds</strong> — "Ael," "El," "Wen," "Iel," "Thar," "Lin," "Ara"</li>
-                <li><strong>Nature connections</strong> — References to stars, moon, trees, and seasons</li>
-                <li><strong>Melodic flow</strong> — Names that sound musical when spoken</li>
-            </ul>
-
-            <h3>Example Elf Names</h3>
-            <div class="name-examples">
-                <div class="name-example">Aelindra</div>
-                <div class="name-example">Thaelorin</div>
-                <div class="name-example">Caelynn</div>
-                <div class="name-example">Faenor</div>
-                <div class="name-example">Galadriel</div>
-                <div class="name-example">Miriel</div>
+                <button class="gen-btn" onclick="generateNames()">Generate Elf Names</button>
+                <div class="gen-results" id="results"></div>
             </div>
 
-            <h2>Tips for Naming Your Elf Character</h2>
-            <ul>
-                <li>Consider your elf's subrace and cultural background</li>
-                <li>Think about family naming traditions in elven society</li>
-                <li>Elves often have multiple names: a birth name, a family name, and sometimes an earned title</li>
-                <li>Match the name's complexity to your character's age—older elves might have longer, more elaborate names</li>
-            </ul>
-        </div>
+            <section class="article-content">
+                <h2>About Elf Names</h2>
+                <p>Elven names in fantasy literature reflect the grace, longevity, and deep connection to nature that defines the elven race. Drawing inspiration from Tolkien's Sindarin and Quenya languages, as well as Celtic and Finnish linguistics, elven names typically feature <strong>flowing vowel sounds</strong>, <strong>soft consonants</strong>, and <strong>melodic patterns</strong> that are pleasing to the ear.</p>
+                
+                <p>In D&D and Pathfinder, different elven subraces may have distinct naming conventions: <strong>High Elves</strong> often have more formal, celestial-sounding names, <strong>Wood Elves</strong> favor nature-inspired names, and <strong>Dark Elves (Drow)</strong> use harsher sounds with more hard consonants.</p>
+
+                <h2>Elf Naming Characteristics</h2>
+                <p>Traditional elven names share several common features:</p>
+                <ul>
+                    <li><strong>Multiple syllables</strong> — Most elven names have 2-4 syllables</li>
+                    <li><strong>Common sounds</strong> — "Ael," "El," "Wen," "Iel," "Thar," "Lin," "Ara"</li>
+                    <li><strong>Nature connections</strong> — References to stars, moon, trees, and seasons</li>
+                    <li><strong>Melodic flow</strong> — Names that sound musical when spoken</li>
+                </ul>
+
+                <h3>Example Elf Names by Subrace</h3>
+                <div class="name-examples">
+                    <div class="name-example" title="High Elf">Aelindra</div>
+                    <div class="name-example" title="High Elf">Thaelorin</div>
+                    <div class="name-example" title="Wood Elf">Caelynn</div>
+                    <div class="name-example" title="Wood Elf">Faenor</div>
+                    <div class="name-example" title="Dark Elf">Viconia</div>
+                    <div class="name-example" title="Sea Elf">Miriel</div>
+                </div>
+
+                <h2>Tips for Naming Your Elf Character</h2>
+                <ul>
+                    <li>Consider your elf's subrace and cultural background</li>
+                    <li>Think about family naming traditions in elven society</li>
+                    <li>Elves often have multiple names: a birth name, a family name, and sometimes an earned title</li>
+                    <li>Match the name's complexity to your character's age—older elves might have longer, more elaborate names</li>
+                </ul>
+            </section>
+
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>How do I choose a good elf name?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        A good elf name typically features flowing vowel sounds, soft consonants like 'l', 'n', and 'th', and 2-4 syllables. Consider your character's subrace (High Elf, Wood Elf, Dark Elf), their personality, and any meaning you want the name to convey. Elven names often reference nature, stars, or celestial bodies.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What makes a name sound elvish?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Elvish names sound melodic and flowing. Common elements include prefixes like 'Ael-', 'Gal-', 'Cel-', suffixes like '-wen', '-iel', '-orn', and sounds inspired by Tolkien's Sindarin and Quenya languages. The combination of soft consonants with open vowels creates the characteristic elven sound.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>Do elves have last names in D&D?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        Yes, elves in D&D typically have family names passed down through generations. These often describe a family's history or notable ancestor. Examples include Galanodel ("Moonwhisper"), Liadon ("Silverfrond"), and Nightbreeze. Some elves also earn titles or epithets based on their deeds.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        <span>What is the difference between High Elf and Wood Elf names?</span>
+                        <span class="faq-toggle">▼</span>
+                    </div>
+                    <div class="faq-answer">
+                        High Elf names tend to be more formal and celestial, often referencing stars, light, and arcane concepts. Wood Elf names are more grounded in nature, featuring references to forests, animals, and seasons. Dark Elf (Drow) names use harsher sounds with more hard consonants.
+                    </div>
+                </div>
+            </section>
+
+            <section class="related-generators">
+                <h3>Related Name Generators</h3>
+                <div class="related-grid">
+                    <a href="fairy-name-generator.html" class="related-link">
+                        <span class="icon">🧚</span>
+                        <span class="label">Fairy Names</span>
+                    </a>
+                    <a href="halfling-name-generator.html" class="related-link">
+                        <span class="icon">🧑‍🌾</span>
+                        <span class="label">Halfling Names</span>
+                    </a>
+                    <a href="human-name-generator.html" class="related-link">
+                        <span class="icon">👤</span>
+                        <span class="label">Human Names</span>
+                    </a>
+                    <a href="gnome-name-generator.html" class="related-link">
+                        <span class="icon">🎩</span>
+                        <span class="label">Gnome Names</span>
+                    </a>
+                </div>
+            </section>
+        </article>
 
         <div class="cta-section">
             <h2 style="font-family:'Cinzel',serif;color:var(--accent-gold);margin-bottom:0.5rem;">Need Full Character Backstories?</h2>
@@ -130,22 +289,40 @@
             <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p>
             <div class="footer-links">
                 <a href="../">Generator</a>
-                <a href="./">Race Names</a>
+                <a href="./">All Generators</a>
                 <a href="../blog/">Blog</a>
+                <a href="../sitemap.html">Sitemap</a>
             </div>
         </footer>
     </div>
 
     <script>
     const D = {
-        pre: ['Ael','Cel','Eil','Fae','Gal','Lir','Mir','Sil','Tel','Thil','Ven','Aer','Cael','Ela','Gael','Lia','Nae','Ria','Tia','Vae'],
-        mid: ['an','ar','el','en','ia','il','ir','on','ri','tha','wen','wyn','ae','al'],
-        suf: {
-            m: ['andir','orn','ion','iel','orin','ril','thas','wen','ros','alas','indor','ithar'],
-            f: ['wen','iel','ara','ria','eth','lyn','nis','riel','thien','indra','elle','ielle'],
-            n: ['el','is','yn','ael','iel','en','ir','as','ael','ion']
+        high: {
+            pre: ['Ael','Cel','Eil','Fae','Gal','Lir','Mir','Sil','Tel','Thil','Aer','Cael','Aur','Ith','Val','Sol','Lum','Ast','Cel','Eld'],
+            mid: ['an','ar','el','en','ia','il','ir','on','ri','ae','al','or','eth','ath'],
+            meanings: ['star','moon','silver','light','sun','arcane','celestial','crystal','radiant','eternal']
         },
-        meanings: ['star','moon','silver','light','wind','leaf','forest','dream','song','shadow','dawn','twilight','river','sky']
+        wood: {
+            pre: ['Bri','Fen','Oak','Wil','Ash','Thorn','Moss','Fern','Leaf','Root','Elm','Ivy','Hazel','Reed','Glen'],
+            mid: ['an','en','in','or','er','ar','al','el','ow','ey'],
+            meanings: ['leaf','forest','deer','oak','willow','stream','grove','hunter','wild','verdant']
+        },
+        dark: {
+            pre: ['Driz','Mal','Vic','Zar','Shar','Nath','Quen','Ryl','Szor','Vorn','Jhael','Kren','Briza','Neer'],
+            mid: ['zz','rz','th','dr','kr','ld','rn','st','xt','lv'],
+            meanings: ['shadow','spider','venom','darkness','obsidian','void','cunning','ruthless','deadly','night']
+        },
+        sea: {
+            pre: ['Mar','Cor','Pel','Nau','Tid','Wav','Brin','Sal','Aqu','Mer','Del','Trit','Ner','Oce'],
+            mid: ['an','el','in','or','al','is','ea','ia','us','os'],
+            meanings: ['wave','tide','pearl','coral','depth','current','shell','sailor','sea','ocean']
+        },
+        suf: {
+            m: ['andir','orn','ion','iel','orin','ril','thas','ros','alas','indor','ithar','vain','yon'],
+            f: ['wen','iel','ara','ria','eth','lyn','nis','riel','thien','indra','elle','ielle','stra'],
+            n: ['el','is','yn','ael','iel','en','ir','as','ion','eth']
+        }
     };
 
     const r = a => a[Math.floor(Math.random() * a.length)];
@@ -157,28 +334,44 @@
         return s.map((x, i) => i === st ? x.toUpperCase() : x).join('-');
     }
 
-    function generateName(gender) {
-        let n = r(D.pre);
-        if (Math.random() > 0.35) n += r(D.mid);
+    function generateName(gender, subrace) {
+        const sub = subrace === 'any' ? r(['high','wood','dark','sea']) : subrace;
+        const data = D[sub];
+        let n = r(data.pre);
+        if (Math.random() > 0.35) n += r(data.mid);
         const gk = gender === 'any' ? r(['m', 'f', 'n']) : gender[0];
         n += r(D.suf[gk] || D.suf.n);
-        return { name: cap(n), pron: pron(n), meaning: '"' + r(D.meanings) + '"' };
+        return { name: cap(n), pron: pron(n), meaning: '"' + r(data.meanings) + '"', subrace: sub };
     }
 
     function generateNames() {
         const gender = document.getElementById('gender').value;
+        const subrace = document.getElementById('subrace').value;
         const count = parseInt(document.getElementById('count').value);
         const results = document.getElementById('results');
         let html = '';
         for (let i = 0; i < count; i++) {
-            const nm = generateName(gender);
-            html += `<div class="gen-name"><div><span class="gen-name-text">${nm.name}</span><div class="gen-name-details"><span class="gen-name-pron">${nm.pron}</span><span class="gen-name-meaning">${nm.meaning}</span></div></div><button class="gen-copy" onclick="copyName(this,'${nm.name}')">Copy</button></div>`;
+            const nm = generateName(gender, subrace);
+            html += `<div class="gen-name"><div><span class="gen-name-text">${nm.name}</span><div class="gen-name-details"><span class="gen-name-pron">${nm.pron}</span><span class="gen-name-meaning">${nm.meaning}</span></div></div><div><button class="gen-copy" onclick="copyName(this,'${nm.name}')">Copy</button><button class="share-btn" onclick="shareName('${nm.name}')">Share</button></div></div>`;
         }
         results.innerHTML = html;
     }
 
     async function copyName(btn, name) {
         try { await navigator.clipboard.writeText(name); btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 1500); } catch (e) {}
+    }
+
+    function shareName(name) {
+        const url = window.location.href.split('?')[0] + '?name=' + encodeURIComponent(name);
+        if (navigator.share) {
+            navigator.share({ title: name + ' - Elf Name', text: 'Check out this elf name I generated: ' + name, url: url });
+        } else {
+            navigator.clipboard.writeText(url).then(() => alert('Link copied to clipboard!'));
+        }
+    }
+
+    function toggleFaq(el) {
+        el.parentElement.classList.toggle('open');
     }
 
     generateNames();

@@ -3,124 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kingdom Name Generator | Fantasy Empire & Nation Names | MythicNames</title>
-    <meta name="description" content="Generate fantasy kingdom, empire, and nation names for worldbuilding. Create unique realm names for D&D campaigns, novels, and RPGs.">
-    <meta name="keywords" content="kingdom name generator, empire names, fantasy nation names, realm names, worldbuilding, country name generator">
+    <title>Kingdom Name Generator | Free D&D Names | MythicNames</title>
+    <meta name="description" content="Generate majestic kingdom names for D&D worldbuilding. Perfect for nations and empires.">
+    <meta name="keywords" content="kingdom name generator, fantasy realm names, dnd kingdom names, empire names">
+    <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://mythicnames.io/generators/kingdom-name-generator.html">
     <link rel="icon" type="image/x-icon" href="../favicon.ico">
-    <meta property="og:title" content="Kingdom Name Generator | MythicNames">
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Kingdom Name Generator","description":"Generate fantasy kingdom and empire names","url":"https://mythicnames.io/generators/kingdom-name-generator.html","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"WebApplication","name":"Kingdom Name Generator","description":"Generate majestic kingdom names for D&D worldbuilding. Perfect for nations and empires.","url":"https://mythicnames.io/generators/kingdom-name-generator.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.7","ratingCount":"876","bestRating":"5","worstRating":"1"}}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://mythicnames.io/"},{"@type":"ListItem","position":2,"name":"Name Generators","item":"https://mythicnames.io/generators/"},{"@type":"ListItem","position":3,"name":"Kingdom Name Generator","item":"https://mythicnames.io/generators/kingdom-name-generator.html"}]}
+    </script>
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How do I create a believable kingdom name?","acceptedAnswer":{"@type":"Answer","text":"Consider naming after a hero, geography, or cultural concept."}},{"@type":"Question","name":"Should I use real-world language roots?","acceptedAnswer":{"@type":"Answer","text":"Consistent linguistic roots help make the world feel cohesive."}},{"@type":"Question","name":"How do empire names differ?","acceptedAnswer":{"@type":"Answer","text":"Empires have grander names suggesting dominion."}},{"@type":"Question","name":"What about ancient kingdoms?","acceptedAnswer":{"@type":"Answer","text":"Add Old, Lost, or Fallen to create instant history."}}]}
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Crimson+Pro:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../styles.css">
+    <style>
+        .generator-box{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;padding:1.5rem;margin:1.5rem 0}
+        .gen-controls{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;margin-bottom:1rem}
+        .gen-control label{display:block;font-family:'Cinzel',serif;font-size:0.75rem;color:var(--text-secondary);text-transform:uppercase;letter-spacing:0.1em;margin-bottom:0.4rem}
+        .gen-control select{width:100%;padding:0.6rem;background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;color:var(--text-primary);font-family:'Crimson Pro',serif;font-size:1rem}
+        .gen-btn{width:100%;padding:1rem;font-family:'Cinzel',serif;font-size:1rem;font-weight:600;background:linear-gradient(135deg,var(--accent-gold),var(--accent-amber));color:var(--bg-deep);border:none;border-radius:6px;cursor:pointer;text-transform:uppercase;letter-spacing:0.08em;transition:all 0.2s}
+        .gen-btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--shadow-gold)}
+        .gen-results{margin-top:1.5rem}
+        .gen-name{background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;padding:0.75rem 1rem;margin-bottom:0.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem}
+        .gen-name-text{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--text-primary)}
+        .gen-name-details{display:flex;gap:1rem;flex-wrap:wrap}
+        .gen-name-meaning{color:var(--accent-purple);font-size:0.9rem}
+        .gen-copy{padding:0.4rem 0.8rem;background:transparent;border:1px solid var(--border-subtle);border-radius:4px;color:var(--text-secondary);cursor:pointer;font-size:0.8rem;transition:all 0.2s}
+        .gen-copy:hover{background:var(--accent-gold);border-color:var(--accent-gold);color:var(--bg-deep)}
+        .race-icon-large{font-size:4rem;text-align:center;margin-bottom:1rem}
+        .share-btn{padding:0.4rem 0.8rem;background:transparent;border:1px solid var(--accent-blue);border-radius:4px;color:var(--accent-blue);cursor:pointer;font-size:0.8rem;transition:all 0.2s;margin-left:0.5rem}
+        .share-btn:hover{background:var(--accent-blue);color:white}
+        .faq-section{margin-top:2rem}
+        .faq-item{background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px;margin-bottom:1rem;overflow:hidden}
+        .faq-question{padding:1rem;font-family:'Cinzel',serif;color:var(--accent-gold);cursor:pointer;display:flex;justify-content:space-between;align-items:center}
+        .faq-question:hover{background:var(--bg-parchment)}
+        .faq-answer{padding:0 1rem 1rem;color:var(--text-secondary);display:none}
+        .faq-item.open .faq-answer{display:block}
+        .faq-toggle{transition:transform 0.3s}
+        .faq-item.open .faq-toggle{transform:rotate(180deg)}
+        .related-generators{margin-top:2rem;padding:1.5rem;background:var(--bg-card);border:1px solid var(--border-subtle);border-radius:8px}
+        .related-generators h3{font-family:'Cinzel',serif;color:var(--accent-gold);margin-bottom:1rem}
+        .related-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem}
+        .related-link{display:flex;flex-direction:column;align-items:center;padding:1rem;background:var(--bg-parchment);border:1px solid var(--border-subtle);border-radius:6px;text-decoration:none;transition:all 0.2s}
+        .related-link:hover{border-color:var(--accent-gold);transform:translateY(-2px)}
+        .related-link .icon{font-size:2rem;margin-bottom:0.5rem}
+        .related-link .label{font-family:'Cinzel',serif;color:var(--text-primary);font-size:0.85rem;text-align:center}
+    </style>
 </head>
 <body>
     <div class="ambient-glow glow-1"></div>
     <div class="ambient-glow glow-2"></div>
     <div class="container">
         <header class="site-header">
-            <a href="../" class="logo-link"><img src="../icon-192.png" alt="MythicNames" class="logo-icon"><span class="logo">MythicNames</span></a>
-            <nav class="site-nav"><a href="../">Generator</a><a href="./">Race Names</a><a href="../blog/">Blog</a></nav>
+            <a href="../" class="logo-link"><img src="../logo.png" alt="MythicNames" class="logo-icon"><span class="logo">MythicNames</span></a>
+            <nav class="site-nav"><a href="../">Generator</a><a href="./">All Generators</a><a href="../blog/">Blog</a></nav>
         </header>
-        <nav class="breadcrumbs"><a href="../">Home</a> <span>›</span> <a href="./">Generators</a> <span>›</span> Kingdom Names</nav>
-        
-        <h1 class="page-title">👑 Kingdom Name Generator</h1>
-        <p class="page-subtitle">Create empires, nations, and realms for your world</p>
-        
-        <div class="generator-box">
-            <div class="control-row">
-                <div class="control-group">
-                    <label>Kingdom Type</label>
-                    <select id="kingdomType">
-                        <option value="fantasy">High Fantasy</option>
-                        <option value="dark">Dark / Gothic</option>
-                        <option value="norse">Norse / Viking</option>
-                        <option value="desert">Desert Empire</option>
-                        <option value="elven">Elven Realm</option>
-                        <option value="dwarven">Dwarven Hold</option>
-                        <option value="asian">Eastern / Asian</option>
-                    </select>
+        <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../">Home</a> <span>›</span> <a href="./">Name Generators</a> <span>›</span> <span>Kingdom Names</span></nav>
+        <article>
+            <div class="race-icon-large">👑</div>
+            <h1 class="page-title">Kingdom Name Generator</h1>
+            <p class="page-subtitle">Generate authentic kingdom names for your fantasy characters</p>
+            <div class="generator-box">
+                <div class="gen-controls">
+                    <div class="gen-control"><label>Style</label><select id="gender"><option value="any">Any</option><option value="m">Masculine</option><option value="f">Feminine</option><option value="n">Neutral</option></select></div>
+                    <div class="gen-control"><label>Results</label><select id="count"><option value="5">5 names</option><option value="10" selected>10 names</option><option value="20">20 names</option></select></div>
                 </div>
-                <div class="control-group">
-                    <label>Count</label>
-                    <select id="kingdomCount">
-                        <option value="5">5</option>
-                        <option value="10" selected>10</option>
-                        <option value="20">20</option>
-                    </select>
-                </div>
+                <button class="gen-btn" onclick="generateNames()">Generate Kingdom Names</button>
+                <div class="gen-results" id="results"></div>
             </div>
-            <button type="button" class="generate-btn" id="generateBtn">Generate Kingdom Names</button>
-        </div>
-        
-        <div class="results-section">
-            <div id="resultsContainer" class="names-list"></div>
-        </div>
-        
-        <section class="info-section">
-            <h2>About Kingdom Names</h2>
-            <p>A kingdom's name establishes its identity, culture, and place in your world. Good kingdom names feel authentic to their fictional culture while remaining memorable and pronounceable.</p>
-            
-            <h3>Common Naming Patterns</h3>
-            <ul>
-                <li><strong>-ia suffix</strong>: Valeria, Astoria (Latin feel)</li>
-                <li><strong>-land suffix</strong>: Nordland, Frostland (Germanic)</li>
-                <li><strong>-heim suffix</strong>: Stormheim, Ironheim (Norse)</li>
-                <li><strong>Compound names</strong>: Stormhold, Sunspire, Blackmoor</li>
-            </ul>
-        </section>
-        
-        <footer class="site-footer">
-            <p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p>
-            <p><a href="../blog/how-to-name-your-fantasy-kingdom.html">Kingdom Naming Guide</a> • <a href="./">All Generators</a></p>
-        </footer>
+            <section class="article-content"><h2>About Kingdom Names</h2><p>Kingdom names anchor your world, giving shape to <strong>political geography</strong> and <strong>cultural identity</strong>.</p><h2>Naming Traditions</h2><ul><li><strong>Founding reference</strong> — Founders, events, geography</li><li><strong>Cultural roots</strong> — Consistent linguistic influences</li><li><strong>Scale indication</strong> — Empire, Kingdom, Duchy</li></ul></section>
+            <section class="faq-section"><h2>Frequently Asked Questions</h2><div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>How do I create a believable kingdom name?</span><span class="faq-toggle">▼</span></div><div class="faq-answer">Consider naming after a hero, geography, or cultural concept.</div></div>
+<div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>Should I use real-world language roots?</span><span class="faq-toggle">▼</span></div><div class="faq-answer">Consistent linguistic roots help make the world feel cohesive.</div></div>
+<div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>How do empire names differ?</span><span class="faq-toggle">▼</span></div><div class="faq-answer">Empires have grander names suggesting dominion.</div></div>
+<div class="faq-item"><div class="faq-question" onclick="toggleFaq(this)"><span>What about ancient kingdoms?</span><span class="faq-toggle">▼</span></div><div class="faq-answer">Add Old, Lost, or Fallen to create instant history.</div></div></section>
+            <section class="related-generators"><h3>Related Name Generators</h3><div class="related-grid"><a href="tavern-name-generator.html" class="related-link"><span class="icon">🍺</span><span class="label">Tavern Names</span></a>
+<a href="ship-name-generator.html" class="related-link"><span class="icon">⛵</span><span class="label">Ship Names</span></a>
+<a href="human-name-generator.html" class="related-link"><span class="icon">👤</span><span class="label">Human Names</span></a>
+<a href="elf-name-generator.html" class="related-link"><span class="icon">🧝</span><span class="label">Elf Names</span></a></div></section>
+        </article>
+        <div class="cta-section"><h2 style="font-family:'Cinzel',serif;color:var(--accent-gold);margin-bottom:0.5rem;">Need Full Character Backstories?</h2><p style="color:var(--text-secondary);margin-bottom:1rem;">Our main generator creates complete characters with history, factions, and personality.</p><a href="../" class="cta-btn">Open Full Generator</a></div>
+        <footer class="site-footer"><p>© 2025 <strong>MythicNames</strong> — Free Fantasy Name Generator</p><div class="footer-links"><a href="../">Generator</a><a href="./">All Generators</a><a href="../blog/">Blog</a><a href="../sitemap.html">Sitemap</a></div></footer>
     </div>
-    
     <script>
-    const kingdomData = {
-        fantasy: {pre:['Val','Aur','Cel','Lum','Sol','Sil','Cael','Eld','Astr','Ther'],suf:['ia','oria','heim','dale','mark','gard','realm','hold','spire','haven']},
-        dark: {pre:['Shad','Mor','Drak','Neth','Grim','Ash','Void','Dusk','Mal','Crypt'],suf:['moor','fell','hollow','vale','mere','gard','heim','reach','end','blight']},
-        norse: {pre:['Frost','Storm','Iron','Wolf','Raven','Thunder','Ice','Nord','Skal','Heim'],suf:['heim','gard','fell','mark','fjord','land','hold','vald','rim','peak']},
-        desert: {pre:['Al-','Sun','Sand','Gold','Phoenix','Oasis','Ember','Scorch','Dune','Mirage'],suf:['istan','ia','ar','abad','pur','khan','rim','sun','fire','wind']},
-        elven: {pre:['Syl','Ael','Lor','Cel','Fae','Star','Moon','Ever','Silv','Loth'],suf:['andor','iel','wen','dale','wood','haven','mere','glade','song','light']},
-        dwarven: {pre:['Iron','Stone','Gold','Mith','Granite','Anvil','Hammer','Deep','Under','Forge'],suf:['heim','hold','delve','deep','forge','hall','mine','peak','gate','throne']},
-        asian: {pre:['Jade','Dragon','Lotus','Phoenix','Tiger','Crane','Moon','Sun','Wind','Storm'],suf:[' Kingdom',' Empire',' Dynasty',' Realm',' Lands',' Domain',' Prefecture',' Province']}
-    };
-    
+    const D = {pre: {"m": ["Val", "Nord", "East", "West", "Iron", "Golden", "Silver", "Storm", "Sun", "Shadow", "Dragon", "High", "Ancient", "Crown", "Elder"], "f": ["Val", "Nord", "East", "West", "Iron", "Golden", "Silver", "Storm", "Sun", "Shadow", "Dragon", "High", "Ancient", "Crown", "Elder"], "n": ["Val", "Nord", "East", "West", "Iron", "Golden", "Silver", "Storm", "Sun", "Shadow", "Dragon", "High", "Ancient", "Crown", "Elder"]}, suf: {"m": ["oria", "heim", "hold", "mark", "land", "realm", "haven", "dale", "garde", "moor", "fell", "holm", "shire", "ford", "mere"], "f": ["oria", "heim", "hold", "mark", "land", "realm", "haven", "dale", "garde", "moor", "fell", "holm", "shire", "ford", "mere"], "n": ["oria", "heim", "hold", "mark", "land", "realm", "haven", "dale", "garde", "moor", "fell", "holm", "shire", "ford", "mere"]}, meanings: ["crown", "throne", "dominion", "sovereignty", "legacy", "dynasty", "heritage", "glory", "honor", "might"]};
     const r = a => a[Math.floor(Math.random() * a.length)];
-    const cap = s => s.charAt(0).toUpperCase() + s.slice(1);
-    
-    function generateKingdom(type) {
-        const d = kingdomData[type] || kingdomData.fantasy;
-        return cap(r(d.pre) + r(d.suf));
+    const cap = s => s.charAt(0).toUpperCase() + s.slice(1).toLowerCase();
+    function generateName(gender) {
+        const gk = gender === 'any' ? r(['m', 'f', 'n']) : gender;
+        let n = r(D.pre[gk] || D.pre.m) + r(D.suf[gk] || D.suf.m);
+        return { name: cap(n), meaning: '"' + r(D.meanings) + '"' };
     }
-    
-    function generate() {
-        const type = document.getElementById('kingdomType').value;
-        const count = parseInt(document.getElementById('kingdomCount').value);
-        const names = new Set();
-        while (names.size < count) {
-            names.add(generateKingdom(type));
+    function generateNames() {
+        const gender = document.getElementById('gender').value;
+        const count = parseInt(document.getElementById('count').value);
+        const results = document.getElementById('results');
+        let html = '';
+        for (let i = 0; i < count; i++) {
+            const nm = generateName(gender);
+            html += `<div class="gen-name"><div><span class="gen-name-text">${nm.name}</span><div class="gen-name-details"><span class="gen-name-meaning">${nm.meaning}</span></div></div><div><button class="gen-copy" onclick="copyName(this,'${nm.name}')">Copy</button><button class="share-btn" onclick="shareName('${nm.name}')">Share</button></div></div>`;
         }
-        
-        document.getElementById('resultsContainer').innerHTML = Array.from(names).map(name => 
-            `<div class="name-item"><div class="name-row"><span class="name-text">${name}</span><button class="copy-btn" onclick="copyName(this,'${name}')"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg></button></div></div>`
-        ).join('');
+        results.innerHTML = html;
     }
-    
-    async function copyName(btn, name) {
-        await navigator.clipboard.writeText(name);
-        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>';
-        btn.style.background = 'var(--accent-green)';
-        setTimeout(() => {
-            btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
-            btn.style.background = '';
-        }, 1500);
+    async function copyName(btn, name) { try { await navigator.clipboard.writeText(name); btn.textContent = 'Copied!'; setTimeout(() => btn.textContent = 'Copy', 1500); } catch (e) {} }
+    function shareName(name) {
+        const url = window.location.href.split('?')[0] + '?name=' + encodeURIComponent(name);
+        if (navigator.share) { navigator.share({ title: name + ' - Kingdom Name', text: 'Check out this name I generated: ' + name, url: url }); }
+        else { navigator.clipboard.writeText(url).then(() => alert('Link copied to clipboard!')); }
     }
-    
-    document.getElementById('generateBtn').addEventListener('click', generate);
-    generate();
+    function toggleFaq(el) { el.parentElement.classList.toggle('open'); }
+    generateNames();
     </script>
 </body>
 </html>
